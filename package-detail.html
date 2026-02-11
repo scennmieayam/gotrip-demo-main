@@ -1,0 +1,1520 @@
+<!DOCTYPE html>
+<html class="light" lang="id">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title id="page-title">Paket Detail - GO TRIP MENJANGAN</title>
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body
+    class="bg-background-light text-[#111418] font-display antialiased flex flex-col min-h-screen relative overflow-x-hidden">
+    <div class="sticky top-0 left-0 right-0 z-40 bg-[#0b3c5d]/70 backdrop-blur-md border-b border-white/10">
+        <div class="max-w-[1280px] mx-auto px-4 sm:px-10">
+            <header class="flex items-center justify-between h-20">
+                <div class="flex items-center gap-3">
+                    <img src="logo/logo.PNG" alt="GO TRIP MENJANGAN" class="h-10" />
+                </div>
+                <div class="hidden lg:flex flex-1 justify-center items-center">
+                    <nav class="flex items-center gap-8">
+                        <a class="text-white/70 hover:text-white text-sm font-medium transition-colors"
+                            href="index.html" data-i18n="nav.home">Beranda</a>
+                        <a class="text-blue-300 text-sm font-bold" href="package.html"
+                            data-i18n="nav.packages">Paket</a>
+                        <a class="text-white/70 hover:text-white text-sm font-medium transition-colors"
+                            href="gallery.html" data-i18n="nav.gallery">Galeri</a>
+                        <a class="text-white/70 hover:text-white text-sm font-medium transition-colors"
+                            href="about.html" data-i18n="nav.about">Tentang</a>
+                        <a class="text-white/70 hover:text-white text-sm font-medium transition-colors"
+                            href="contact.html" data-i18n="nav.contact">Kontak</a>
+                    </nav>
+                </div>
+                <div class="hidden lg:flex items-center lang-desktop">
+                    <div class="flex items-center gap-1.5 bg-white/10 backdrop-blur-sm rounded-full px-1 py-1 h-11">
+                        <button
+                            class="lang-toggle active px-5 py-2 rounded-full text-white text-sm font-bold transition-all duration-300 ease-in-out flex items-center justify-center h-full"
+                            data-lang="id">ID</button>
+                        <button
+                            class="lang-toggle px-5 py-2 rounded-full text-white/70 hover:text-white text-sm font-medium transition-all duration-300 ease-in-out flex items-center justify-center h-full"
+                            data-lang="en">EN</button>
+                    </div>
+                </div>
+                <button id="mobile-menu-btn" class="lg:hidden text-white p-2" aria-label="Toggle menu">
+                    <span class="material-symbols-outlined text-[28px]">menu</span>
+                </button>
+            </header>
+        </div>
+        <div id="mobile-menu" class="lg:hidden hidden border-t border-white/10">
+            <div class="max-w-[1280px] mx-auto px-4 sm:px-10">
+                <nav class="flex flex-col py-3 gap-1">
+                    <a class="mobile-nav-link" href="index.html" data-i18n="nav.home">Beranda</a>
+                    <a class="mobile-nav-link active" href="package.html" data-i18n="nav.packages">Paket</a>
+                    <a class="mobile-nav-link" href="gallery.html" data-i18n="nav.gallery">Galeri</a>
+                    <a class="mobile-nav-link" href="about.html" data-i18n="nav.about">Tentang</a>
+                    <a class="mobile-nav-link" href="contact.html" data-i18n="nav.contact">Kontak</a>
+                </nav>
+                <div class="border-t border-white/10"></div>
+                <div class="py-4 lang-mobile">
+                    <div
+                        class="flex items-center gap-1.5 bg-white/10 backdrop-blur-sm rounded-full px-1 py-1 h-10 w-fit">
+                        <button
+                            class="lang-toggle active px-5 py-1.5 rounded-full text-white text-sm font-bold transition-all duration-300 ease-in-out flex items-center justify-center h-full"
+                            data-lang="id">ID</button>
+                        <button
+                            class="lang-toggle px-5 py-1.5 rounded-full text-white/70 hover:text-white text-sm font-medium transition-all duration-300 ease-in-out flex items-center justify-center h-full"
+                            data-lang="en">EN</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Main Content -->
+    <main class="flex-grow">
+        <div class="max-w-[1280px] mx-auto px-4 sm:px-10 py-8">
+            <!-- Breadcrumb -->
+            <nav class="flex mb-6 text-sm text-[#60718a]">
+                <a class="hover:text-primary transition-colors" href="index.html">Beranda</a>
+                <span class="mx-2">/</span>
+                <a class="hover:text-primary transition-colors" href="package.html">Paket</a>
+                <span class="mx-2">/</span>
+                <span id="breadcrumb-name" class="text-[#111418] font-medium">Detail Paket</span>
+            </nav>
+            <!-- Header Section -->
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-8">
+                <div class="lg:col-span-2">
+                    <h1 id="pkg-title"
+                        class="text-3xl md:text-4xl lg:text-5xl font-bold text-[#111418] mb-4 leading-tight"></h1>
+                    <div class="flex flex-wrap items-center gap-4 md:gap-6 text-sm">
+                        <div class="flex items-center gap-1.5 text-[#60718a]">
+                            <span class="material-symbols-outlined text-[20px] text-primary">location_on</span>
+                            <span id="pkg-location"></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="hidden lg:flex justify-end items-end gap-3">
+                    <button
+                        class="flex items-center gap-2 px-4 py-2 rounded-lg hover:bg-gray-100 transition-colors text-sm font-medium">
+                        <span class="material-symbols-outlined text-[20px]">share</span>
+                        Share
+                    </button>
+                </div>
+            </div>
+            <!-- Image Grid -->
+            <div id="pkg-images"
+                class="grid grid-cols-1 md:grid-cols-4 gap-2 md:gap-4 h-[400px] md:h-[480px] mb-12 rounded-2xl overflow-hidden shadow-xl">
+            </div>
+            <!-- Content Layout -->
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-12">
+                <!-- Left Column (Details) -->
+                <div class="lg:col-span-2 space-y-10">
+                    <!-- Quick Chips -->
+                    <div id="pkg-chips" class="flex flex-wrap gap-3"></div>
+                    <!-- Description -->
+                    <section>
+                        <h2 class="text-2xl font-bold mb-4 text-[#111418]">Tentang Trip</h2>
+                        <div id="pkg-description" class="prose prose-slate max-w-none text-[#60718a] leading-relaxed">
+                        </div>
+                    </section>
+                    <!-- Destinations -->
+                    <section class="bg-blue-50 rounded-2xl p-6 sm:p-8">
+                        <h3 class="text-xl font-bold mb-6 text-[#111418] flex items-center gap-2">
+                            <span class="material-symbols-outlined text-primary">stars</span>
+                            Destinasi
+                        </h3>
+                        <div id="pkg-destinations" class="grid grid-cols-1 md:grid-cols-2 gap-4"></div>
+                    </section>
+                    <!-- Itinerary -->
+                    <section>
+                        <h2 class="text-2xl font-bold mb-6 text-[#111418]">Itinerary</h2>
+                        <div id="pkg-itinerary"
+                            class="relative pl-8 space-y-8 before:absolute before:left-[11px] before:top-2 before:bottom-2 before:w-[2px] before:bg-gray-200">
+                        </div>
+                    </section>
+                    <!-- Inclusions -->
+                    <section class="border-t border-gray-200 pt-8">
+                        <h2 class="text-2xl font-bold mb-6 text-[#111418]">Include & Exclude</h2>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                            <div>
+                                <h4 class="font-bold mb-4 flex items-center gap-2 text-secondary">
+                                    <span class="material-symbols-outlined">add_circle</span> Include
+                                </h4>
+                                <ul id="pkg-include" class="space-y-3"></ul>
+                            </div>
+                            <div>
+                                <h4 class="font-bold mb-4 flex items-center gap-2 text-red-600">
+                                    <span class="material-symbols-outlined">cancel</span> Exclude
+                                </h4>
+                                <ul id="pkg-exclude" class="space-y-3"></ul>
+                            </div>
+                        </div>
+                    </section>
+                    <!-- WNA Info -->
+                    <section id="pkg-wna-section" class="bg-amber-50 rounded-2xl p-6 sm:p-8 border border-amber-100">
+                        <h3 class="text-lg font-bold mb-3 text-[#111418] flex items-center gap-2">
+                            <span class="material-symbols-outlined text-amber-500">info</span>
+                            Informasi WNA
+                        </h3>
+                        <div id="pkg-wna-info" class="text-sm text-[#60718a] space-y-1"></div>
+                    </section>
+                    <!-- Terms -->
+                    <section class="border-t border-gray-200 pt-8">
+                        <h2 class="text-2xl font-bold mb-4 text-[#111418]">Syarat & Ketentuan</h2>
+                        <ul id="pkg-terms" class="space-y-3 text-sm text-[#60718a]"></ul>
+                    </section>
+                </div>
+                <!-- Right Column (Sticky Booking Widget) -->
+                <div class="relative">
+                    <div class="sticky top-24 space-y-4">
+                        <div class="bg-white rounded-2xl shadow-xl p-6 border border-gray-100">
+                            <div class="mb-5">
+                                <p class="text-sm text-[#60718a] font-medium">Mulai dari</p>
+                                <div class="flex items-baseline gap-1">
+                                    <h3 id="pkg-price-display" class="text-3xl font-extrabold text-primary"></h3>
+                                    <span class="text-[#60718a]">/ orang</span>
+                                </div>
+                                <div id="pkg-min-pax"
+                                    class="mt-2 inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md bg-green-50 text-green-700 text-xs font-bold border border-green-100">
+                                    <span class="material-symbols-outlined text-[14px]">local_offer</span>
+                                    <span></span>
+                                </div>
+                            </div>
+                            <!-- Booking Form -->
+                            <form id="bookingForm" class="space-y-4 border-t border-gray-100 pt-5">
+                                <div>
+                                    <label for="booking-name" class="block text-sm font-bold text-[#111418] mb-1.5">Nama
+                                        Lengkap <span class="text-red-500">*</span></label>
+                                    <input type="text" id="booking-name" required placeholder="Masukkan nama lengkap"
+                                        class="w-full px-4 py-2.5 border border-gray-200 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent" />
+                                </div>
+                                <div>
+                                    <label for="booking-contact"
+                                        class="block text-sm font-bold text-[#111418] mb-1.5">Nomor HP / Email <span
+                                            class="text-red-500">*</span></label>
+                                    <input type="text" id="booking-contact" required
+                                        placeholder="08xx atau email@contoh.com"
+                                        class="w-full px-4 py-2.5 border border-gray-200 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent" />
+                                </div>
+                                <div>
+                                    <label for="booking-package"
+                                        class="block text-sm font-bold text-[#111418] mb-1.5">Nama Paket</label>
+                                    <input type="text" id="booking-package" readonly
+                                        class="w-full px-4 py-2.5 border border-gray-100 rounded-xl text-sm bg-gray-50 text-[#60718a] cursor-not-allowed" />
+                                </div>
+                                <div>
+                                    <label for="booking-date"
+                                        class="block text-sm font-bold text-[#111418] mb-1.5">Pilihan Tanggal <span
+                                            class="text-red-500">*</span></label>
+                                    <input type="date" id="booking-date" required
+                                        class="w-full px-4 py-2.5 border border-gray-200 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent" />
+                                </div>
+                                <div>
+                                    <label for="booking-pax"
+                                        class="block text-sm font-bold text-[#111418] mb-1.5">Jumlah Peserta <span
+                                            class="text-red-500">*</span></label>
+                                    <input type="number" id="booking-pax" min="1" value="2" required
+                                        class="w-full px-4 py-2.5 border border-gray-200 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent" />
+                                </div>
+                                <div>
+                                    <label for="booking-notes"
+                                        class="block text-sm font-bold text-[#111418] mb-1.5">Catatan Tambahan</label>
+                                    <textarea id="booking-notes" rows="2"
+                                        placeholder="Misal: alergi makanan, jemput di bandara, dll."
+                                        class="w-full px-4 py-2.5 border border-gray-200 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent resize-none"></textarea>
+                                </div>
+                                <div
+                                    class="flex items-center justify-between py-3 border-t border-dashed border-gray-200">
+                                    <span class="text-[#60718a] font-medium text-sm">Total Estimasi</span>
+                                    <span id="booking-total" class="text-xl font-bold text-[#111418]"></span>
+                                </div>
+                                <button type="submit"
+                                    class="w-full bg-[#25D366] hover:bg-[#20bd5a] text-white py-4 px-6 rounded-xl font-bold text-base shadow-lg hover:shadow-xl transition-all flex items-center justify-center gap-2 group">
+                                    <svg class="w-5 h-5 fill-current" viewbox="0 0 448 512"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7.9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-4-10.5-6.7z">
+                                        </path>
+                                    </svg>
+                                    <span>Kirim ke WhatsApp</span>
+                                </button>
+                                <p class="text-xs text-center text-[#60718a] mt-3">Belum perlu bayar sekarang.
+                                    Konfirmasi instan via chat.</p>
+                            </form>
+                        </div>
+                        <div class="bg-blue-50 p-4 rounded-xl flex items-start gap-3">
+                            <span class="material-symbols-outlined text-primary text-[24px]">verified_user</span>
+                            <div>
+                                <h5 class="text-sm font-bold text-[#111418]">Secure &amp; Trusted</h5>
+                                <p class="text-xs text-[#60718a] mt-0.5">Kami adalah tour operator berlisensi resmi di
+                                    Banyuwangi.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer class="site-footer" role="contentinfo">
+        <div class="footer-container">
+            <div class="footer-grid">
+                <div>
+                    <img src="logo/logo.PNG" alt="GO TRIP MENJANGAN" class="footer-logo" />
+                    <p class="footer-description">
+                        Mitra terpercaya Anda untuk petualangan laut dan alam di Banyuwangi. Rasakan pengalaman yang tak
+                        terlupakan.
+                    </p>
+                    <div class="footer-social">
+                        <a class="footer-social-link" href="https://instagram.com/gotripmenjangan" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                            <svg viewBox="0 0 24 24">
+                                <path
+                                    d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.85-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
+                            </svg>
+                        </a>
+                        <a class="footer-social-link" href="https://tiktok.com/@gotripmenjangan" target="_blank" rel="noopener noreferrer" aria-label="TikTok">
+                            <svg viewBox="0 0 24 24">
+                                <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5 20.1a6.34 6.34 0 0 0 10.86-4.43v-7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1-.1z"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                <nav aria-label="Footer navigation">
+                    <h3 class="footer-heading" data-i18n="footer.navigation">Navigasi</h3>
+                    <ul class="footer-nav-list">
+                        <li><a class="footer-link" href="index.html" data-i18n="nav.home">Beranda</a></li>
+                        <li><a class="footer-link" href="package.html" data-i18n="nav.packages">Paket</a></li>
+                        <li><a class="footer-link" href="gallery.html" data-i18n="nav.gallery">Galeri</a></li>
+                        <li><a class="footer-link" href="about.html" data-i18n="nav.about">Tentang</a></li>
+                        <li><a class="footer-link" href="contact.html" data-i18n="nav.contact">Kontak</a></li>
+                    </ul>
+                </nav>
+                <div>
+                    <h3 class="footer-heading" data-i18n="footer.contactInfo">Informasi Kontak</h3>
+                    <ul class="footer-contact-list">
+                        <li class="footer-contact-item">
+                            <span class="material-symbols-outlined footer-contact-icon"
+                                aria-hidden="true">location_on</span>
+                            <span>Perum permata candi permai, Krajan I, Alasbulu, Kec. Wongsorejo, Kabupaten Banyuwangi, Jawa Timur.</span>
+                        </li>
+                        <li class="footer-contact-item">
+                            <span class="material-symbols-outlined footer-contact-icon" aria-hidden="true">call</span>
+                            <span>6285604510094</span>
+                        </li>
+                        <li class="footer-contact-item">
+                            <span class="material-symbols-outlined footer-contact-icon" aria-hidden="true">mail</span>
+                            <span>gotripmenjangan@gmail.com</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-divider">
+                <p class="footer-copyright text-center">&copy; 2024 Go Trip Menjangan. Hak cipta dilindungi.</p>
+            </div>
+        </div>
+    </footer>
+    <script>
+        // ==================== PACKAGE DATA ====================
+        const PACKAGES = {
+            'menjangan-tabuhan': {
+                type: 'open',
+                title: 'Open Trip Pulau Menjangan & Tabuhan',
+                shortName: 'Menjangan & Tabuhan',
+                location: 'Meeting Point: Pantai Grand Watu Dodol (BWI)',
+                price: 290000,
+                duration: '1 Hari',
+                minPax: 'Weekday: Min. 5 Peserta | Weekend: Tanpa minimal',
+                chips: [
+                    { icon: 'schedule', label: '1 Hari', color: 'text-primary' },
+                    { icon: 'local_fire_department', label: 'Terlaris', color: 'text-accent' },
+                    { icon: 'scuba_diving', label: 'Snorkeling', color: 'text-blue-400' },
+                    { icon: 'groups', label: 'Open Trip', color: 'text-secondary' }
+                ],
+                description: `<p class="mb-4">Nikmati pengalaman snorkeling yang luar biasa di Pulau Menjangan, permata tersembunyi di dalam Taman Nasional Bali Barat. Dengan air yang tenang dan visibilitas spektakuler, destinasi ini menawarkan pengalaman snorkeling terbaik di Indonesia.</p><p>Perjalanan dilanjutkan ke Pulau Tabuhan yang eksotis. Nikmati pantai berpasir putih, makan siang, dan eksplorasi pulau yang mempesona. Berangkat setiap hari dari Pantai Grand Watu Dodol.</p>`,
+                destinations: [
+                    'Pantai Grand Watu Dodol (Meeting Point)',
+                    'Pulau Menjangan - Spot Coral Garden (Snorkeling)',
+                    'Pulau Menjangan - Spot Sandy Slope (Snorkeling)',
+                    'Pulau Tabuhan - Eksplorasi Pantai'
+                ],
+                itinerary: [
+                    { time: '08:00 - 09:00 WIB', title: 'Berkumpul & Berangkat', desc: 'Berkumpul di Meeting Point Pantai Grand Watu Dodol dan berangkat ke Pulau Menjangan.' },
+                    { time: '09:00 - 09:40 WIB', title: 'Sampai di Pulau Menjangan', desc: 'Tiba di Pulau Menjangan, agenda bebas dan persiapan snorkeling.' },
+                    { time: '09:40 - 12:30 WIB', title: 'Snorkeling Spot 1 & 2', desc: 'Snorkeling di Spot Coral Garden dan Sandy Slope (spot kondisional).' },
+                    { time: '12:30 - 13:00 WIB', title: 'Menuju Pulau Tabuhan', desc: 'Perjalanan ke Pulau Tabuhan dan tiba di pulau.' },
+                    { time: '13:00 - 14:30 WIB', title: 'Makan Siang & Eksplorasi', desc: 'Menikmati makan siang dan eksplorasi Pulau Tabuhan.' },
+                    { time: '14:30 - 15:00 WIB', title: 'Kembali ke Meeting Point', desc: 'Kembali ke meeting point, bilas-bilas. Trip selesai.' }
+                ],
+                include: [
+                    'Kapal Wisata PP (Boat)',
+                    'Tiket semua destinasi (termasuk Meeting Point GWD)',
+                    'Izin aktivitas snorkeling',
+                    'Alat Snorkeling',
+                    'Life Jacket / Jaket Pelampung',
+                    'Dokumentasi Underwater',
+                    'Asuransi Jiwa',
+                    'Sarapan Pagi',
+                    'Makan Siang (Lunch Box) & Air Mineral'
+                ],
+                exclude: [
+                    'Pengeluaran Pribadi',
+                    'Tips Guide / Pemandu',
+                    'Transportasi ke Meeting Point',
+                    'Fin / Kaki Katak'
+                ],
+                wna: 'Weekday: Rp 250.000/Orang | Weekend: Rp 300.000/Orang (bisa bayar di tempat)',
+                dp: 'Rp 100.000/orang',
+                terms: [
+                    'Membayar DP maksimal 2 minggu sebelum trip selagi kuota masih tersedia',
+                    'Harga berlaku untuk WNI',
+                    'Harga tidak berlaku untuk periode High Season, Peak Season, Lebaran dan Tahun Baru (surcharge 20%)',
+                    'Biaya DP Rp 100.000/orang sebagai tanda jadi',
+                    'Pelunasan dilakukan di hari pertama trip via transfer',
+                    'Biaya DP tidak bisa di refund bila terjadi pembatalan dari pihak tamu',
+                    'Batas usia minimal 1 tahun, maksimal 60 tahun dalam kondisi sehat, tidak memiliki riwayat penyakit jantung atau asma',
+                    'Apabila destinasi tidak memungkinkan untuk dikunjungi karena penutupan, cuaca yang tidak mendukung, dll - peserta tidak berhak meminta kompensasi',
+                    'Peralatan yang perlu dibawa: alat snorkeling pribadi (opsional), kamera underwater, handuk, obat pribadi, sandal, outfit pantai, sunblock, kacamata hitam',
+                    'Peserta yang telah mendaftar dianggap mengerti dan sepakat dengan syarat dan ketentuan di atas'
+                ],
+                images: [
+                    'https://lh3.googleusercontent.com/aida-public/AB6AXuCyw2nqX_GCuy6t1NjlsSR1INDbMsd93i36aNHlksSAOuHnOBXpnPn_EX_RfcgAzp6vUI45ie2u8Fy05sMuN5A15SoymshmQGEkumIB6_wpDGAC4bzGbB7yfavZgMUs31nawlfu2kohjOLE_xENS2SZ-y9zCAU2VtJcjYg-X0sqV7MB8Tp7mHprj_8YVsSF-2h3kdkQgk-JZD8yF-6HvFlE55CsC2wv-2ZRZNUAaI-pEywTLDzvUwp44_EXdFJHFAhnayBCdOoFXw',
+                    'https://lh3.googleusercontent.com/aida-public/AB6AXuAKVwLbC55L2P8aIqrcmHdUkV45SA4UGpY6QqyPpU0aOtQrzyxbW6tNYNN3gdGmCUoNpuzVg6u9zSkCUnxKa1QVuBn2RDwutFu2ftBZ0FY2ftjRxeJ0HaBp6VXOPVELO2YNtnGqTPRZ4G3qoOrzYYIVP4zxxZDToDbtpwXXQJPfmOjsFH1pvZb93t9h6x2f5aQeLPF06bZfE5KK9FHc41xsy9sDZnDcYdi6fCAQ9L322IeKRUjpnslBXGHieGk1UORzVTQJYBGkDw',
+                    'https://lh3.googleusercontent.com/aida-public/AB6AXuCkp6CdQIEqlIRkg-F0W2fSIXTHbbbGZSCIKj2krR8tSYRZT5asF8OTlXsJ5eKT9I_ZD45L2IVcRwX9fzmu6dCW62dFpRoxJLhB0AauYq5VT_dFws2Qqdco88Akh49hAFaSWa0LyUDuQhDHVJirppoor-i_fcJYX1WYDdau4yWpVwqlRRBK5qzuhnXpe8EEE-n6mxZM9rIFqTNgk9BeUU3JOwbZSFqvI18XxaWG98l8b9_6tfYl1yUQeSGy-HwqVhXP2Mqa1dOS5g',
+                    'https://lh3.googleusercontent.com/aida-public/AB6AXuDI_d3qVJ3cxZ80WqWyb3LfYCwbXihYLWNKFqmPYP51vkw7O9HeNdDf_I38eQ7iWKd68icbDNp03kTKrECxBVz6_bUwhrSfzGbUQ7C19OFdcjwQ4bHWUgeLpaMvnY5EAMck6APPpob2JUjokgj1S3QZDAEI1fkdR3kl672yKJ2R9FjkrUKHm5XFAODNyFjARLcU6tZk1HP0Of3bBXwQ9le6unU6eDayLudH2qbPSpdKvKSNC199Ge2AEwXOnwXINn7fidYNcOUdsQ',
+                    'https://lh3.googleusercontent.com/aida-public/AB6AXuDslyiUP6uUrsyDB4rcSdNaEniNdlz0RxP9fKiFkSXvGozJLAPyN2SsAZtcSPt584oXDaDC8DYUJDHRjpZQooRkfftUVeGp9skFV6IWRUCYA_Kygp6ZIXxmwOZI633GfmjLmcHS2hZyWB7Snjz4mONn-X5ZrIml457ae4j_NoOHcxQcqsIgbzwSAP3DGk5HZ7dW8oJJoqCkfXNnO32FDubTH1HQUqT3N1vS7eH4qjGmVHbVo6TNsPk4GgZHJghmMmd7aNz6hqsiyg'
+                ]
+            },
+            'kawah-ijen': {
+                type: 'open',
+                title: 'Open Trip Kawah Ijen',
+                shortName: 'Kawah Ijen',
+                location: 'Meeting Point: Area Banyuwangi Kota',
+                price: 275000,
+                duration: '1 Hari',
+                minPax: 'Minimal 5 Peserta | Berangkat setiap hari',
+                chips: [
+                    { icon: 'schedule', label: '1 Hari', color: 'text-primary' },
+                    { icon: 'local_fire_department', label: 'Populer', color: 'text-accent' },
+                    { icon: 'hiking', label: 'Pendakian', color: 'text-secondary' },
+                    { icon: 'groups', label: 'Open Trip', color: 'text-blue-400' }
+                ],
+                description: `<p class="mb-4">Saksikan fenomena alam yang menakjubkan — Blue Fire (Api Biru) yang hanya ada di dua tempat di dunia, salah satunya di Kawah Ijen, Banyuwangi. Pendakian dimulai dini hari untuk menyaksikan keajaiban ini.</p><p>Selain Blue Fire, nikmati pemandangan Sunrise Point yang spektakuler dan jelajahi Hutan Mati yang misterius. Perjalanan yang tak akan terlupakan bagi para pencinta alam dan petualangan.</p>`,
+                destinations: [
+                    'Kawah Ijen - Blue Fire (Api Biru)',
+                    'Kawah Ijen - Sunrise Point',
+                    'Kawah Ijen - Hutan Mati'
+                ],
+                itinerary: [
+                    { time: '23:30 - 01:15 WIB', title: 'Penjemputan & Perjalanan', desc: 'Penjemputan peserta di Meeting Point area Banyuwangi Kota dan sampai di Pos pendakian Paltuding.' },
+                    { time: '01:15 - 02:00 WIB', title: 'Pendakian ke Puncak', desc: 'Pendakian ke Puncak Kawah Ijen dengan pemandu.' },
+                    { time: '02:00 - 07:00 WIB', title: 'Explore Kawah Ijen', desc: 'Explore spot Blue Fire, Sunrise Point, dan Hutan Mati.' },
+                    { time: '07:00 - 09:00 WIB', title: 'Turun & Kembali', desc: 'Turun kembali ke Pos Paltuding.' },
+                    { time: '09:00 - 10:30 WIB', title: 'Kembali ke Meeting Point', desc: 'Kembali ke Meeting Point Banyuwangi Kota. Trip selesai.' }
+                ],
+                include: [
+                    'Transportasi Tour AC',
+                    'Dokumentasi Trip Fotografer (Free Edit File)',
+                    'Tiket & Retribusi',
+                    'Guide',
+                    'Masker Gas',
+                    'Head Lamp',
+                    'Air Mineral'
+                ],
+                exclude: [
+                    'Pengeluaran Pribadi',
+                    'Tips Guide / Pemandu (sukarela)',
+                    'Penginapan / Hotel',
+                    'Tracking Pole & Surat Sehat',
+                    'Asuransi Perjalanan'
+                ],
+                wna: 'Weekday: Rp 250.000/Orang | Weekend: Rp 300.000/Orang (bisa bayar di tempat)',
+                dp: 'Rp 100.000/orang',
+                terms: [
+                    'Membayar DP maksimal 2 minggu sebelum trip selagi kuota masih tersedia',
+                    'Harga berlaku untuk WNI',
+                    'Harga tidak berlaku untuk periode High Season, Peak Season, Lebaran dan Tahun Baru (surcharge 20%)',
+                    'Biaya DP Rp 100.000/orang sebagai tanda jadi',
+                    'Pelunasan dilakukan di hari pertama trip via transfer',
+                    'Biaya DP tidak bisa di refund bila terjadi pembatalan dari pihak tamu',
+                    'Batas usia minimal 1 tahun, maksimal 60 tahun dalam kondisi sehat, tidak memiliki riwayat penyakit jantung atau asma',
+                    'Apabila destinasi tidak memungkinkan untuk dikunjungi karena penutupan, cuaca yang tidak mendukung, dll - peserta tidak berhak meminta kompensasi',
+                    'Peserta yang telah mendaftar dianggap mengerti dan sepakat dengan syarat dan ketentuan di atas'
+                ],
+                images: [
+                    'https://lh3.googleusercontent.com/aida-public/AB6AXuAJqTh0VDyhP4HJGVgXBUONOh9IQFPF627vwgEaSPLRV9Nxd6uZqj9Nku8wrCvGLps-aSgqEy5QUJkS_HL5C066mxqPTxN_-NhNQ_qjBrA7fe3YFBDMVd5o38RTvwAKRi4uq_xsymg_MOWAmAJQemgmtnip5K6dkRh8CmpedNHIa2gvLYwu-3P5zPhoKk83bh-5BhZ-zq0BUFnmokei9eRUSDakQPZZ_WRlh-D3kn752PHmUIAA5RzNtbJPqckSX6VqEWP1UUmnYg',
+                    'https://lh3.googleusercontent.com/aida-public/AB6AXuDRZZytQ1gXLOLDtSf3ucVnL2ouXtVn2jpkiPPzHIECvqc8lncHP0MS3Pi6Xy3OLeDTz1Zrl0BZCEa8r2-gJEEfiBV7MOy6uMo3Ja9w0NicOXeac68cNWIDJHLPS2xJzpUUA7PwQ_eEPAgrVDD4RzWHdYCoIqscxeNbUrOjPtNXiuC39P1jgAjUCKRUO48KdsgSKvHd5ViMFZEFINGvLPj_7xVvfBMVKa7kQDJMiHusd-PPrftLxQDpT46r0AOI9QaX1A9h0vMZHQ',
+                    'https://lh3.googleusercontent.com/aida-public/AB6AXuAQI1N02wmGlc0-BW_5bAF4xqh9SKcecafmlOQfD5sYDT0cyzcdh0ZGLMyXJkaT4lz9nSA1OzvILAD3gSGmRSulHGjyJG620jKdv99hd87ehNkrbFSN0jqS0zGDHxN_reRhxK01401ObgQRQlTnxr8A3No7g_Dbi4rwN_qcU4pcpO-toLYnnWrB1joXQXQlyoYY0JVL9U1JpbtzqQGEX6ikWtgD7mCZxOKfQSLA1DQqelHakHuOb7HrqPwFInd0x1Ts_vcdigsSyA',
+                    'https://lh3.googleusercontent.com/aida-public/AB6AXuC-mLtDhnm-dmKjt1_O49r-UKjDMXQh8ZXhr3bhpwFwS2saIWjZ-osV5ZHrDGJvOlZZAstIqW-EuYelEfrneKQbRKUqeBp5yVPg88p_7Lnz82JU7MyY2Ylw5HW_NlX38SFZKIngtvIv8TvSusZSvbgYmHzBBHQrWm7tmmaaLzUTKXtMqFXcBEf6ThS8Z3GAYMNwKflFIBjezuT7syUhUS4kfPRwMYHrKAcoD8FKa9q58YSVY6FxaN5R57XpABABjP4NcwtjJPN9aA',
+                    'https://lh3.googleusercontent.com/aida-public/AB6AXuDslyiUP6uUrsyDB4rcSdNaEniNdlz0RxP9fKiFkSXvGozJLAPyN2SsAZtcSPt584oXDaDC8DYUJDHRjpZQooRkfftUVeGp9skFV6IWRUCYA_Kygp6ZIXxmwOZI633GfmjLmcHS2hZyWB7Snjz4mONn-X5ZrIml457ae4j_NoOHcxQcqsIgbzwSAP3DGk5HZ7dW8oJJoqCkfXNnO32FDubTH1HQUqT3N1vS7eH4qjGmVHbVo6TNsPk4GgZHJghmMmd7aNz6hqsiyg'
+                ]
+            },
+            'baluran-jeep': {
+                type: 'open',
+                title: 'Open Trip TN. Baluran Jeep Experience',
+                shortName: 'TN. Baluran Jeep',
+                location: 'Meeting Point: Area Banyuwangi Kota (Hotel, Stasiun, Terminal, Pelabuhan)',
+                price: 275000,
+                duration: 'Setengah Hari',
+                minPax: 'Minimal 2 Peserta | Berangkat setiap hari',
+                chips: [
+                    { icon: 'schedule', label: 'Setengah Hari', color: 'text-primary' },
+                    { icon: 'local_fire_department', label: 'Petualangan', color: 'text-accent' },
+                    { icon: 'directions_car', label: 'Safari Jeep', color: 'text-secondary' },
+                    { icon: 'groups', label: 'Open Trip', color: 'text-blue-400' }
+                ],
+                description: `<p class="mb-4">Rasakan petualangan safari Jeep yang seru di Taman Nasional Baluran, yang dijuluki "Afrika kecil" di Indonesia. Jelajahi padang savana Bekol yang luas dengan Jeep Trooper dan nikmati pemandangan alam yang memukau.</p><p>Perjalanan mencakup Savana Bekol, Pantai Bama yang indah, dan Mangrove Trail. Akhiri petualangan dengan menikmati sunset spektakuler di savana TN. Baluran.</p>`,
+                destinations: [
+                    'TN. Baluran - Savana Bekol',
+                    'TN. Baluran - Pantai Bama',
+                    'TN. Baluran - Mangrove Trail',
+                    'TN. Baluran - Sunset Point'
+                ],
+                itinerary: [
+                    { time: '13:00 - 14:00 WIB', title: 'Penjemputan & Perjalanan', desc: 'Penjemputan peserta di Meeting Point area Banyuwangi Kota dan sampai di TN. Baluran.' },
+                    { time: '14:00 - 16:30 WIB', title: 'Explore TN. Baluran', desc: 'Explore TN. Baluran dengan spot Savana Bekol, Mangrove Trail, dan Pantai Bama.' },
+                    { time: '16:30 - 17:00 WIB', title: 'Sunset di Savana', desc: 'Menikmati keindahan sunset di savana TN. Baluran.' },
+                    { time: '17:00 - 18:30 WIB', title: 'Kembali ke Meeting Point', desc: 'Kembali ke Meeting Point & drop. Trip selesai.' }
+                ],
+                include: [
+                    'Jeep Trooper',
+                    'Driver',
+                    'BBM',
+                    'Tiket & Parkir',
+                    'Air Mineral',
+                    'Asuransi (tertera di tiket Taman Nasional)'
+                ],
+                exclude: [
+                    'Pengeluaran Pribadi',
+                    'Tips Guide / Pemandu',
+                    'Hotel / Penginapan',
+                    'Asuransi Perjalanan'
+                ],
+                wna: 'Charge tiket tambahan: Rp 250.000/Orang',
+                dp: 'Rp 150.000/orang',
+                terms: [
+                    'Membayar DP maksimal 2 minggu sebelum trip selagi kuota masih tersedia',
+                    'Harga berlaku untuk WNI',
+                    'Harga tidak berlaku untuk periode High Season, Peak Season, Lebaran dan Tahun Baru (surcharge 20%)',
+                    'Biaya DP Rp 150.000/orang sebagai tanda jadi',
+                    'Pelunasan dilakukan di hari pertama trip via transfer',
+                    'Biaya DP tidak bisa di refund bila terjadi pembatalan dari pihak tamu',
+                    'Batas usia minimal 1 tahun, maksimal 60 tahun dalam kondisi sehat, tidak memiliki riwayat penyakit jantung atau asma',
+                    'Apabila destinasi tidak memungkinkan untuk dikunjungi karena penutupan, cuaca yang tidak mendukung, dll - peserta tidak berhak meminta kompensasi',
+                    'Peserta yang telah mendaftar dianggap mengerti dan sepakat dengan syarat dan ketentuan di atas'
+                ],
+                images: [
+                    'https://lh3.googleusercontent.com/aida-public/AB6AXuBEK65ZL3HXU2kc9ug3F2faXJ82U6VRcNd69uXB34nuhBc0XbDkfidMYlgLQwX7T-JqSyCSw9h7-oAJ4G5crk1aHs5AfF7Y6xs0l4lyMQkP5pYRKDEaYea04nj1Mr9TygnuFs9nCE-tjX6RlUVscfHqLRTfit9pAuJb-QNKBCpzYSfXGy9KFgFS0K8IlZb7LmisHO82BPejB98_gjzkMiPkgPH3mVN3THTIHpcVuZ0Igl_G8pI8VYAncGPoEZaAFkqQVE_I6RTvgQ',
+                    'https://lh3.googleusercontent.com/aida-public/AB6AXuDRZZytQ1gXLOLDtSf3ucVnL2ouXtVn2jpkiPPzHIECvqc8lncHP0MS3Pi6Xy3OLeDTz1Zrl0BZCEa8r2-gJEEfiBV7MOy6uMo3Ja9w0NicOXeac68cNWIDJHLPS2xJzpUUA7PwQ_eEPAgrVDD4RzWHdYCoIqscxeNbUrOjPtNXiuC39P1jgAjUCKRUO48KdsgSKvHd5ViMFZEFINGvLPj_7xVvfBMVKa7kQDJMiHusd-PPrftLxQDpT46r0AOI9QaX1A9h0vMZHQ',
+                    'https://lh3.googleusercontent.com/aida-public/AB6AXuC-mLtDhnm-dmKjt1_O49r-UKjDMXQh8ZXhr3bhpwFwS2saIWjZ-osV5ZHrDGJvOlZZAstIqW-EuYelEfrneKQbRKUqeBp5yVPg88p_7Lnz82JU7MyY2Ylw5HW_NlX38SFZKIngtvIv8TvSusZSvbgYmHzBBHQrWm7tmmaaLzUTKXtMqFXcBEf6ThS8Z3GAYMNwKflFIBjezuT7syUhUS4kfPRwMYHrKAcoD8FKa9q58YSVY6FxaN5R57XpABABjP4NcwtjJPN9aA',
+                    'https://lh3.googleusercontent.com/aida-public/AB6AXuAQI1N02wmGlc0-BW_5bAF4xqh9SKcecafmlOQfD5sYDT0cyzcdh0ZGLMyXJkaT4lz9nSA1OzvILAD3gSGmRSulHGjyJG620jKdv99hd87ehNkrbFSN0jqS0zGDHxN_reRhxK01401ObgQRQlTnxr8A3No7g_Dbi4rwN_qcU4pcpO-toLYnnWrB1joXQXQlyoYY0JVL9U1JpbtzqQGEX6ikWtgD7mCZxOKfQSLA1DQqelHakHuOb7HrqPwFInd0x1Ts_vcdigsSyA',
+                    'https://lh3.googleusercontent.com/aida-public/AB6AXuDslyiUP6uUrsyDB4rcSdNaEniNdlz0RxP9fKiFkSXvGozJLAPyN2SsAZtcSPt584oXDaDC8DYUJDHRjpZQooRkfftUVeGp9skFV6IWRUCYA_Kygp6ZIXxmwOZI633GfmjLmcHS2hZyWB7Snjz4mONn-X5ZrIml457ae4j_NoOHcxQcqsIgbzwSAP3DGk5HZ7dW8oJJoqCkfXNnO32FDubTH1HQUqT3N1vS7eH4qjGmVHbVo6TNsPk4GgZHJghmMmd7aNz6hqsiyg'
+                ]
+            },
+            'baluran-jeep-private': {
+                type: 'private',
+                title: 'PRIVATE TRIP BALURAN JEEP EXPERIENCE',
+                shortName: 'Private Baluran Jeep',
+                location: 'Meeting Point: Area Banyuwangi Kota (Penjemputan Hotel, Stasiun, Terminal, Pelabuhan)',
+                duration: 'Setengah Hari',
+                minPax: 'Harga per orang mengikuti tabel 1–10 peserta (bukan harga flat per pax)',
+                chips: [
+                    { icon: 'schedule', label: 'Setengah Hari', color: 'text-primary' },
+                    { icon: 'person', label: 'Private Trip', color: 'text-emerald-500' },
+                    { icon: 'directions_car', label: 'Safari Jeep', color: 'text-secondary' }
+                ],
+                pricingTable: {
+                    1: 1300000,
+                    2: 650000,
+                    3: 450000,
+                    4: 350000,
+                    5: 300000,
+                    6: 250000,
+                    7: 295000,
+                    8: 270000,
+                    9: 240000,
+                    10: 220000
+                },
+                description: `<p class="mb-4">PRIVATE TRIP BALURAN JEEP EXPERIENCE adalah paket private ke TN. Baluran dengan penjemputan dari area Banyuwangi Kota (hotel, stasiun, terminal, pelabuhan). Perjalanan menggunakan Jeep Trooper menyusuri Savana Bekol, Pantai Bama, dan Mangrove Trail.</p><p class="mb-4">Trip berlangsung sore hingga sunset sehingga Anda bisa menikmati suasana savana Baluran dengan lebih santai dan eksklusif. Harga tidak menggunakan rumus matematika, tetapi sudah ditentukan per jumlah orang (1–10 peserta).</p>`,
+                destinations: [
+                    'TN. Baluran - Savana Bekol',
+                    'TN. Baluran - Pantai Bama',
+                    'TN. Baluran - Mangrove Trail'
+                ],
+                itinerary: [
+                    { time: '13:00 - 14:00 WIB', title: 'Penjemputan & Perjalanan', desc: 'Penjemputan peserta di Meeting Point area Banyuwangi Kota dan sampai di TN. Baluran.' },
+                    { time: '14:00 - 16:30 WIB', title: 'Explore TN. Baluran', desc: 'Explore TN. Baluran dengan spot Savana Bekol, Mangrove Trail, dan Pantai Bama.' },
+                    { time: '16:30 - 17:00 WIB', title: 'Sunset di Savana', desc: 'Menikmati keindahan sunset di savana TN. Baluran.' },
+                    { time: '17:00 - 18:30 WIB', title: 'Kembali ke Meeting Point', desc: 'Kembali ke Meeting Point & drop, trip selesai.' }
+                ],
+                include: [
+                    'Jeep Trooper',
+                    'Driver',
+                    'BBM',
+                    'Tiket & Parkir',
+                    'Air Mineral',
+                    'Dokumentasi Foto (Free Edit)',
+                    'Asuransi tertera di tiket Taman Nasional'
+                ],
+                exclude: [
+                    'Pengeluaran Pribadi',
+                    'Tips Guide/Pemandu',
+                    'Hotel / Penginapan',
+                    'Asuransi Perjalanan'
+                ],
+                wna: 'Charge tiket tambahan WNA: Rp 250.000/Orang',
+                dp: 'Rp 150.000/orang',
+                terms: [
+                    'Membayar DP maksimal 2 minggu sebelum trip selagi kuota masih tersedia',
+                    'Harga berlaku untuk WNI',
+                    'Harga tidak berlaku untuk periode High Season, Peak Season, Lebaran dan Tahun Baru (surcharge 20%)',
+                    'Biaya DP Rp 150.000/orang sebagai tanda jadi',
+                    'Pelunasan dilakukan di hari pertama trip via transfer',
+                    'Biaya DP tidak bisa di refund bila terjadi pembatalan dari pihak tamu',
+                    'Batas usia minimal 1 tahun maksimal 60 tahun dalam kondisi sehat, tidak memiliki riwayat penyakit jantung atau asma',
+                    'Apabila destinasi tidak memungkinkan untuk dikunjungi karena penutupan, cuaca yang tidak mendukung dan lain-lain peserta trip tidak berhak meminta kompensasi',
+                    'Peserta yang telah mendaftar dianggap mengerti dan sepakat dengan syarat dan ketentuan diatas.'
+                ],
+                images: [
+                    'https://lh3.googleusercontent.com/aida-public/AB6AXuBEK65ZL3HXU2kc9ug3F2faXJ82U6VRcNd69uXB34nuhBc0XbDkfidMYlgLQwX7T-JqSyCSw9h7-oAJ4G5crk1aHs5AfF7Y6xs0l4lyMQkP5pYRKDEaYea04nj1Mr9TygnuFs9nCE-tjX6RlUVscfHqLRTfit9pAuJb-QNKBCpzYSfXGy9KFgFS0K8IlZb7LmisHO82BPejB98_gjzkMiPkgPH3mVN3THTIHpcVuZ0Igl_G8pI8VYAncGPoEZaAFkqQVE_I6RTvgQ',
+                    'https://lh3.googleusercontent.com/aida-public/AB6AXuDRZZytQ1gXLOLDtSf3ucVnL2ouXtVn2jpkiPPzHIECvqc8lncHP0MS3Pi6Xy3OLeDTz1Zrl0BZCEa8r2-gJEEfiBV7MOy6uMo3Ja9w0NicOXeac68cNWIDJHLPS2xJzpUUA7PwQ_eEPAgrVDD4RzWHdYCoIqscxeNbUrOjPtNXiuC39P1jgAjUCKRUO48KdsgSKvHd5ViMFZEFINGvLPj_7xVvfBMVKa7kQDJMiHusd-PPrftLxQDpT46r0AOI9QaX1A9h0vMZHQ',
+                    'https://lh3.googleusercontent.com/aida-public/AB6AXuC-mLtDhnm-dmKjt1_O49r-UKjDMXQh8ZXhr3bhpwFwS2saIWjZ-osV5ZHrDGJvOlZZAstIqW-EuYelEfrneKQbRKUqeBp5yVPg88p_7Lnz82JU7MyY2Ylw5HW_NlX38SFZKIngtvIv8TvSusZSvbgYmHzBBHQrWm7tmmaaLzUTKXtMqFXcBEf6ThS8Z3GAYMNwKflFIBjezuT7syUhUS4kfPRwMYHrKAcoD8FKa9q58YSVY6FxaN5R57XpABABjP4NcwtjJPN9aA',
+                    'https://lh3.googleusercontent.com/aida-public/AB6AXuAQI1N02wmGlc0-BW_5bAF4xqh9SKcecafmlOQfD5sYDT0cyzcdh0ZGLMyXJkaT4lz9nSA1OzvILAD3gSGmRSulHGjyJG620jKdv99hd87ehNkrbFSN0jqS0zGDHxN_reRhxK01401ObgQRQlTnxr8A3No7g_Dbi4rwN_qcU4pcpO-toLYnnWrB1joXQXQlyoYY0JVL9U1JpbtzqQGEX6ikWtgD7mCZxOKfQSLA1DQqelHakHuOb7HrqPwFInd0x1Ts_vcdigsSyA',
+                    'https://lh3.googleusercontent.com/aida-public/AB6AXuDslyiUP6uUrsyDB4rcSdNaEniNdlz0RxP9fKiFkSXvGozJLAPyN2SsAZtcSPt584oXDaDC8DYUJDHRjpZQooRkfftUVeGp9skFV6IWRUCYA_Kygp6ZIXxmwOZI633GfmjLmcHS2hZyWB7Snjz4mONn-X5ZrIml457ae4j_NoOHcxQcqsIgbzwSAP3DGk5HZ7dW8oJJoqCkfXNnO32FDubTH1HQUqT3N1vS7eH4qjGmVHbVo6TNsPk4GgZHJghmMmd7aNz6hqsiyg'
+                ]
+            },
+            'banyuwangi-selatan-private': {
+                type: 'private',
+                title: 'PRIVATE TRIP BANYUWANGI SELATAN',
+                shortName: 'Private Banyuwangi Selatan',
+                location: 'Meeting Point: Area Banyuwangi Kota',
+                duration: '1 Hari',
+                minPax: 'Harga per orang mengikuti tabel 1–10 peserta (bukan harga flat per pax)',
+                chips: [
+                    { icon: 'schedule', label: '1 Hari', color: 'text-primary' },
+                    { icon: 'person', label: 'Private Trip', color: 'text-emerald-500' },
+                    { icon: 'beach_access', label: 'Pantai & Island Hopping', color: 'text-secondary' }
+                ],
+                pricingTable: {
+                    1: 2150000,
+                    2: 1150000,
+                    3: 820000,
+                    4: 650000,
+                    5: 590000,
+                    6: 525000,
+                    7: 520000,
+                    8: 500000,
+                    9: 470000,
+                    10: 450000
+                },
+                description: `<p class="mb-4">PRIVATE TRIP BANYUWANGI SELATAN adalah paket private eksplorasi pantai-pantai terbaik di selatan Banyuwangi. Trip dimulai dari area Banyuwangi Kota, lalu menuju Djawatan, Green Island, Spot T Bedil, Wedi Ireng, hingga Pulau Merah.</p><p class="mb-4">Paket ini sudah termasuk transportasi nyaman (Avanza/Innova/Hiace sesuai jumlah peserta), perahu wisata ke pulau, makan siang ikan bakar dan kelapa muda di Pantai Mustika, serta dokumentasi foto dan video reels.</p>`,
+                destinations: [
+                    'Djawatan Forest',
+                    'Green Island',
+                    'Spot T Bedil',
+                    'Wedi Ireng',
+                    'Pulau Merah'
+                ],
+                itinerary: [
+                    { time: '07:30 - 08:00 WIB', title: 'Penjemputan di Meeting Point', desc: 'Penjemputan peserta di area Banyuwangi Kota.' },
+                    { time: '08:00 - 09:00 WIB', title: 'Perjalanan ke Djawatan', desc: 'Perjalanan menuju Djawatan Forest.' },
+                    { time: '09:00 - 10:00 WIB', title: 'Explore Djawatan', desc: 'Tiba di Djawatan dan sesi foto.' },
+                    { time: '10:00 - 11:00 WIB', title: 'Menuju Pantai Mustika', desc: 'Perjalanan menuju Pantai Mustika.' },
+                    { time: '11:00 - 11:45 WIB', title: 'Makan Siang di Pantai Mustika', desc: 'Makan siang (ikan bakar & kelapa muda) di warung Bu di Pantai Mustika.' },
+                    { time: '11:45 - 13:00 WIB', title: 'Menuju Green Island', desc: 'Menuju dan sampai ke dermaga Green Island, tracking ±15 menit ke puncak, agenda bebas.' },
+                    { time: '13:00 - 13:30 WIB', title: 'Spot T Bedil', desc: 'Menuju ke Spot T Bedil dan sesi foto.' },
+                    { time: '13:30 - 14:45 WIB', title: 'Wedi Ireng', desc: 'Menuju dan sampai di Wedi Ireng, agenda bebas.' },
+                    { time: '14:45 - 15:00 WIB', title: 'Kembali ke Dermaga Pantai Mustika', desc: 'Kembali dan sampai ke dermaga Pantai Mustika.' },
+                    { time: '15:00 - 16:40 WIB', title: 'Pulau Merah', desc: 'Menuju dan sampai di Pulau Merah, agenda bebas sambil menikmati sunset jika beruntung.' },
+                    { time: '16:40 - 19:00 WIB', title: 'Kembali ke Banyuwangi Kota', desc: 'Perjalanan kembali ke meeting point Banyuwangi Kota.' },
+                    { time: '19:00 - 20:00 WIB', title: 'Oleh-oleh & Drop', desc: 'Sampai di Banyuwangi Kota, bisa mampir ke pusat oleh-oleh, kemudian drop peserta. Trip selesai.' }
+                ],
+                include: [
+                    'Transportasi Tour (1–4 orang: Avanza, 5–6 orang: Innova, 7–12 orang: Hiace)',
+                    'Perahu Wisata ke Pulau',
+                    'Tiket Semua Destinasi',
+                    'Guide',
+                    'Dokumentasi Foto & Video Reels (Free Edit)',
+                    'Life Jacket',
+                    'Full Mineral',
+                    'Makan Siang (Ikan Bakar & Kelapa Muda) di Pantai Mustika'
+                ],
+                exclude: [
+                    'Pengeluaran Pribadi',
+                    'Tips Guide/Pemandu',
+                    'Asuransi Perjalanan'
+                ],
+                wna: 'Charge tiket tambahan WNA: Rp 250.000/Orang',
+                dp: 'Rp 100.000/orang',
+                terms: [
+                    'Membayar DP maksimal 2 minggu sebelum trip selagi kuota masih tersedia',
+                    'Harga berlaku untuk WNI',
+                    'Harga tidak berlaku untuk periode High Season, Peak Season, Lebaran dan Tahun Baru (surcharge 20%)',
+                    'Biaya DP Rp 100.000/orang sebagai tanda jadi',
+                    'Pelunasan dilakukan di hari pertama trip via transfer',
+                    'Biaya DP tidak bisa di refund bila terjadi pembatalan dari pihak tamu',
+                    'Batas usia minimal 1 tahun maksimal 60 tahun dalam kondisi sehat, tidak memiliki riwayat penyakit jantung atau asma',
+                    'Apabila destinasi tidak memungkinkan untuk dikunjungi karena penutupan, cuaca yang tidak mendukung dan lain-lain peserta trip tidak berhak meminta kompensasi',
+                    'Peserta yang telah mendaftar dianggap mengerti dan sepakat dengan syarat dan ketentuan diatas.',
+                    'Peralatan yang perlu dibawa: alat snorkeling bagi yang punya, kamera underwater (opsional), handuk, obat-obatan pribadi, sandal, outfit pantai, sunblock, kacamata hitam, kamera.'
+                ],
+                images: [
+                    'https://lh3.googleusercontent.com/aida-public/AB6AXuCwNUotJBB-PBiBEhK4CaXIrxdhZnCoXvhXQIXl5_n1whNLmnQnq-4VXpGjOxTO99zb3WvRsTeVCSmhzjg80qijgwB6URnr6Z5HHSRfOhTXcxTwvLTKoaEzYF1qPjHKLYFkKxQB7FvBHOt0Z3vDfbsyRjqiRWszVyLTFI4t1r2ni23lFFsObYxacYNqRPdW6WX6x2HorirhEq7cigRT3MJcsMbnLjfI4HHcoawvaslaRB6Ej2Scci9AC3YgoxWCM7_9E_7QRm8ahw',
+                    'https://lh3.googleusercontent.com/aida-public/AB6AXuBEK65ZL3HXU2kc9ug3F2faXJ82U6VRcNd69uXB34nuhBc0XbDkfidMYlgLQwX7T-JqSyCSw9h7-oAJ4G5crk1aHs5AfF7Y6xs0l4lyMQkP5pYRKDEaYea04nj1Mr9TygnuFs9nCE-tjX6RlUVscfHqLRTfit9pAuJb-QNKBCpzYSfXGy9KFgFS0K8IlZb7LmisHO82BPejB98_gjzkMiPkgPH3mVN3THTIHpcVuZ0Igl_G8pI8VYAncGPoEZaAFkqQVE_I6RTvgQ',
+                    'https://lh3.googleusercontent.com/aida-public/AB6AXuDRZZytQ1gXLOLDtSf3ucVnL2ouXtVn2jpkiPPzHIECvqc8lncHP0MS3Pi6Xy3OLeDTz1Zrl0BZCEa8r2-gJEEfiBV7MOy6uMo3Ja9w0NicOXeac68cNWIDJHLPS2xJzpUUA7PwQ_eEPAgrVDD4RzWHdYCoIqscxeNbUrOjPtNXiuC39P1jgAjUCKRUO48KdsgSKvHd5ViMFZEFINGvLPj_7xVvfBMVKa7kQDJMiHusd-PPrftLxQDpT46r0AOI9QaX1A9h0vMZHQ',
+                    'https://lh3.googleusercontent.com/aida-public/AB6AXuC-mLtDhnm-dmKjt1_O49r-UKjDMXQh8ZXhr3bhpwFwS2saIWjZ-osV5ZHrDGJvOlZZAstIqW-EuYelEfrneKQbRKUqeBp5yVPg88p_7Lnz82JU7MyY2Ylw5HW_NlX38SFZKIngtvIv8TvSusZSvbgYmHzBBHQrWm7tmmaaLzUTKXtMqFXcBEf6ThS8Z3GAYMNwKflFIBjezuT7syUhUS4kfPRwMYHrKAcoD8FKa9q58YSVY6FxaN5R57XpABABjP4NcwtjJPN9aA',
+                    'https://lh3.googleusercontent.com/aida-public/AB6AXuAQI1N02wmGlc0-BW_5bAF4xqh9SKcecafmlOQfD5sYDT0cyzcdh0ZGLMyXJkaT4lz9nSA1OzvILAD3gSGmRSulHGjyJG620jKdv99hd87ehNkrbFSN0jqS0zGDHxN_reRhxK01401ObgQRQlTnxr8A3No7g_Dbi4rwN_qcU4pcpO-toLYnnWrB1joXQXQlyoYY0JVL9U1JpbtzqQGEX6ikWtgD7mCZxOKfQSLA1DQqelHakHuOb7HrqPwFInd0x1Ts_vcdigsSyA'
+                ]
+            },
+            'djawatan-baluran-private': {
+                type: 'private',
+                title: 'PRIVATE TRIP DJAWATAN BALURAN',
+                shortName: 'Private Djawatan Baluran',
+                location: 'Meeting Point: Area Banyuwangi Kota',
+                duration: '1 Hari',
+                minPax: 'Harga per orang mengikuti tabel 1–10 peserta (bukan harga flat per pax)',
+                chips: [
+                    { icon: 'schedule', label: '1 Hari', color: 'text-primary' },
+                    { icon: 'person', label: 'Private Trip', color: 'text-emerald-500' },
+                    { icon: 'forest', label: 'Djawatan & TN. Baluran', color: 'text-secondary' }
+                ],
+                pricingTable: {
+                    1: 1700000,
+                    2: 900000,
+                    3: 650000,
+                    4: 500000,
+                    5: 420000,
+                    6: 350000,
+                    7: 435000,
+                    8: 400000,
+                    9: 360000,
+                    10: 330000
+                },
+                description: `<p class="mb-4">PRIVATE TRIP DJAWATAN BALURAN adalah paket private yang menggabungkan keindahan hutan Djawatan dan safari TN. Baluran. Trip dimulai dari area Banyuwangi Kota, menuju Djawatan untuk sesi foto, lalu dilanjutkan ke Baluran (Spot Kepala Banteng, Pantai Bama, dan Savana Bekol).</p><p class="mb-4">Paket ini sudah termasuk Jeep Trooper, tiket & retribusi destinasi, dokumentasi fotografer, snack, serta P3K standar. Harga ditentukan berdasarkan jumlah peserta (1–10 orang) sesuai tabel, tanpa rumus matematika.</p>`,
+                destinations: [
+                    'Djawatan Forest',
+                    'TN. Baluran - Spot Kepala Banteng',
+                    'TN. Baluran - Pantai Bama',
+                    'TN. Baluran - Savana Bekol'
+                ],
+                itinerary: [
+                    { time: '08:00 - 08:30 WIB', title: 'Penjemputan Peserta', desc: 'Penjemputan peserta di area Banyuwangi Kota.' },
+                    { time: '08:30 - 09:30 WIB', title: 'Perjalanan ke Djawatan', desc: 'Perjalanan menuju Djawatan.' },
+                    { time: '09:30 - 11:30 WIB', title: 'Explore Djawatan', desc: 'Eksplore Djawatan & photo session.' },
+                    { time: '11:30 - 13:00 WIB', title: 'Menuju Baluran & Makan Siang', desc: 'Lanjut menuju TN. Baluran dan makan siang di resto lokal searah Baluran.' },
+                    { time: '13:00 - 13:30 WIB', title: 'Tiba di Kawasan TN. Baluran', desc: 'Sampai di kawasan TN. Baluran.' },
+                    { time: '13:30 - 17:00 WIB', title: 'Explore TN. Baluran', desc: 'Eksplore Savana Bekol, Pohon Raisa & Spot Kepala Banteng.' },
+                    { time: '17:00 - 18:00 WIB', title: 'Kembali ke Meeting Point', desc: 'Kembali & sampai ke Meeting Point Banyuwangi Kota, trip selesai.' }
+                ],
+                include: [
+                    'Jeep Trooper',
+                    'Dokumentasi Trip Fotografer (Free Edit File)',
+                    'Tiket & Retribusi Destinasi',
+                    'Guide',
+                    'Air Mineral',
+                    'P3K Standart',
+                    'Snack'
+                ],
+                exclude: [
+                    'Pengeluaran Pribadi',
+                    'Tips Guide/Pemandu',
+                    'Asuransi Perjalanan'
+                ],
+                wna: 'Charge tiket tambahan WNA: Weekday Rp 250.000/Orang, Weekend Rp 250.000/Orang (bisa bayar di tempat)',
+                dp: 'Rp 150.000/orang',
+                terms: [
+                    'Membayar DP maksimal 2 minggu sebelum trip selagi kuota masih tersedia',
+                    'Harga berlaku untuk WNI',
+                    'Harga tidak berlaku untuk periode High season, Peak Season, Lebaran dan Tahun Baru (surcharge 20%)',
+                    'Biaya DP Rp 150.000/orang sebagai tanda jadi',
+                    'Pelunasan dilakukan di hari pertama trip via transfer',
+                    'Biaya DP tidak bisa di refund bila terjadi pembatalan dari pihak tamu',
+                    'Batas usia minimal 1 tahun maksimal 60 tahun dalam kondisi sehat, tidak memiliki riwayat penyakit jantung atau asma',
+                    'Apabila destinasi tidak memungkinkan untuk dikunjungi karena penutupan, cuaca yang tidak mendukung dan lain-lain peserta trip tidak berhak meminta kompensasi',
+                    'Peserta yang telah mendaftar dianggap mengerti dan sepakat dengan syarat dan ketentuan di atas.'
+                ],
+                images: [
+                    'https://lh3.googleusercontent.com/aida-public/AB6AXuCwNUotJBB-PBiBEhK4CaXIrxdhZnCoXvhXQIXl5_n1whNLmnQnq-4VXpGjOxTO99zb3WvRsTeVCSmhzjg80qijgwB6URnr6Z5HHSRfOhTXcxTwvLTKoaEzYF1qPjHKLYFkKxQB7FvBHOt0Z3vDfbsyRjqiRWszVyLTFI4t1r2ni23lFFsObYxacYNqRPdW6WX6x2HorirhEq7cigRT3MJcsMbnLjfI4HHcoawvaslaRB6Ej2Scci9AC3YgoxWCM7_9E_7QRm8ahw',
+                    'https://lh3.googleusercontent.com/aida-public/AB6AXuBEK65ZL3HXU2kc9ug3F2faXJ82U6VRcNd69uXB34nuhBc0XbDkfidMYlgLQwX7T-JqSyCSw9h7-oAJ4G5crk1aHs5AfF7Y6xs0l4lyMQkP5pYRKDEaYea04nj1Mr9TygnuFs9nCE-tjX6RlUVscfHqLRTfit9pAuJb-QNKBCpzYSfXGy9KFgFS0K8IlZb7LmisHO82BPejB98_gjzkMiPkgPH3mVN3THTIHpcVuZ0Igl_G8pI8VYAncGPoEZaAFkqQVE_I6RTvgQ',
+                    'https://lh3.googleusercontent.com/aida-public/AB6AXuDRZZytQ1gXLOLDtSf3ucVnL2ouXtVn2jpkiPPzHIECvqc8lncHP0MS3Pi6Xy3OLeDTz1Zrl0BZCEa8r2-gJEEfiBV7MOy6uMo3Ja9w0NicOXeac68cNWIDJHLPS2xJzpUUA7PwQ_eEPAgrVDD4RzWHdYCoIqscxeNbUrOjPtNXiuC39P1jgAjUCKRUO48KdsgSKvHd5ViMFZEFINGvLPj_7xVvfBMVKa7kQDJMiHusd-PPrftLxQDpT46r0AOI9QaX1A9h0vMZHQ',
+                    'https://lh3.googleusercontent.com/aida-public/AB6AXuC-mLtDhnm-dmKjt1_O49r-UKjDMXQh8ZXhr3bhpwFwS2saIWjZ-osV5ZHrDGJvOlZZAstIqW-EuYelEfrneKQbRKUqeBp5yVPg88p_7Lnz82JU7MyY2Ylw5HW_NlX38SFZKIngtvIv8TvSusZSvbgYmHzBBHQrWm7tmmaaLzUTKXtMqFXcBEf6ThS8Z3GAYMNwKflFIBjezuT7syUhUS4kfPRwMYHrKAcoD8FKa9q58YSVY6FxaN5R57XpABABjP4NcwtjJPN9aA',
+                    'https://lh3.googleusercontent.com/aida-public/AB6AXuAQI1N02wmGlc0-BW_5bAF4xqh9SKcecafmlOQfD5sYDT0cyzcdh0ZGLMyXJkaT4lz9nSA1OzvILAD3gSGmRSulHGjyJG620jKdv99hd87ehNkrbFSN0jqS0zGDHxN_reRhxK01401ObgQRQlTnxr8A3No7g_Dbi4rwN_qcU4pcpO-toLYnnWrB1joXQXQlyoYY0JVL9U1JpbtzqQGEX6ikWtgD7mCZxOKfQSLA1DQqelHakHuOb7HrqPwFInd0x1Ts_vcdigsSyA'
+                ]
+            },
+            'kawah-ijen-private': {
+                type: 'private',
+                title: 'PRIVATE TRIP KAWAH IJEN',
+                shortName: 'Private Kawah Ijen',
+                location: 'Meeting Point: Area Banyuwangi Kota',
+                duration: '1 Hari',
+                minPax: 'Harga per orang mengikuti tabel 1–10 peserta (bukan harga flat per pax)',
+                chips: [
+                    { icon: 'schedule', label: '1 Hari', color: 'text-primary' },
+                    { icon: 'person', label: 'Private Trip', color: 'text-emerald-500' },
+                    { icon: 'landscape', label: 'Kawah Ijen Road Trip', color: 'text-secondary' }
+                ],
+                pricingTable: {
+                    1: 1450000,
+                    2: 780000,
+                    3: 565000,
+                    4: 450000,
+                    5: 435000,
+                    6: 380000,
+                    7: 370000,
+                    8: 350000,
+                    9: 320000,
+                    10: 300000
+                },
+                description: `<p class="mb-4">PRIVATE TRIP KAWAH IJEN adalah paket private ke Kawah Ijen dengan start dari area Banyuwangi Kota. Trip dimulai malam hari menuju Pos Paltuding, dilanjutkan pendakian untuk menikmati Blue Fire, Hutan Mati, dan Sunrise Point.</p><p class="mb-4">Paket ini sudah termasuk transportasi tour AC, tiket & retribusi, masker gas, head lamp, hot drink, dokumentasi fotografer (free edit), serta asuransi yang tertera di tiket. Harga mengikuti tabel 1–10 peserta tanpa rumus matematika.</p>`,
+                destinations: [
+                    'Kawah Ijen - Blue Fire',
+                    'Kawah Ijen - Hutan Mati',
+                    'Kawah Ijen - Sunrise Point'
+                ],
+                itinerary: [
+                    { time: '23:30 - 01:15 WIB', title: 'Penjemputan & Perjalanan', desc: 'Penjemputan peserta di Meeting Point area Banyuwangi Kota dan sampai di Pos pendakian Paltuding.' },
+                    { time: '01:15 - 02:00 WIB', title: 'Pendakian ke Puncak', desc: 'Pendakian ke Puncak Kawah Ijen.' },
+                    { time: '02:00 - 07:00 WIB', title: 'Explore Kawah Ijen', desc: 'Eksplorasi Blue Fire, Sunrise Point, dan Hutan Mati.' },
+                    { time: '07:00 - 08:30 WIB', title: 'Turun ke Pos Paltuding', desc: 'Turun kembali ke Pos Paltuding dan istirahat.' },
+                    { time: '08:30 - 10:00 WIB', title: 'Kembali ke Banyuwangi Kota', desc: 'Perjalanan kembali ke Meeting Point Banyuwangi Kota, trip selesai.' }
+                ],
+                include: [
+                    'Transportasi Tour AC',
+                    'Dokumentasi Trip Fotografer (Free Edit File)',
+                    'Tiket & Retribusi',
+                    'Guide',
+                    'Masker Gas',
+                    'Head Lamp',
+                    'Air Mineral + Hot Drink',
+                    'Asuransi yang tertera di tiket'
+                ],
+                exclude: [
+                    'Pengeluaran Pribadi',
+                    'Tips Guide/Pemandu (sukarela)',
+                    'Tracking Pole & Surat Sehat',
+                    'Asuransi Perjalanan'
+                ],
+                wna: 'Charge tiket tambahan WNA: Weekday Rp 250.000/Orang, Weekend Rp 300.000/Orang (bisa bayar di tempat)',
+                dp: 'Rp 100.000/orang',
+                terms: [
+                    'Membayar DP maksimal 2 minggu sebelum trip selagi kuota masih tersedia',
+                    'Harga berlaku untuk WNI',
+                    'Harga tidak berlaku untuk periode High season, Peak Season, Lebaran dan Tahun Baru (surcharge 20%)',
+                    'Biaya DP Rp 100.000/orang sebagai tanda jadi',
+                    'Pelunasan dilakukan di hari pertama trip via transfer',
+                    'Biaya DP tidak bisa di refund bila terjadi pembatalan dari pihak tamu',
+                    'Batas usia minimal 1 tahun maksimal 60 tahun dalam kondisi sehat, tidak memiliki riwayat penyakit jantung atau asma',
+                    'Apabila destinasi tidak memungkinkan untuk dikunjungi karena penutupan, cuaca yang tidak mendukung dan lain-lain peserta trip tidak berhak meminta kompensasi',
+                    'Peserta yang telah mendaftar dianggap mengerti dan sepakat dengan syarat dan ketentuan di atas.'
+                ],
+                images: [
+                    'https://lh3.googleusercontent.com/aida-public/AB6AXuAJqTh0VDyhP4HJGVgXBUONOh9IQFPF627vwgEaSPLRV9Nxd6uZqj9Nku8wrCvGLps-aSgqEy5QUJkS_HL5C066mxqPTxN_-NhNQ_qjBrA7fe3YFBDMVd5o38RTvwAKRi4uq_xsymg_MOWAmAJQemgmtnip5K6dkRh8CmpedNHIa2gvLYwu-3P5zPhoKk83bh-5BhZ-zq0BUFnmokei9eRUSDakQPZZ_WRlh-D3kn752PHmUIAA5RzNtbJPqckSX6VqEWP1UUmnYg',
+                    'https://lh3.googleusercontent.com/aida-public/AB6AXuDRZZytQ1gXLOLDtSf3ucVnL2ouXtVn2jpkiPPzHIECvqc8lncHP0MS3Pi6Xy3OLeDTz1Zrl0BZCEa8r2-gJEEfiBV7MOy6uMo3Ja9w0NicOXeac68cNWIDJHLPS2xJzpUUA7PwQ_eEPAgrVDD4RzWHdYCoIqscxeNbUrOjPtNXiuC39P1jgAjUCKRUO48KdsgSKvHd5ViMFZEFINGvLPj_7xVvfBMVKa7kQDJMiHusd-PPrftLxQDpT46r0AOI9QaX1A9h0vMZHQ',
+                    'https://lh3.googleusercontent.com/aida-public/AB6AXuAQI1N02wmGlc0-BW_5bAF4xqh9SKcecafmlOQfD5sYDT0cyzcdh0ZGLMyXJkaT4lz9nSA1OzvILAD3gSGmRSulHGjyJG620jKdv99hd87ehNkrbFSN0jqS0zGDHxN_reRhxK01401ObgQRQlTnxr8A3No7g_Dbi4rwN_qcU4pcpO-toLYnnWrB1joXQXQlyoYY0JVL9U1JpbtzqQGEX6ikWtgD7mCZxOKfQSLA1DQqelHakHuOb7HrqPwFInd0x1Ts_vcdigsSyA',
+                    'https://lh3.googleusercontent.com/aida-public/AB6AXuC-mLtDhnm-dmKjt1_O49r-UKjDMXQh8ZXhr3bhpwFwS2saIWjZ-osV5ZHrDGJvOlZZAstIqW-EuYelEfrneKQbRKUqeBp5yVPg88p_7Lnz82JU7MyY2Ylw5HW_NlX38SFZKIngtvIv8TvSusZSvbgYmHzBBHQrWm7tmmaaLzUTKXtMqFXcBEf6ThS8Z3GAYMNwKflFIBjezuT7syUhUS4kfPRwMYHrKAcoD8FKa9q58YSVY6FxaN5R57XpABABjP4NcwtjJPN9aA',
+                    'https://lh3.googleusercontent.com/aida-public/AB6AXuAQI1N02wmGlc0-BW_5bAF4xqh9SKcecafmlOQfD5sYDT0cyzcdh0ZGLMyXJkaT4lz9nSA1OzvILAD3gSGmRSulHGjyJG620jKdv99hd87ehNkrbFSN0jqS0zGDHxN_reRhxK01401ObgQRQlTnxr8A3No7g_Dbi4rwN_qcU4pcpO-toLYnnWrB1joXQXQlyoYY0JVL9U1JpbtzqQGEX6ikWtgD7mCZxOKfQSLA1DQqelHakHuOb7HrqPwFInd0x1Ts_vcdigsSyA'
+                ]
+            },
+            'kawah-ijen-baluran-private': {
+                type: 'private',
+                title: 'PRIVATE TRIP KAWAH IJEN BALURAN',
+                shortName: 'Private Kawah Ijen Baluran',
+                location: 'Meeting Point: Area Banyuwangi Kota',
+                duration: '1 Hari',
+                minPax: 'Harga per orang mengikuti tabel 1–10 peserta (bukan harga flat per pax)',
+                chips: [
+                    { icon: 'schedule', label: '1 Hari', color: 'text-primary' },
+                    { icon: 'person', label: 'Private Trip', color: 'text-emerald-500' },
+                    { icon: 'landscape', label: 'Kombo Trip', color: 'text-secondary' }
+                ],
+                pricingTable: {
+                    1: 1450000,
+                    2: 780000,
+                    3: 565000,
+                    4: 450000,
+                    5: 435000,
+                    6: 380000,
+                    7: 370000,
+                    8: 350000,
+                    9: 320000,
+                    10: 300000
+                },
+                description: `<p class="mb-4">PRIVATE TRIP KAWAH IJEN BALURAN adalah paket private kombo yang menggabungkan dua destinasi ikonik Banyuwangi dalam satu hari penuh petualangan. Mulai dari pendakian Kawah Ijen untuk menyaksikan Blue Fire, Hutan Mati, dan Sunrise Point, dilanjutkan ke Taman Nasional Baluran.</p><p class="mb-4">Di TN. Baluran, eksplorasi Savana Bekol, Pohon Raisa, dan spot Kepala Banteng. Nikmati sunset spektakuler di savana sebelum kembali ke kota. Paket lengkap dengan transportasi tour AC, dokumentasi fotografer, masker gas, head lamp, dan asuransi.</p>`,
+                destinations: [
+                    'Kawah Ijen - Sunrise Point',
+                    'Kawah Ijen - Blue Fire',
+                    'Kawah Ijen - Hutan Mati',
+                    'TN. Baluran - Savana Bekol',
+                    'TN. Baluran - Pohon Raisa',
+                    'TN. Baluran - Kepala Banteng'
+                ],
+                itinerary: [
+                    { time: '23:30 - 00:00 WIB', title: 'Penjemputan Peserta', desc: 'Penjemputan Peserta dari Banyuwangi Kota' },
+                    { time: '00:00 - 01:00 WIB', title: 'Perjalanan ke Paltuding', desc: 'Perjalanan ke Paltuding dan sampai di Pos Paltuding' },
+                    { time: '01:00 - 02:00 WIB', title: 'Tracking ke Puncak', desc: 'Tracking ke Puncak Kawah Ijen' },
+                    { time: '02:00 - 07:00 WIB', title: 'Explore Kawah Ijen', desc: 'Explore Kawah Ijen dengan Spot (Blue Fire, Hutan Mati, Sunrise Point)' },
+                    { time: '07:00 - 09:00 WIB', title: 'Turun & Menuju Baluran', desc: 'Turun ke Pos Paltuding dan Kembali Ke Banyuwangi Kota, Menuju Baluran' },
+                    { time: '09:00 - 13:00 WIB', title: 'Menuju TN. Baluran', desc: 'Menuju TN. Baluran & sampai di Kawasan TN. Baluran' },
+                    { time: '13:00 - 17:00 WIB', title: 'Explore TN. Baluran', desc: 'Explore TN. Baluran (Pantai bama, Mangrove Trail, Sunset di savana Baluran)' },
+                    { time: '17:00 - 18:30 WIB', title: 'Kembali ke Meeting Point', desc: 'Kembali Ke Meeting Point Banyuwangi Kota & Trip Pun selesai' }
+                ],
+                include: [
+                    'Transportasi Tour AC',
+                    'Dokumentasi Trip Fotografer (Free Edit File)',
+                    'Tiket & Retribusi destinasi',
+                    'Guide',
+                    'Masker Gas',
+                    'Head Lamp',
+                    'Air Mineral + Hot dring di Pos Paltuding',
+                    'P3K Standart',
+                    'Snack'
+                ],
+                exclude: [
+                    'Pengeluaran Pribadi',
+                    'Tips Guide/Pemandu',
+                    'Surat Sehat',
+                    'Tracking Pole',
+                    'Asuransi Perjalanan'
+                ],
+                wna: 'Charge tiket tambahan WNA: Weekday Rp 500.000/Orang, Weekend Rp 550.000/Orang (bisa bayar di tempat)',
+                dp: 'Rp 100.000/orang',
+                terms: [
+                    'Membayar DP maksimal 2 minggu sebelum trip selagi kuota masih tersedia',
+                    'Harga berlaku untuk WNI',
+                    'Harga tidak berlaku untuk periode High season, Peak Season, Lebaran dan Tahun Baru (surcharge 20%)',
+                    'Biaya DP Rp 100.000/orang sebagai tanda jadi',
+                    'Pelunasan dilakukan di hari pertama trip via transfer',
+                    'Biaya DP tidak bisa di refund bila terjadi pembatalan dari pihak tamu',
+                    'Batas usia minimal 1 tahun maksimal 60 tahun dalam kondisi sehat, tidak memiliki riwayat penyakit jantung atau asma',
+                    'Apabila destinasi tidak memungkinkan untuk dikunjungi karena penutupan, cuaca yang tidak mendukung dan lain-lain peserta trip tidak berhak meminta kompensasi',
+                    'Peserta yang telah mendaftar dianggap mengerti dan sepakat dengan syarat dan ketentuan di atas.'
+                ],
+                images: [
+                    'https://lh3.googleusercontent.com/aida-public/AB6AXuAJqTh0VDyhP4HJGVgXBUONOh9IQFPF627vwgEaSPLRV9Nxd6uZqj9Nku8wrCvGLps-aSgqEy5QUJkS_HL5C066mxqPTxN_-NhNQ_qjBrA7fe3YFBDMVd5o38RTvwAKRi4uq_xsymg_MOWAmAJQemgmtnip5K6dkRh8CmpedNHIa2gvLYwu-3P5zPhoKk83bh-5BhZ-zq0BUFnmokei9eRUSDakQPZZ_WRlh-D3kn752PHmUIAA5RzNtbJPqckSX6VqEWP1UUmnYg',
+                    'https://lh3.googleusercontent.com/aida-public/AB6AXuDRZZytQ1gXLOLDtSf3ucVnL2ouXtVn2jpkiPPzHIECvqc8lncHP0MS3Pi6Xy3OLeDTz1Zrl0BZCEa8r2-gJEEfiBV7MOy6uMo3Ja9w0NicOXeac68cNWIDJHLPS2xJzpUUA7PwQ_eEPAgrVDD4RzWHdYCoIqscxeNbUrOjPtNXiuC39P1jgAjUCKRUO48KdsgSKvHd5ViMFZEFINGvLPj_7xVvfBMVKa7kQDJMiHusd-PPrftLxQDpT46r0AOI9QaX1A9h0vMZHQ',
+                    'https://lh3.googleusercontent.com/aida-public/AB6AXuBEK65ZL3HXU2kc9ug3F2faXJ82U6VRcNd69uXB34nuhBc0XbDkfidMYlgLQwX7T-JqSyCSw9h7-oAJ4G5crk1aHs5AfF7Y6xs0l4lyMQkP5pYRKDEaYea04nj1Mr9TygnuFs9nCE-tjX6RlUVscfHqLRTfit9pAuJb-QNKBCpzYSfXGy9KFgFS0K8IlZb7LmisHO82BPejB98_gjzkMiPkgPH3mVN3THTIHpcVuZ0Igl_G8pI8VYAncGPoEZaAFkqQVE_I6RTvgQ',
+                    'https://lh3.googleusercontent.com/aida-public/AB6AXuC-mLtDhnm-dmKjt1_O49r-UKjDMXQh8ZXhr3bhpwFwS2saIWjZ-osV5ZHrDGJvOlZZAstIqW-EuYelEfrneKQbRKUqeBp5yVPg88p_7Lnz82JU7MyY2Ylw5HW_NlX38SFZKIngtvIv8TvSusZSvbgYmHzBBHQrWm7tmmaaLzUTKXtMqFXcBEf6ThS8Z3GAYMNwKflFIBjezuT7syUhUS4kfPRwMYHrKAcoD8FKa9q58YSVY6FxaN5R57XpABABjP4NcwtjJPN9aA',
+                    'https://lh3.googleusercontent.com/aida-public/AB6AXuAQI1N02wmGlc0-BW_5bAF4xqh9SKcecafmlOQfD5sYDT0cyzcdh0ZGLMyXJkaT4lz9nSA1OzvILAD3gSGmRSulHGjyJG620jKdv99hd87ehNkrbFSN0jqS0zGDHxN_reRhxK01401ObgQRQlTnxr8A3No7g_Dbi4rwN_qcU4pcpO-toLYnnWrB1joXQXQlyoYY0JVL9U1JpbtzqQGEX6ikWtgD7mCZxOKfQSLA1DQqelHakHuOb7HrqPwFInd0x1Ts_vcdigsSyA'
+                ]
+            },
+            'kawah-wurung-baluran-private': {
+                type: 'private',
+                title: 'PRIVATE TRIP KAWAH WURUNG & BALURAN',
+                shortName: 'Private Kawah Wurung Baluran',
+                location: 'Meeting Point: Area Banyuwangi Kota',
+                duration: '1 Hari',
+                minPax: 'Harga per orang mengikuti tabel 1–10 peserta (bukan harga flat per pax)',
+                chips: [
+                    { icon: 'schedule', label: '1 Hari', color: 'text-primary' },
+                    { icon: 'person', label: 'Private Trip', color: 'text-emerald-500' },
+                    { icon: 'landscape', label: 'Kombo Trip', color: 'text-secondary' }
+                ],
+                pricingTable: {
+                    1: 2050000,
+                    2: 1050000,
+                    3: 750000,
+                    4: 600000,
+                    5: 475000,
+                    6: 400000,
+                    7: 525000,
+                    8: 450000,
+                    9: 425000,
+                    10: 400000
+                },
+                description: `<p class="mb-4">PRIVATE TRIP KAWAH WURUNG & BALURAN adalah paket private yang menggabungkan keindahan Kawah Wurung dengan savana sunrise dan eksplorasi TN. Baluran. Trip dimulai dini hari dari area Banyuwangi Kota menuju Kawah Wurung untuk menikmati savana sunrise, dilanjutkan ke TN. Baluran.</p><p class="mb-4">Di TN. Baluran, eksplorasi Spot Kepala Banteng, Pantai Bama, Savana Bekol, dan nikmati sunset spektakuler. Paket lengkap dengan Jeep Trooper, dokumentasi fotografer, tiket & retribusi, guide, snack, dan P3K standar.</p>`,
+                destinations: [
+                    'KAWAH WURUNG (savana Sunrise)',
+                    'BALURAN (Spot Kepala Banteng, Pantai Bama, Savana bekol, Sunset)'
+                ],
+                itinerary: [
+                    { time: '02:30 - 03:00 WIB', title: 'Penjemputan Peserta', desc: 'Penjemputan Peserta di area Banyuwangi Kota' },
+                    { time: '03:00 - 04:30 WIB', title: 'Perjalanan & Sampai di Kawah Wurung', desc: 'Perjalanan & Sampai di Kawah Wurung' },
+                    { time: '04:30 - 08:00 WIB', title: 'Eksplore Kawah Wurung', desc: 'Eksplore Kawah Wurung & Sesi Foto' },
+                    { time: '08:00 - 09:30 WIB', title: 'Kembali & Istirahat', desc: 'Kembali ke Meeting point Banyuwangi Kota dan Istirahat' },
+                    { time: '13:00 - 14:30 WIB', title: 'Perjalanan Menuju TN. Baluran', desc: 'Perjalanan Menuju TN. Baluran' },
+                    { time: '14:30 - 17:00 WIB', title: 'Eksplore TN. Baluran', desc: 'Ekspolre TN. Baluran (Savana Bekol, Pohon Raisa & Spot Kepala)' },
+                    { time: '17:00 - 18:30 WIB', title: 'Kembali ke Meeting Point', desc: 'Kembali & Sampai Ke Meeting Point Banyuwangi Kota, Trip Selesai' }
+                ],
+                include: [
+                    'Jeep Trooper',
+                    'Dokumentasi Trip Fotografer (Free Edit File)',
+                    'Tiket & Retribusi destinasi',
+                    'Guide',
+                    'Air Mineral',
+                    'P3K Standart',
+                    'Snack'
+                ],
+                exclude: [
+                    'Pengeluaran Pribadi',
+                    'Tips Guide/Pemandu',
+                    'Asuransi Perjalanan'
+                ],
+                wna: 'Charge tiket tambahan WNA: Weekday Rp 250.000/Orang, Weekend Rp 250.000/Orang (bisa bayar di tempat)',
+                dp: 'Rp 150.000/orang',
+                terms: [
+                    'Membayar DP maksimal 2 minggu sebelum trip selagi kuota masih tersedia',
+                    'Harga berlaku untuk WNI',
+                    'Harga tidak berlaku untuk periode High season, Peak Season, Lebaran dan Tahun Baru (surcharge 20%)',
+                    'Biaya DP Rp 150.000/orang sebagai tanda jadi',
+                    'Pelunasan dilakukan di hari pertama trip via transfer',
+                    'Biaya DP tidak bisa di refund bila terjadi pembatalan dari pihak tamu',
+                    'Batas usia minimal 1 tahun maksimal 60 tahun dalam kondisi sehat, tidak memiliki riwayat penyakit jantung atau asma',
+                    'Apabila destinasi tidak memungkinkan untuk dikunjungi karena penutupan, cuaca yang tidak mendukung dan lain-lain peserta trip tidak berhak meminta kompensasi',
+                    'Peserta yang telah mendaftar dianggap mengerti dan sepakat dengan syarat dan ketentuan di atas.'
+                ],
+                images: [
+                    'https://lh3.googleusercontent.com/aida-public/AB6AXuAJqTh0VDyhP4HJGVgXBUONOh9IQFPF627vwgEaSPLRV9Nxd6uZqj9Nku8wrCvGLps-aSgqEy5QUJkS_HL5C066mxqPTxN_-NhNQ_qjBrA7fe3YFBDMVd5o38RTvwAKRi4uq_xsymg_MOWAmAJQemgmtnip5K6dkRh8CmpedNHIa2gvLYwu-3P5zPhoKk83bh-5BhZ-zq0BUFnmokei9eRUSDakQPZZ_WRlh-D3kn752PHmUIAA5RzNtbJPqckSX6VqEWP1UUmnYg',
+                    'https://lh3.googleusercontent.com/aida-public/AB6AXuDRZZytQ1gXLOLDtSf3ucVnL2ouXtVn2jpkiPPzHIECvqc8lncHP0MS3Pi6Xy3OLeDTz1Zrl0BZCEa8r2-gJEEfiBV7MOy6uMo3Ja9w0NicOXeac68cNWIDJHLPS2xJzpUUA7PwQ_eEPAgrVDD4RzWHdYCoIqscxeNbUrOjPtNXiuC39P1jgAjUCKRUO48KdsgSKvHd5ViMFZEFINGvLPj_7xVvfBMVKa7kQDJMiHusd-PPrftLxQDpT46r0AOI9QaX1A9h0vMZHQ',
+                    'https://lh3.googleusercontent.com/aida-public/AB6AXuBEK65ZL3HXU2kc9ug3F2faXJ82U6VRcNd69uXB34nuhBc0XbDkfidMYlgLQwX7T-JqSyCSw9h7-oAJ4G5crk1aHs5AfF7Y6xs0l4lyMQkP5pYRKDEaYea04nj1Mr9TygnuFs9nCE-tjX6RlUVscfHqLRTfit9pAuJb-QNKBCpzYSfXGy9KFgFS0K8IlZb7LmisHO82BPejB98_gjzkMiPkgPH3mVN3THTIHpcVuZ0Igl_G8pI8VYAncGPoEZaAFkqQVE_I6RTvgQ',
+                    'https://lh3.googleusercontent.com/aida-public/AB6AXuC-mLtDhnm-dmKjt1_O49r-UKjDMXQh8ZXhr3bhpwFwS2saIWjZ-osV5ZHrDGJvOlZZAstIqW-EuYelEfrneKQbRKUqeBp5yVPg88p_7Lnz82JU7MyY2Ylw5HW_NlX38SFZKIngtvIv8TvSusZSvbgYmHzBBHQrWm7tmmaaLzUTKXtMqFXcBEf6ThS8Z3GAYMNwKflFIBjezuT7syUhUS4kfPRwMYHrKAcoD8FKa9q58YSVY6FxaN5R57XpABABjP4NcwtjJPN9aA',
+                    'https://lh3.googleusercontent.com/aida-public/AB6AXuAQI1N02wmGlc0-BW_5bAF4xqh9SKcecafmlOQfD5sYDT0cyzcdh0ZGLMyXJkaT4lz9nSA1OzvILAD3gSGmRSulHGjyJG620jKdv99hd87ehNkrbFSN0jqS0zGDHxN_reRhxK01401ObgQRQlTnxr8A3No7g_Dbi4rwN_qcU4pcpO-toLYnnWrB1joXQXQlyoYY0JVL9U1JpbtzqQGEX6ikWtgD7mCZxOKfQSLA1DQqelHakHuOb7HrqPwFInd0x1Ts_vcdigsSyA'
+                ]
+            },
+            'kawah-wurung-experience-private': {
+                type: 'private',
+                title: 'PRIVATE TRIP KAWAH WURUNG EXPERIENCE',
+                shortName: 'Private Kawah Wurung Experience',
+                location: 'Meeting Point: Area Banyuwangi Kota',
+                duration: 'Setengah Hari',
+                minPax: 'Harga per orang mengikuti tabel 1–10 peserta (bukan harga flat per pax)',
+                chips: [
+                    { icon: 'schedule', label: 'Setengah Hari', color: 'text-primary' },
+                    { icon: 'person', label: 'Private Trip', color: 'text-emerald-500' },
+                    { icon: 'landscape', label: 'Kawah Wurung', color: 'text-secondary' }
+                ],
+                pricingTable: {
+                    1: 1550000,
+                    2: 800000,
+                    3: 550000,
+                    4: 425000,
+                    5: 350000,
+                    6: 290000,
+                    7: 375000,
+                    8: 330000,
+                    9: 300000,
+                    10: 270000
+                },
+                description: `<p class="mb-4">PRIVATE TRIP KAWAH WURUNG EXPERIENCE adalah paket private ke Kawah Wurung dengan start dari area Banyuwangi Kota. Trip dimulai dini hari untuk menikmati sunrise point, spot panorama, dan padang savana yang memukau.</p><p class="mb-4">Paket ini sudah termasuk Jeep Trooper, dokumentasi fotografer (free edit), tiket & retribusi destinasi, guide, air mineral, snack, dan P3K standar. Harga mengikuti tabel 1–10 peserta tanpa rumus matematika.</p>`,
+                destinations: [
+                    'KAWAH WURUNG - Sunrise Point',
+                    'KAWAH WURUNG - Spot Panorama',
+                    'KAWAH WURUNG - Padang Savana'
+                ],
+                itinerary: [
+                    { time: '02:30 - 03:00 WIB', title: 'Penjemputan Peserta', desc: 'Penjemputan Peserta di area Banyuwangi Kota' },
+                    { time: '03:00 - 04:30 WIB', title: 'Perjalanan & Sampai di Kawah Wurung', desc: 'Perjalanan & Sampai di Kawah Wurung' },
+                    { time: '04:30 - 08:00 WIB', title: 'Eksplore Kawah Wurung', desc: 'Eksplore Kawah Wurung & Sesi Foto' },
+                    { time: '08:00 - 09:30 WIB', title: 'Kembali ke Meeting Point', desc: 'Kembali ke Meeting point Banyuwangi Kota dan trip selesai' }
+                ],
+                include: [
+                    'Jeep Trooper',
+                    'Dokumentasi Trip Fotografer (Free Edit File)',
+                    'Tiket & Retribusi destinasi',
+                    'Guide',
+                    'Air Mineral',
+                    'P3K Standart',
+                    'Snack'
+                ],
+                exclude: [
+                    'Pengeluaran Pribadi',
+                    'Tips Guide/Pemandu',
+                    'Asuransi Perjalanan'
+                ],
+                wna: '',
+                dp: 'Rp 150.000/orang',
+                terms: [
+                    'Membayar DP maksimal 2 minggu sebelum trip selagi kuota masih tersedia',
+                    'Harga berlaku untuk WNI',
+                    'Harga tidak berlaku untuk periode High season, Peak Season, Lebaran dan Tahun Baru (surcharge 20%)',
+                    'Biaya DP Rp 150.000/orang sebagai tanda jadi',
+                    'Pelunasan dilakukan di hari pertama trip via transfer',
+                    'Biaya DP tidak bisa di refund bila terjadi pembatalan dari pihak tamu',
+                    'Batas usia minimal 1 tahun maksimal 60 tahun dalam kondisi sehat, tidak memiliki riwayat penyakit jantung atau asma',
+                    'Apabila destinasi tidak memungkinkan untuk dikunjungi karena penutupan, cuaca yang tidak mendukung dan lain-lain peserta trip tidak berhak meminta kompensasi',
+                    'Peserta yang telah mendaftar dianggap mengerti dan sepakat dengan syarat dan ketentuan di atas.'
+                ],
+                images: [
+                    'https://lh3.googleusercontent.com/aida-public/AB6AXuAJqTh0VDyhP4HJGVgXBUONOh9IQFPF627vwgEaSPLRV9Nxd6uZqj9Nku8wrCvGLps-aSgqEy5QUJkS_HL5C066mxqPTxN_-NhNQ_qjBrA7fe3YFBDMVd5o38RTvwAKRi4uq_xsymg_MOWAmAJQemgmtnip5K6dkRh8CmpedNHIa2gvLYwu-3P5zPhoKk83bh-5BhZ-zq0BUFnmokei9eRUSDakQPZZ_WRlh-D3kn752PHmUIAA5RzNtbJPqckSX6VqEWP1UUmnYg',
+                    'https://lh3.googleusercontent.com/aida-public/AB6AXuDRZZytQ1gXLOLDtSf3ucVnL2ouXtVn2jpkiPPzHIECvqc8lncHP0MS3Pi6Xy3OLeDTz1Zrl0BZCEa8r2-gJEEfiBV7MOy6uMo3Ja9w0NicOXeac68cNWIDJHLPS2xJzpUUA7PwQ_eEPAgrVDD4RzWHdYCoIqscxeNbUrOjPtNXiuC39P1jgAjUCKRUO48KdsgSKvHd5ViMFZEFINGvLPj_7xVvfBMVKa7kQDJMiHusd-PPrftLxQDpT46r0AOI9QaX1A9h0vMZHQ',
+                    'https://lh3.googleusercontent.com/aida-public/AB6AXuBEK65ZL3HXU2kc9ug3F2faXJ82U6VRcNd69uXB34nuhBc0XbDkfidMYlgLQwX7T-JqSyCSw9h7-oAJ4G5crk1aHs5AfF7Y6xs0l4lyMQkP5pYRKDEaYea04nj1Mr9TygnuFs9nCE-tjX6RlUVscfHqLRTfit9pAuJb-QNKBCpzYSfXGy9KFgFS0K8IlZb7LmisHO82BPejB98_gjzkMiPkgPH3mVN3THTIHpcVuZ0Igl_G8pI8VYAncGPoEZaAFkqQVE_I6RTvgQ',
+                    'https://lh3.googleusercontent.com/aida-public/AB6AXuC-mLtDhnm-dmKjt1_O49r-UKjDMXQh8ZXhr3bhpwFwS2saIWjZ-osV5ZHrDGJvOlZZAstIqW-EuYelEfrneKQbRKUqeBp5yVPg88p_7Lnz82JU7MyY2Ylw5HW_NlX38SFZKIngtvIv8TvSusZSvbgYmHzBBHQrWm7tmmaaLzUTKXtMqFXcBEf6ThS8Z3GAYMNwKflFIBjezuT7syUhUS4kfPRwMYHrKAcoD8FKa9q58YSVY6FxaN5R57XpABABjP4NcwtjJPN9aA',
+                    'https://lh3.googleusercontent.com/aida-public/AB6AXuAQI1N02wmGlc0-BW_5bAF4xqh9SKcecafmlOQfD5sYDT0cyzcdh0ZGLMyXJkaT4lz9nSA1OzvILAD3gSGmRSulHGjyJG620jKdv99hd87ehNkrbFSN0jqS0zGDHxN_reRhxK01401ObgQRQlTnxr8A3No7g_Dbi4rwN_qcU4pcpO-toLYnnWrB1joXQXQlyoYY0JVL9U1JpbtzqQGEX6ikWtgD7mCZxOKfQSLA1DQqelHakHuOb7HrqPwFInd0x1Ts_vcdigsSyA'
+                ]
+            },
+            'pulau-menjangan-tabuhan-private': {
+                type: 'private',
+                title: 'PRIVATE TRIP PULAU MENJANGAN TABUHAN',
+                shortName: 'Private Pulau Menjangan Tabuhan',
+                location: 'Meeting Point: Pantai grand watu dodol (BWI)',
+                duration: '1 Hari',
+                minPax: 'Harga per orang mengikuti tabel 1–10 peserta (bukan harga flat per pax)',
+                chips: [
+                    { icon: 'schedule', label: '1 Hari', color: 'text-primary' },
+                    { icon: 'person', label: 'Private Trip', color: 'text-emerald-500' },
+                    { icon: 'beach_access', label: 'Snorkeling & Island', color: 'text-secondary' }
+                ],
+                pricingTable: {
+                    1: 1700000,
+                    2: 900000,
+                    3: 650000,
+                    4: 550000,
+                    5: 450000,
+                    6: 400000,
+                    7: 350000,
+                    8: 320000,
+                    9: 290000,
+                    10: 270000
+                },
+                description: `<p class="mb-4">PRIVATE TRIP PULAU MENJANGAN TABUHAN adalah paket private eksplorasi pulau-pulau terbaik di Taman Nasional Bali Barat. Trip dimulai dari Pantai Grand Watu Dodol (BWI) sebagai meeting point, lalu menuju Pulau Menjangan untuk snorkeling di spot Coral Garden dan Sandy Slope, serta mengunjungi Pura Ganesha.</p><p class="mb-4">Perjalanan dilanjutkan ke Pulau Tabuhan yang eksotis untuk menikmati pantai berpasir putih, makan siang, dan eksplorasi pulau. Paket lengkap dengan kapal wisata PP, tiket semua destinasi, alat snorkeling, life jacket, dokumentasi underwater, asuransi jiwa, sarapan pagi, dan makan siang (lunch box).</p>`,
+                destinations: [
+                    'Pantai grand watu dodol',
+                    'Pulau Menjangan - Spot Coral Garden (Snorkeling)',
+                    'Pulau Menjangan - Spot Sandy Slope (Snorkeling)',
+                    'Pulau Menjangan - Pura Ganesha',
+                    'Pulau Tabuhan'
+                ],
+                itinerary: [
+                    { time: '08:00 - 09:00 WIB', title: 'Berkumpul & Berangkat', desc: 'Berkumpul di Meeting Point Dan Berangkat Ke Pulau Menjangan' },
+                    { time: '09:00 - 09:40 WIB', title: 'Sampai di Pulau Menjangan', desc: 'Sampai di Pulau Menjangan agenda bebas' },
+                    { time: '09:40 - 12:30 WIB', title: 'Snorkeling di Spot 1 dan Spot 2', desc: 'Snorkeling di Spot 1 dan Spot 2 (Spot Kondisional)' },
+                    { time: '12:30 - 13:00 WIB', title: 'Menuju Ke Pulau Tabuhan', desc: 'Menuju Ke Pulau Tabuhan & sampai di Pulau Tabuhan Agenda Bebas' },
+                    { time: '13:00 - 14:30 WIB', title: 'Makan Siang & Explore Pulau', desc: 'Selama di Pulau Kalian Bisa Menikmati Makan Siang & explore pulau' },
+                    { time: '14:30 - 15:00 WIB', title: 'Kembali Ke Meeting Point', desc: 'Kembali Ke meeting point & Bilas - bilas, Trip selesai' }
+                ],
+                include: [
+                    'Kapal Wisata PP (Boat)',
+                    'Tiket semua destinasi (Termasuk Meeting Point GWD)',
+                    'Izin aktivitas snorkeling',
+                    'Alat Snorkeling',
+                    'Life Jacket / Jaket Pelampung',
+                    'Dokumentasi Underwater',
+                    'Asuransi Jiwa',
+                    'Sarapan pagi',
+                    'Makan Siang (Lunch Box) & Air Mineral'
+                ],
+                exclude: [
+                    'Pengeluaran Pribadi',
+                    'Tips Guide/Pemandu',
+                    'Transportasi ke Meeting Point',
+                    'Fin / Kaki Katak'
+                ],
+                wna: 'Charge tiket tambahan WNA: Weekday Rp 250.000/Orang, Weekend Rp 300.000/Orang (bisa bayar di tempat). Paket Sunrise dan Sunset Charge 300K/Kapal',
+                dp: 'Rp 100.000/orang',
+                terms: [
+                    'Membayar DP maksimal 2 minggu sebelum trip selagi kuota masih tersedia',
+                    'Harga berlaku untuk WNI',
+                    'Harga tidak berlaku untuk periode High season, Peak Season, Lebaran dan Tahun Baru (surcharge 20%)',
+                    'Biaya DP Rp 100.000/orang sebagai tanda jadi',
+                    'Pelunasan dilakukan di hari pertama trip via transfer',
+                    'Biaya DP tidak bisa di refund bila terjadi pembatalan dari pihak tamu',
+                    'Batas usia minimal 1 tahun maksimal 60 tahun dalam kondisi sehat, tidak memiliki riwayat penyakit jantung atau asma',
+                    'Apabila destinasi tidak memungkinkan untuk dikunjungi karena penutupan, cuaca yang tidak mendukung dan lain-lain peserta trip tidak berhak meminta kompensasi',
+                    'Peserta yang telah mendaftar dianggap mengerti dan sepakat dengan syarat dan ketentuan di atas.',
+                    'Peralatan yang perlu dibawa: Alat snorkeling bagi yang punya (mengantisipasi peralatan yang kami sediakan tidak sesuai standard Anda), Kamera Underwater bagi yang punya, handuk, obat-obatan pribadi, sandal, outfit pantai, sunblock, kacamata hitam, kamera bagi yang punya.'
+                ],
+                images: [
+                    'https://lh3.googleusercontent.com/aida-public/AB6AXuCyw2nqX_GCuy6t1NjlsSR1INDbMsd93i36aNHlksSAOuHnOBXpnPn_EX_RfcgAzp6vUI45ie2u8Fy05sMuN5A15SoymshmQGEkumIB6_wpDGAC4bzGbB7yfavZgMUs31nawlfu2kohjOLE_xENS2SZ-y9zCAU2VtJcjYg-X0sqV7MB8Tp7mHprj_8YVsSF-2h3kdkQgk-JZD8yF-6HvFlE55CsC2wv-2ZRZNUAaI-pEywTLDzvUwp44_EXdFJHFAhnayBCdOoFXw',
+                    'https://lh3.googleusercontent.com/aida-public/AB6AXuAKVwLbC55L2P8aIqrcmHdUkV45SA4UGpY6QqyPpU0aOtQrzyxbW6tNYNN3gdGmCUoNpuzVg6u9zSkCUnxKa1QVuBn2RDwutFu2ftBZ0FY2ftjRxeJ0HaBp6VXOPVELO2YNtnGqTPRZ4G3qoOrzYYIVP4zxxZDToDbtpwXXQJPfmOjsFH1pvZb93t9h6x2f5aQeLPF06bZfE5KK9FHc41xsy9sDZnDcYdi6fCAQ9L322IeKRUjpnslBXGHieGk1UORzVTQJYBGkDw',
+                    'https://lh3.googleusercontent.com/aida-public/AB6AXuCkp6CdQIEqlIRkg-F0W2fSIXTHbbbGZSCIKj2krR8tSYRZT5asF8OTlXsJ5eKT9I_ZD45L2IVcRwX9fzmu6dCW62dFpRoxJLhB0AauYq5VT_dFws2Qqdco88Akh49hAFaSWa0LyUDuQhDHVJirppoor-i_fcJYX1WYDdau4yWpVwqlRRBK5qzuhnXpe8EEE-n6mxZM9rIFqTNgk9BeUU3JOwbZSFqvI18XxaWG98l8b9_6tfYl1yUQeSGy-HwqVhXP2Mqa1dOS5g',
+                    'https://lh3.googleusercontent.com/aida-public/AB6AXuDI_d3qVJ3cxZ80WqWyb3LfYCwbXihYLWNKFqmPYP51vkw7O9HeNdDf_I38eQ7iWKd68icbDNp03kTKrECxBVz6_bUwhrSfzGbUQ7C19OFdcjwQ4bHWUgeLpaMvnY5EAMck6APPpob2JUjokgj1S3QZDAEI1fkdR3kl672yKJ2R9FjkrUKHm5XFAODNyFjARLcU6tZk1HP0Of3bBXwQ9le6unU6eDayLudH2qbPSpdKvKSNC199Ge2AEwXOnwXINn7fidYNcOUdsQ',
+                    'https://lh3.googleusercontent.com/aida-public/AB6AXuDslyiUP6uUrsyDB4rcSdNaEniNdlz0RxP9fKiFkSXvGozJLAPyN2SsAZtcSPt584oXDaDC8DYUJDHRjpZQooRkfftUVeGp9skFV6IWRUCYA_Kygp6ZIXxmwOZI633GfmjLmcHS2hZyWB7Snjz4mONn-X5ZrIml457ae4j_NoOHcxQcqsIgbzwSAP3DGk5HZ7dW8oJJoqCkfXNnO32FDubTH1HQUqT3N1vS7eH4qjGmVHbVo6TNsPk4GgZHJghmMmd7aNz6hqsiyg'
+                ]
+            },
+            'djawatan-baluran': {
+                type: 'open',
+                title: 'Open Trip Djawatan & TN. Baluran',
+                shortName: 'Djawatan & TN. Baluran',
+                location: 'Meeting Point: Area Banyuwangi Kota',
+                price: 350000,
+                duration: '1 Hari',
+                minPax: 'Berangkat setiap hari | Jika < 5 orang harga menyesuaikan',
+                chips: [
+                    { icon: 'schedule', label: '1 Hari', color: 'text-primary' },
+                    { icon: 'forest', label: 'Nature', color: 'text-secondary' },
+                    { icon: 'photo_camera', label: 'Fotografi', color: 'text-blue-400' },
+                    { icon: 'groups', label: 'Open Trip', color: 'text-accent' }
+                ],
+                description: `<p class="mb-4">Jelajahi keindahan Hutan Djawatan yang magis dengan pohon-pohon raksasa yang menjulang tinggi, menciptakan suasana seperti di negeri dongeng. Sempurna untuk sesi foto yang memukau dengan fotografer profesional.</p><p>Perjalanan dilanjutkan ke Taman Nasional Baluran untuk mengeksplorasi Savana Bekol, Pohon Raisa yang ikonik, dan spot Kepala Banteng. Akhiri hari dengan menikmati sunset yang spektakuler.</p>`,
+                destinations: [
+                    'Hutan Djawatan - Photo Session',
+                    'TN. Baluran - Savana Bekol',
+                    'TN. Baluran - Pohon Raisa',
+                    'TN. Baluran - Kepala Banteng',
+                    'TN. Baluran - Sunset Point'
+                ],
+                itinerary: [
+                    { time: '08:00 - 08:30 WIB', title: 'Penjemputan Peserta', desc: 'Penjemputan peserta di area Banyuwangi Kota.' },
+                    { time: '08:30 - 09:30 WIB', title: 'Perjalanan ke Djawatan', desc: 'Perjalanan menuju Hutan Djawatan.' },
+                    { time: '09:30 - 11:30 WIB', title: 'Explore Djawatan', desc: 'Eksplore Hutan Djawatan & Photo Session dengan fotografer.' },
+                    { time: '11:30 - 13:00 WIB', title: 'Menuju Baluran & Makan Siang', desc: 'Lanjut menuju TN. Baluran dan makan siang di resto lokal searah Baluran.' },
+                    { time: '13:00 - 17:00 WIB', title: 'Explore TN. Baluran', desc: 'Eksplore TN. Baluran: Savana Bekol, Pohon Raisa & Spot Kepala Banteng.' },
+                    { time: '17:00 - 18:00 WIB', title: 'Kembali ke Meeting Point', desc: 'Kembali dan sampai ke Meeting Point Banyuwangi Kota. Trip selesai.' }
+                ],
+                include: [
+                    'Jeep Trooper',
+                    'Dokumentasi Trip Fotografer (Free Edit File)',
+                    'Tiket & Retribusi Destinasi',
+                    'Guide',
+                    'Air Mineral',
+                    'P3K Standart'
+                ],
+                exclude: [
+                    'Pengeluaran Pribadi',
+                    'Tips Guide / Pemandu',
+                    'Asuransi Perjalanan'
+                ],
+                wna: 'Weekday: Rp 250.000/Orang | Weekend: Rp 250.000/Orang (bisa bayar di tempat)',
+                dp: 'Rp 150.000/orang',
+                terms: [
+                    'Membayar DP maksimal 2 minggu sebelum trip selagi kuota masih tersedia',
+                    'Harga berlaku untuk WNI',
+                    'Harga tidak berlaku untuk periode High Season, Peak Season, Lebaran dan Tahun Baru (surcharge 20%)',
+                    'Biaya DP Rp 150.000/orang sebagai tanda jadi',
+                    'Pelunasan dilakukan di hari pertama trip via transfer',
+                    'Biaya DP tidak bisa di refund bila terjadi pembatalan dari pihak tamu',
+                    'Batas usia minimal 1 tahun, maksimal 60 tahun dalam kondisi sehat, tidak memiliki riwayat penyakit jantung atau asma',
+                    'Apabila destinasi tidak memungkinkan untuk dikunjungi karena penutupan, cuaca yang tidak mendukung, dll - peserta tidak berhak meminta kompensasi',
+                    'Peserta yang telah mendaftar dianggap mengerti dan sepakat dengan syarat dan ketentuan di atas'
+                ],
+                images: [
+                    'https://lh3.googleusercontent.com/aida-public/AB6AXuCwNUotJBB-PBiBEhK4CaXIrxdhZnCoXvhXQIXl5_n1whNLmnQnq-4VXpGjOxTO99zb3WvRsTeVCSmhzjg80qijgwB6URnr6Z5HHSRfOhTXcxTwvLTKoaEzYF1qPjHKLYFkKxQB7FvBHOt0Z3vDfbsyRjqiRWszVyLTFI4t1r2ni23lFFsObYxacYNqRPdW6WX6x2HorirhEq7cigRT3MJcsMbnLjfI4HHcoawvaslaRB6Ej2Scci9AC3YgoxWCM7_9E_7QRm8ahw',
+                    'https://lh3.googleusercontent.com/aida-public/AB6AXuBEK65ZL3HXU2kc9ug3F2faXJ82U6VRcNd69uXB34nuhBc0XbDkfidMYlgLQwX7T-JqSyCSw9h7-oAJ4G5crk1aHs5AfF7Y6xs0l4lyMQkP5pYRKDEaYea04nj1Mr9TygnuFs9nCE-tjX6RlUVscfHqLRTfit9pAuJb-QNKBCpzYSfXGy9KFgFS0K8IlZb7LmisHO82BPejB98_gjzkMiPkgPH3mVN3THTIHpcVuZ0Igl_G8pI8VYAncGPoEZaAFkqQVE_I6RTvgQ',
+                    'https://lh3.googleusercontent.com/aida-public/AB6AXuDRZZytQ1gXLOLDtSf3ucVnL2ouXtVn2jpkiPPzHIECvqc8lncHP0MS3Pi6Xy3OLeDTz1Zrl0BZCEa8r2-gJEEfiBV7MOy6uMo3Ja9w0NicOXeac68cNWIDJHLPS2xJzpUUA7PwQ_eEPAgrVDD4RzWHdYCoIqscxeNbUrOjPtNXiuC39P1jgAjUCKRUO48KdsgSKvHd5ViMFZEFINGvLPj_7xVvfBMVKa7kQDJMiHusd-PPrftLxQDpT46r0AOI9QaX1A9h0vMZHQ',
+                    'https://lh3.googleusercontent.com/aida-public/AB6AXuC-mLtDhnm-dmKjt1_O49r-UKjDMXQh8ZXhr3bhpwFwS2saIWjZ-osV5ZHrDGJvOlZZAstIqW-EuYelEfrneKQbRKUqeBp5yVPg88p_7Lnz82JU7MyY2Ylw5HW_NlX38SFZKIngtvIv8TvSusZSvbgYmHzBBHQrWm7tmmaaLzUTKXtMqFXcBEf6ThS8Z3GAYMNwKflFIBjezuT7syUhUS4kfPRwMYHrKAcoD8FKa9q58YSVY6FxaN5R57XpABABjP4NcwtjJPN9aA',
+                    'https://lh3.googleusercontent.com/aida-public/AB6AXuAQI1N02wmGlc0-BW_5bAF4xqh9SKcecafmlOQfD5sYDT0cyzcdh0ZGLMyXJkaT4lz9nSA1OzvILAD3gSGmRSulHGjyJG620jKdv99hd87ehNkrbFSN0jqS0zGDHxN_reRhxK01401ObgQRQlTnxr8A3No7g_Dbi4rwN_qcU4pcpO-toLYnnWrB1joXQXQlyoYY0JVL9U1JpbtzqQGEX6ikWtgD7mCZxOKfQSLA1DQqelHakHuOb7HrqPwFInd0x1Ts_vcdigsSyA'
+                ]
+            },
+            'ijen-baluran': {
+                type: 'open',
+                title: 'Open Trip Kawah Ijen & TN. Baluran',
+                shortName: 'Kawah Ijen & TN. Baluran',
+                location: 'Meeting Point: Area Banyuwangi Kota',
+                price: 400000,
+                duration: '1 Hari',
+                minPax: 'Berangkat setiap hari | Jika < 5 orang harga menyesuaikan',
+                chips: [
+                    { icon: 'schedule', label: '1 Hari', color: 'text-primary' },
+                    { icon: 'star', label: 'Best Value', color: 'text-accent' },
+                    { icon: 'landscape', label: 'Kombo Trip', color: 'text-secondary' },
+                    { icon: 'groups', label: 'Open Trip', color: 'text-blue-400' }
+                ],
+                description: `<p class="mb-4">Paket kombo terbaik! Gabungkan dua destinasi ikonik Banyuwangi dalam satu hari penuh petualangan. Mulai dari pendakian Kawah Ijen untuk menyaksikan Blue Fire dan Sunrise, dilanjutkan ke Taman Nasional Baluran.</p><p>Di TN. Baluran, eksplorasi Savana Bekol, Pohon Raisa, dan spot Kepala Banteng. Nikmati sunset spektakuler di savana sebelum kembali ke kota. Paket lengkap untuk pengalaman tak terlupakan.</p>`,
+                destinations: [
+                    'Kawah Ijen - Blue Fire',
+                    'Kawah Ijen - Sunrise Point',
+                    'Kawah Ijen - Hutan Mati',
+                    'TN. Baluran - Savana Bekol',
+                    'TN. Baluran - Pohon Raisa',
+                    'TN. Baluran - Kepala Banteng'
+                ],
+                itinerary: [
+                    { time: '23:30 - 00:00 WIB', title: 'Penjemputan Peserta', desc: 'Penjemputan peserta dari Banyuwangi Kota.' },
+                    { time: '00:00 - 01:00 WIB', title: 'Perjalanan ke Paltuding', desc: 'Perjalanan ke Pos Paltuding dan sampai di pos pendakian.' },
+                    { time: '01:00 - 02:00 WIB', title: 'Tracking ke Puncak', desc: 'Tracking ke Puncak Kawah Ijen.' },
+                    { time: '02:00 - 07:00 WIB', title: 'Explore Kawah Ijen', desc: 'Explore Kawah Ijen: Blue Fire, Hutan Mati, dan Sunrise Point.' },
+                    { time: '07:00 - 09:00 WIB', title: 'Turun & Menuju Baluran', desc: 'Turun ke Pos Paltuding, kembali ke Banyuwangi, lalu menuju Baluran.' },
+                    { time: '09:00 - 13:00 WIB', title: 'Perjalanan ke TN. Baluran', desc: 'Menuju TN. Baluran dan sampai di kawasan.' },
+                    { time: '13:00 - 17:00 WIB', title: 'Explore TN. Baluran', desc: 'Explore Pantai Bama, Mangrove Trail, dan sunset di Savana Baluran.' },
+                    { time: '17:00 - 18:30 WIB', title: 'Kembali ke Meeting Point', desc: 'Kembali ke Meeting Point Banyuwangi Kota. Trip selesai.' }
+                ],
+                include: [
+                    'Transportasi Tour AC',
+                    'Dokumentasi Trip Fotografer (Free Edit File)',
+                    'Tiket & Retribusi Destinasi',
+                    'Guide',
+                    'Masker Gas',
+                    'Head Lamp',
+                    'Air Mineral',
+                    'P3K Standart'
+                ],
+                exclude: [
+                    'Pengeluaran Pribadi',
+                    'Tips Guide / Pemandu',
+                    'Surat Sehat',
+                    'Tracking Pole',
+                    'Asuransi Perjalanan'
+                ],
+                wna: 'Weekday: Rp 500.000/Orang | Weekend: Rp 550.000/Orang (bisa bayar di tempat)',
+                dp: 'Rp 100.000/orang',
+                terms: [
+                    'Membayar DP maksimal 2 minggu sebelum trip selagi kuota masih tersedia',
+                    'Harga berlaku untuk WNI',
+                    'Harga tidak berlaku untuk periode High Season, Peak Season, Lebaran dan Tahun Baru (surcharge 20%)',
+                    'Biaya DP Rp 100.000/orang sebagai tanda jadi',
+                    'Pelunasan dilakukan di hari pertama trip via transfer',
+                    'Biaya DP tidak bisa di refund bila terjadi pembatalan dari pihak tamu',
+                    'Batas usia minimal 1 tahun, maksimal 60 tahun dalam kondisi sehat, tidak memiliki riwayat penyakit jantung atau asma',
+                    'Apabila destinasi tidak memungkinkan untuk dikunjungi karena penutupan, cuaca yang tidak mendukung, dll - peserta tidak berhak meminta kompensasi',
+                    'Peserta yang telah mendaftar dianggap mengerti dan sepakat dengan syarat dan ketentuan di atas'
+                ],
+                images: [
+                    'https://lh3.googleusercontent.com/aida-public/AB6AXuAJqTh0VDyhP4HJGVgXBUONOh9IQFPF627vwgEaSPLRV9Nxd6uZqj9Nku8wrCvGLps-aSgqEy5QUJkS_HL5C066mxqPTxN_-NhNQ_qjBrA7fe3YFBDMVd5o38RTvwAKRi4uq_xsymg_MOWAmAJQemgmtnip5K6dkRh8CmpedNHIa2gvLYwu-3P5zPhoKk83bh-5BhZ-zq0BUFnmokei9eRUSDakQPZZ_WRlh-D3kn752PHmUIAA5RzNtbJPqckSX6VqEWP1UUmnYg',
+                    'https://lh3.googleusercontent.com/aida-public/AB6AXuBEK65ZL3HXU2kc9ug3F2faXJ82U6VRcNd69uXB34nuhBc0XbDkfidMYlgLQwX7T-JqSyCSw9h7-oAJ4G5crk1aHs5AfF7Y6xs0l4lyMQkP5pYRKDEaYea04nj1Mr9TygnuFs9nCE-tjX6RlUVscfHqLRTfit9pAuJb-QNKBCpzYSfXGy9KFgFS0K8IlZb7LmisHO82BPejB98_gjzkMiPkgPH3mVN3THTIHpcVuZ0Igl_G8pI8VYAncGPoEZaAFkqQVE_I6RTvgQ',
+                    'https://lh3.googleusercontent.com/aida-public/AB6AXuDRZZytQ1gXLOLDtSf3ucVnL2ouXtVn2jpkiPPzHIECvqc8lncHP0MS3Pi6Xy3OLeDTz1Zrl0BZCEa8r2-gJEEfiBV7MOy6uMo3Ja9w0NicOXeac68cNWIDJHLPS2xJzpUUA7PwQ_eEPAgrVDD4RzWHdYCoIqscxeNbUrOjPtNXiuC39P1jgAjUCKRUO48KdsgSKvHd5ViMFZEFINGvLPj_7xVvfBMVKa7kQDJMiHusd-PPrftLxQDpT46r0AOI9QaX1A9h0vMZHQ',
+                    'https://lh3.googleusercontent.com/aida-public/AB6AXuC-mLtDhnm-dmKjt1_O49r-UKjDMXQh8ZXhr3bhpwFwS2saIWjZ-osV5ZHrDGJvOlZZAstIqW-EuYelEfrneKQbRKUqeBp5yVPg88p_7Lnz82JU7MyY2Ylw5HW_NlX38SFZKIngtvIv8TvSusZSvbgYmHzBBHQrWm7tmmaaLzUTKXtMqFXcBEf6ThS8Z3GAYMNwKflFIBjezuT7syUhUS4kfPRwMYHrKAcoD8FKa9q58YSVY6FxaN5R57XpABABjP4NcwtjJPN9aA',
+                    'https://lh3.googleusercontent.com/aida-public/AB6AXuAQI1N02wmGlc0-BW_5bAF4xqh9SKcecafmlOQfD5sYDT0cyzcdh0ZGLMyXJkaT4lz9nSA1OzvILAD3gSGmRSulHGjyJG620jKdv99hd87ehNkrbFSN0jqS0zGDHxN_reRhxK01401ObgQRQlTnxr8A3No7g_Dbi4rwN_qcU4pcpO-toLYnnWrB1joXQXQlyoYY0JVL9U1JpbtzqQGEX6ikWtgD7mCZxOKfQSLA1DQqelHakHuOb7HrqPwFInd0x1Ts_vcdigsSyA'
+                ]
+            }
+        };
+
+        // ==================== RENDER FUNCTIONS ====================
+        const WA_NUMBER = '6285604510094';
+        let currentPackage = null;
+
+        function formatRupiah(num) {
+            return 'Rp ' + num.toLocaleString('id-ID');
+        }
+
+        function renderImages(images) {
+            const container = document.getElementById('pkg-images');
+            container.innerHTML = `
+        <div class="md:col-span-2 md:row-span-2 relative group cursor-pointer overflow-hidden">
+            <div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105" style="background-image: url('${images[0]}');"></div>
+            <div class="absolute inset-0 bg-black/10 group-hover:bg-black/0 transition-colors"></div>
+        </div>
+        ${images.slice(1).map(img => `
+        <div class="hidden md:block relative group cursor-pointer overflow-hidden">
+            <div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105" style="background-image: url('${img}');"></div>
+        </div>`).join('')}
+    `;
+        }
+
+        function renderChips(chips) {
+            const container = document.getElementById('pkg-chips');
+            container.innerHTML = chips.map(c => `
+        <div class="flex items-center gap-2 bg-white border border-gray-100 px-4 py-2 rounded-xl shadow-sm">
+            <span class="material-symbols-outlined ${c.color}">${c.icon}</span>
+            <span class="text-sm font-semibold">${c.label}</span>
+        </div>
+    `).join('');
+        }
+
+        function renderDestinations(dests) {
+            const container = document.getElementById('pkg-destinations');
+            container.innerHTML = dests.map(d => `
+        <div class="flex gap-3">
+            <span class="material-symbols-outlined text-secondary mt-0.5">check_circle</span>
+            <span class="text-[#60718a]">${d}</span>
+        </div>
+    `).join('');
+        }
+
+        function renderItinerary(items) {
+            const container = document.getElementById('pkg-itinerary');
+            container.innerHTML = items.map((item, i) => `
+        <div class="relative">
+            <div class="absolute -left-8 top-1 w-6 h-6 rounded-full ${i === 0 ? 'bg-primary' : 'bg-gray-200'} border-4 border-white ${i === 0 ? 'shadow-sm' : ''} z-10"></div>
+            <h4 class="text-lg font-bold text-[#111418]">${item.title}</h4>
+            <p class="text-sm font-medium text-primary mb-1">${item.time}</p>
+            <p class="text-[#60718a]">${item.desc}</p>
+        </div>
+    `).join('');
+        }
+
+        function renderIncludeExclude(include, exclude) {
+            document.getElementById('pkg-include').innerHTML = include.map(item => `
+        <li class="flex items-start gap-3 text-[#60718a]">
+            <span class="material-symbols-outlined text-secondary text-[20px] mt-0.5">check</span>
+            <span>${item}</span>
+        </li>
+    `).join('');
+            document.getElementById('pkg-exclude').innerHTML = exclude.map(item => `
+        <li class="flex items-start gap-3 text-[#60718a]">
+            <span class="material-symbols-outlined text-red-400 text-[20px] mt-0.5">close</span>
+            <span>${item}</span>
+        </li>
+    `).join('');
+        }
+
+        function renderTerms(terms) {
+            document.getElementById('pkg-terms').innerHTML = terms.map(t => `
+        <li class="flex items-start gap-2">
+            <span class="text-primary mt-0.5">•</span>
+            <span>${t}</span>
+        </li>
+    `).join('');
+        }
+
+        function getDisplayPrice(pkg) {
+            if (!pkg) return 0;
+            if (pkg.type === 'open') {
+                return pkg.price || 0;
+            }
+            if (pkg.type === 'private' && pkg.pricingTable) {
+                const values = Object.values(pkg.pricingTable);
+                if (!values.length) return 0;
+                return Math.min(...values);
+            }
+            return 0;
+        }
+
+        function calculateTotal(pax) {
+            if (!currentPackage || !pax) {
+                return { total: 0, pricePerPax: 0, paxUsed: pax || 0 };
+            }
+
+            if (currentPackage.type === 'open') {
+                const pricePerPax = currentPackage.price || 0;
+                return { total: pax * pricePerPax, pricePerPax, paxUsed: pax };
+            }
+
+            if (currentPackage.type === 'private') {
+                const table = currentPackage.pricingTable || {};
+                let paxUsed = pax;
+                if (pax > 10) {
+                    paxUsed = 10;
+                    const paxInput = document.getElementById('booking-pax');
+                    if (paxInput) paxInput.value = '10';
+                }
+                const pricePerPax = table[paxUsed] || 0;
+                return { total: paxUsed * pricePerPax, pricePerPax, paxUsed };
+            }
+
+            return { total: 0, pricePerPax: 0, paxUsed: pax };
+        }
+
+        function loadPackage(pkgId) {
+            const pkg = PACKAGES[pkgId];
+            if (!pkg) {
+                window.location.href = 'package.html';
+                return;
+            }
+
+            currentPackage = pkg;
+
+            // Page title & breadcrumb
+            document.getElementById('page-title').textContent = pkg.title + ' - GO TRIP MENJANGAN';
+            document.getElementById('breadcrumb-name').textContent = pkg.shortName;
+            document.getElementById('pkg-title').textContent = pkg.title;
+            document.getElementById('pkg-location').textContent = pkg.location;
+
+            // Price
+            const displayPrice = getDisplayPrice(pkg);
+            document.getElementById('pkg-price-display').textContent = formatRupiah(displayPrice);
+            const minPaxEl = document.getElementById('pkg-min-pax');
+            minPaxEl.querySelector('span:last-child').textContent = pkg.minPax;
+
+            // Booking form
+            document.getElementById('booking-package').value = pkg.title;
+
+            // Sections
+            renderImages(pkg.images);
+            renderChips(pkg.chips);
+            document.getElementById('pkg-description').innerHTML = pkg.description;
+            renderDestinations(pkg.destinations);
+            renderItinerary(pkg.itinerary);
+            renderIncludeExclude(pkg.include, pkg.exclude);
+
+            // WNA
+            document.getElementById('pkg-wna-info').innerHTML = `
+        <p><strong>Charge Tiket Tambahan WNA:</strong> ${pkg.wna}</p>
+        <p><strong>DP (Tanda Jadi):</strong> ${pkg.dp}</p>
+    `;
+
+            renderTerms(pkg.terms);
+            updateTotal();
+        }
+
+        function updateTotal() {
+            const pax = parseInt(document.getElementById('booking-pax').value) || 0;
+            const { total } = calculateTotal(pax);
+            document.getElementById('booking-total').textContent = formatRupiah(total);
+        }
+
+        function formatDate(dateStr) {
+            if (!dateStr) return '-';
+            const options = { day: 'numeric', month: 'long', year: 'numeric' };
+            return new Date(dateStr).toLocaleDateString('id-ID', options);
+        }
+
+        function handleBookingSubmit(e) {
+            e.preventDefault();
+            const name = document.getElementById('booking-name').value.trim();
+            const contact = document.getElementById('booking-contact').value.trim();
+            const packageName = document.getElementById('booking-package').value.trim();
+            const date = document.getElementById('booking-date').value;
+            const pax = parseInt(document.getElementById('booking-pax').value) || 0;
+            const notes = document.getElementById('booking-notes').value.trim();
+            const { total, pricePerPax, paxUsed } = calculateTotal(pax);
+
+            let msg = `Halo GO TRIP MENJANGAN! Saya tertarik untuk memesan trip berikut:\n\n`;
+            msg += `- Paket: ${packageName}\n`;
+            msg += `- Nama Pemesan: ${name}\n`;
+            msg += `- Kontak: ${contact}\n`;
+            msg += `- Tanggal: ${formatDate(date)}\n`;
+            msg += `- Jumlah Peserta: ${paxUsed} Orang\n`;
+            if (pricePerPax) {
+                msg += `- Harga per Orang: ${formatRupiah(pricePerPax)}\n`;
+            }
+            msg += `- Total Estimasi: ${formatRupiah(total)}\n`;
+            if (notes) msg += `- Catatan: ${notes}\n`;
+            msg += `\nMohon informasi ketersediaan slot dan cara pembayarannya. Terima kasih!`;
+
+            window.open(`https://wa.me/${WA_NUMBER}?text=${encodeURIComponent(msg)}`, '_blank');
+        }
+
+        // ==================== LANGUAGE ====================
+        const translations = {
+            id: { 'nav.home': 'Beranda', 'nav.packages': 'Paket', 'nav.gallery': 'Galeri', 'nav.about': 'Tentang', 'nav.contact': 'Kontak', 'footer.navigation': 'Navigasi', 'footer.contactInfo': 'Informasi Kontak' },
+            en: { 'nav.home': 'Home', 'nav.packages': 'Packages', 'nav.gallery': 'Gallery', 'nav.about': 'About', 'nav.contact': 'Contact', 'footer.navigation': 'Navigation', 'footer.contactInfo': 'Contact Info' }
+        };
+        let currentLang = 'id';
+        function updateLanguage(lang) {
+            currentLang = lang;
+            document.querySelectorAll('[data-i18n]').forEach(el => {
+                const key = el.getAttribute('data-i18n');
+                if (translations[lang] && translations[lang][key]) el.innerHTML = translations[lang][key];
+            });
+            document.querySelectorAll('.lang-toggle').forEach(btn => {
+                if (btn.dataset.lang === lang) {
+                    btn.classList.add('active', 'font-bold', 'bg-white/20', 'text-white', 'rounded-full');
+                    btn.classList.remove('text-white/70', 'font-medium');
+                } else {
+                    btn.classList.remove('active', 'font-bold', 'bg-white/20', 'text-white');
+                    btn.classList.add('text-white/70', 'font-medium');
+                }
+            });
+            document.documentElement.lang = lang;
+        }
+
+        // ==================== INIT ====================
+        document.addEventListener('DOMContentLoaded', () => {
+            document.querySelectorAll('.lang-toggle').forEach(btn => btn.addEventListener('click', () => updateLanguage(btn.dataset.lang)));
+
+            const menuBtn = document.getElementById('mobile-menu-btn');
+            const mobileMenu = document.getElementById('mobile-menu');
+            if (menuBtn && mobileMenu) {
+                menuBtn.addEventListener('click', () => {
+                    mobileMenu.classList.toggle('hidden');
+                    const icon = menuBtn.querySelector('.material-symbols-outlined');
+                    icon.textContent = mobileMenu.classList.contains('hidden') ? 'menu' : 'close';
+                });
+            }
+
+            updateLanguage('id');
+
+            // Load package from URL
+            const params = new URLSearchParams(window.location.search);
+            const pkgId = params.get('pkg') || 'menjangan-tabuhan';
+            loadPackage(pkgId);
+
+            // Date min
+            const dateInput = document.getElementById('booking-date');
+            if (dateInput) dateInput.setAttribute('min', new Date().toISOString().split('T')[0]);
+
+            // Total calc
+            const paxInput = document.getElementById('booking-pax');
+            if (paxInput) paxInput.addEventListener('input', updateTotal);
+
+            // Form submit
+            const bookingForm = document.getElementById('bookingForm');
+            if (bookingForm) bookingForm.addEventListener('submit', handleBookingSubmit);
+        });
+    </script>
+</body>
+
+</html>
