@@ -15,10 +15,7 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
         rel="stylesheet" />
-    <link
-        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
-        rel="stylesheet" />
-    <link rel="stylesheet" href="style.css"/>
+    <link rel="stylesheet" href="assets/css/style.css" />
 </head>
 
 <body
@@ -27,9 +24,9 @@
         <div class="max-w-[1280px] mx-auto px-4 sm:px-10">
             <header class="flex items-center justify-between h-20">
                 <div class="flex items-center gap-3">
-                    <img src="logo/logo.PNG" alt="GO TRIP MENJANGAN" class="h-10" />
+                    <img src="assets/images/logo.png" alt="GO TRIP MENJANGAN" class="h-10" />
                 </div>
-                <div class="hidden lg:flex flex-1 justify-center items-center">
+                <div class="hidden lg:flex flex-1 justify-end items-center">
                     <nav class="flex items-center gap-8">
                         <a class="text-blue-300 text-sm font-bold" href="index.html" data-i18n="nav.home">Beranda</a>
                         <a class="text-white/70 hover:text-white text-sm font-medium transition-colors"
@@ -42,16 +39,7 @@
                             href="contact.html" data-i18n="nav.contact">Kontak</a>
                     </nav>
                 </div>
-                <div class="hidden lg:flex items-center lang-desktop">
-                    <div class="flex items-center gap-1.5 bg-white/10 backdrop-blur-sm rounded-full px-1 py-1 h-11">
-                        <button
-                            class="lang-toggle active px-5 py-2 rounded-full text-white text-sm font-bold transition-all duration-300 ease-in-out flex items-center justify-center h-full"
-                            data-lang="id">ID</button>
-                        <button
-                            class="lang-toggle px-5 py-2 rounded-full text-white/70 hover:text-white text-sm font-medium transition-all duration-300 ease-in-out flex items-center justify-center h-full"
-                            data-lang="en">EN</button>
-                    </div>
-                </div>
+
                 <button id="mobile-menu-btn" class="lg:hidden text-white p-2" aria-label="Toggle menu">
                     <span class="material-symbols-outlined text-[28px]">menu</span>
                 </button>
@@ -67,17 +55,7 @@
                     <a class="mobile-nav-link" href="contact.html" data-i18n="nav.contact">Kontak</a>
                 </nav>
                 <div class="border-t border-white/10"></div>
-                <div class="py-4 lang-mobile">
-                    <div
-                        class="flex items-center gap-1.5 bg-white/10 backdrop-blur-sm rounded-full px-1 py-1 h-10 w-fit">
-                        <button
-                            class="lang-toggle active px-5 py-1.5 rounded-full text-white text-sm font-bold transition-all duration-300 ease-in-out flex items-center justify-center h-full"
-                            data-lang="id">ID</button>
-                        <button
-                            class="lang-toggle px-5 py-1.5 rounded-full text-white/70 hover:text-white text-sm font-medium transition-all duration-300 ease-in-out flex items-center justify-center h-full"
-                            data-lang="en">EN</button>
-                    </div>
-                </div>
+
             </div>
         </div>
     </div>
@@ -101,11 +79,7 @@
                     href="package.html" data-i18n="hero.viewPackages">
                     Lihat Paket
                 </a>
-                <button
-                    class="flex items-center justify-center gap-2 bg-white text-slate-900 hover:bg-slate-50 h-12 px-8 rounded-xl font-bold transition-all shadow-lg">
-                    <span class="material-symbols-outlined text-secondary">chat</span>
-                    <span data-i18n="hero.bookWhatsApp">Pesan via WhatsApp</span>
-                </button>
+
             </div>
         </div>
     </div>
@@ -128,8 +102,7 @@
                             <span class="material-symbols-outlined text-3xl">explore</span>
                         </div>
                         <h3 class="text-lg font-bold text-[#111418] mb-2">Pemandu Lokal</h3>
-                        <p class="text-[#60718a] text-sm leading-relaxed">Pemandu ahli asli daerah yang memastikan
-                            pengalaman autentik dan spot tersembunyi.</p>
+                        <p class="text-[#60718a] text-sm leading-relaxed">Pemandu asli daerah yang siap bantu perjalanan kamu jadi lebih aman, nyaman, dan maksimal.</p>
                     </div>
                     <div
                         class="group p-8 bg-background-light rounded-2xl border border-gray-100 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
@@ -137,9 +110,8 @@
                             class="w-14 h-14 bg-primary/10 text-primary rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
                             <span class="material-symbols-outlined text-3xl">sailing</span>
                         </div>
-                        <h3 class="text-lg font-bold text-[#111418] mb-2">Kapal Pribadi</h3>
-                        <p class="text-[#60718a] text-sm leading-relaxed">Kapal eksklusif tersedia untuk perjalanan
-                            pribadi dan nyaman bersama orang terkasih.</p>
+                        <h3 class="text-lg font-bold text-[#111418] mb-2">Transportasi</h3>
+                        <p class="text-[#60718a] text-sm leading-relaxed">Tersedia transportasi darat dan laut yang nyaman untuk menunjang perjalanan kamu selama trip.</p>
                     </div>
                     <div
                         class="group p-8 bg-background-light rounded-2xl border border-gray-100 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
@@ -167,19 +139,22 @@
         <!-- Featured Packages Section -->
         <section class="py-20 bg-background-light">
             <div class="max-w-[1280px] mx-auto px-4 sm:px-10">
-                <div class="flex flex-col md:flex-row justify-between items-end mb-12 gap-4">
-                    <div>
+                <div class="grid grid-cols-1 md:grid-cols-3 items-end mb-12 gap-4">
+                    <div class="hidden md:block"></div>
+                    <div class="text-center">
                         <span class="text-primary font-bold uppercase tracking-wider text-sm mb-2 block"
                             data-i18n="section.ourServices">Layanan Kami</span>
                         <h2 class="text-3xl md:text-4xl font-bold text-[#111418]" data-i18n="section.popularPackages">
                             Paket Populer</h2>
                     </div>
-                    <a class="group flex items-center gap-1 text-[#60718a] font-semibold hover:text-primary transition-colors"
-                        href="package.html">
-                        <span data-i18n="section.viewAll">Lihat Semua Paket</span>
-                        <span
-                            class="material-symbols-outlined text-lg group-hover:translate-x-1 transition-transform">arrow_forward</span>
-                    </a>
+                    <div class="flex justify-center md:justify-end md:translate-y-3">
+                        <a class="group flex items-center gap-1 text-[#60718a] font-semibold hover:text-primary transition-colors"
+                            href="package.html">
+                            <span data-i18n="section.viewAll">Lihat Semua Paket</span>
+                            <span
+                                class="material-symbols-outlined text-lg group-hover:translate-x-1 transition-transform">arrow_forward</span>
+                        </a>
+                    </div>
                 </div>
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                     <!-- Featured 1: Pulau Menjangan & Tabuhan -->
@@ -310,21 +285,24 @@
         <div class="footer-container">
             <div class="footer-grid">
                 <div>
-                    <img src="logo/logo.PNG" alt="GO TRIP MENJANGAN" class="footer-logo" />
+                    <img src="assets/images/logo.png" alt="GO TRIP MENJANGAN" class="footer-logo" />
                     <p class="footer-description">
                         Mitra terpercaya Anda untuk petualangan laut dan alam di Banyuwangi. Rasakan pengalaman yang tak
                         terlupakan.
                     </p>
                     <div class="footer-social">
-                        <a class="footer-social-link" href="https://instagram.com/gotripmenjangan" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                        <a class="footer-social-link" href="https://instagram.com/gotripmenjangan" target="_blank"
+                            rel="noopener noreferrer" aria-label="Instagram">
                             <svg viewBox="0 0 24 24">
                                 <path
                                     d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.85-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
                             </svg>
                         </a>
-                        <a class="footer-social-link" href="https://tiktok.com/@gotripmenjangan" target="_blank" rel="noopener noreferrer" aria-label="TikTok">
+                        <a class="footer-social-link" href="https://tiktok.com/@gotripmenjangan" target="_blank"
+                            rel="noopener noreferrer" aria-label="TikTok">
                             <svg viewBox="0 0 24 24">
-                                <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5 20.1a6.34 6.34 0 0 0 10.86-4.43v-7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1-.1z"/>
+                                <path
+                                    d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5 20.1a6.34 6.34 0 0 0 10.86-4.43v-7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1-.1z" />
                             </svg>
                         </a>
                     </div>
@@ -345,7 +323,8 @@
                         <li class="footer-contact-item">
                             <span class="material-symbols-outlined footer-contact-icon"
                                 aria-hidden="true">location_on</span>
-                            <span>Perum permata candi permai, Krajan I, Alasbulu, Kec. Wongsorejo, Kabupaten Banyuwangi, Jawa Timur.</span>
+                            <span>Perum permata candi permai, Krajan I, Alasbulu, Kec. Wongsorejo, Kabupaten Banyuwangi,
+                                Jawa Timur.</span>
                         </li>
                         <li class="footer-contact-item">
                             <span class="material-symbols-outlined footer-contact-icon" aria-hidden="true">call</span>
@@ -365,7 +344,7 @@
     </footer>
     <!-- FAB: Sticky WhatsApp Button -->
     <a class="whatsapp-fab fixed bottom-6 right-6 z-50 flex items-center justify-center gap-2 bg-green-500 hover:bg-green-600 text-white rounded-full px-5 py-3 shadow-lg hover:shadow-green-500/40 transition-all hover:-translate-y-1"
-        href="#">
+        href="https://wa.me/6285604510094" target="_blank">
         <svg class="bi bi-whatsapp" fill="currentColor" height="24" viewbox="0 0 16 16" width="24"
             xmlns="http://www.w3.org/2000/svg">
             <path
@@ -374,90 +353,7 @@
         </svg>
         <span class="whatsapp-fab-text font-bold" data-i18n="fab.chat">Chat dengan Kami</span>
     </a>
-    <script>
-        const translations = {
-            id: {
-                'nav.home': 'Beranda',
-                'nav.packages': 'Paket',
-                'nav.gallery': 'Galeri',
-                'nav.about': 'Tentang',
-                'nav.contact': 'Kontak',
-                'hero.title': 'Temukan Surga Bawah Laut<br class="hidden sm:block"/> Pulau Menjangan',
-                'hero.subtitle': 'Rasakan perpaduan sempurna keindahan laut dan alam liar di Banyuwangi. Snorkeling, diving, dan pengamatan rusa menanti Anda.',
-                'hero.viewPackages': 'Lihat Paket',
-                'hero.bookWhatsApp': 'Pesan via WhatsApp',
-                'section.whyChoose': 'Mengapa Memilih Kami',
-                'section.whyChooseDesc': 'Kami menyediakan pengalaman terbaik untuk liburan Anda dengan layanan profesional dan keahlian lokal.',
-                'section.ourServices': 'Layanan Kami',
-                'section.popularPackages': 'Paket Populer',
-                'section.viewAll': 'Lihat Semua Paket',
-                'fab.chat': 'Chat dengan Kami',
-                'footer.navigation': 'Navigasi',
-                'footer.contactInfo': 'Informasi Kontak'
-            },
-            en: {
-                'nav.home': 'Home',
-                'nav.packages': 'Packages',
-                'nav.gallery': 'Gallery',
-                'nav.about': 'About',
-                'nav.contact': 'Contact',
-                'hero.title': 'Discover the Underwater<br class="hidden sm:block"/> Paradise of Menjangan',
-                'hero.subtitle': 'Experience the perfect blend of marine beauty and wild nature in Banyuwangi. Snorkeling, diving, and deer watching await.',
-                'hero.viewPackages': 'View Packages',
-                'hero.bookWhatsApp': 'Book via WhatsApp',
-                'section.whyChoose': 'Why Choose Us',
-                'section.whyChooseDesc': 'We provide the best experience for your holiday with professional services and local expertise.',
-                'section.ourServices': 'Our Services',
-                'section.popularPackages': 'Popular Packages',
-                'section.viewAll': 'View All Packages',
-                'fab.chat': 'Chat with Us',
-                'footer.navigation': 'Navigation',
-                'footer.contactInfo': 'Contact Info'
-            }
-        };
-
-        let currentLang = 'id';
-
-        function updateLanguage(lang) {
-            currentLang = lang;
-            document.querySelectorAll('[data-i18n]').forEach(el => {
-                const key = el.getAttribute('data-i18n');
-                if (translations[lang] && translations[lang][key]) {
-                    el.innerHTML = translations[lang][key];
-                }
-            });
-
-            document.querySelectorAll('.lang-toggle').forEach(btn => {
-                if (btn.dataset.lang === lang) {
-                    btn.classList.add('active', 'font-bold', 'bg-white/20', 'text-white', 'rounded-full');
-                    btn.classList.remove('text-white/70', 'font-medium');
-                } else {
-                    btn.classList.remove('active', 'font-bold', 'bg-white/20', 'text-white');
-                    btn.classList.add('text-white/70', 'font-medium');
-                }
-            });
-
-            document.documentElement.lang = lang;
-        }
-
-        document.addEventListener('DOMContentLoaded', () => {
-            document.querySelectorAll('.lang-toggle').forEach(btn => {
-                btn.addEventListener('click', () => updateLanguage(btn.dataset.lang));
-            });
-
-            const menuBtn = document.getElementById('mobile-menu-btn');
-            const mobileMenu = document.getElementById('mobile-menu');
-            if (menuBtn && mobileMenu) {
-                menuBtn.addEventListener('click', () => {
-                    mobileMenu.classList.toggle('hidden');
-                    const icon = menuBtn.querySelector('.material-symbols-outlined');
-                    icon.textContent = mobileMenu.classList.contains('hidden') ? 'menu' : 'close';
-                });
-            }
-
-            updateLanguage('id');
-        });
-    </script>
+    <script src="assets/js/script.js"></script>
 </body>
 
 </html>
