@@ -81,7 +81,8 @@
     <!-- Filter & Grid Container -->
     <div class="max-w-[1280px] mx-auto px-4 sm:px-10 py-12 w-full -mt-16 relative z-30">
       <!-- Filter Toggle -->
-      <div class="flex justify-center mb-10">
+      <div class="flex flex-col items-center mb-10 gap-6">
+        <!-- Main Trip Type Toggle -->
         <div class="bg-white p-1.5 rounded-xl shadow-lg border border-gray-100 inline-flex">
           <label class="cursor-pointer relative px-6 py-2.5 rounded-lg transition-all duration-200">
             <input checked="" class="peer sr-only" name="trip_type" type="radio" value="open" id="trip-open" />
@@ -105,6 +106,36 @@
               Private Trip
             </span>
           </label>
+        </div>
+
+        <!-- Duration Filter (Hidden by default, shown only for Private Trip) -->
+        <div id="duration-filter-container" class="hidden transition-all duration-300 transform origin-top">
+          <div class="bg-white/80 backdrop-blur-sm p-1 rounded-lg border border-gray-200 inline-flex">
+            <label class="cursor-pointer relative px-4 py-1.5 rounded-md transition-all duration-200">
+              <input checked="" class="peer sr-only" name="trip_duration" type="radio" value="all" />
+              <div class="absolute inset-0 bg-primary rounded-md opacity-0 peer-checked:opacity-100 transition-opacity">
+              </div>
+              <span class="relative z-10 text-gray-500 peer-checked:text-white font-semibold text-xs">
+                Semua
+              </span>
+            </label>
+            <label class="cursor-pointer relative px-4 py-1.5 rounded-md transition-all duration-200">
+              <input class="peer sr-only" name="trip_duration" type="radio" value="1-day" />
+              <div class="absolute inset-0 bg-primary rounded-md opacity-0 peer-checked:opacity-100 transition-opacity">
+              </div>
+              <span class="relative z-10 text-gray-500 peer-checked:text-white font-semibold text-xs">
+                1 Hari
+              </span>
+            </label>
+            <label class="cursor-pointer relative px-4 py-1.5 rounded-md transition-all duration-200">
+              <input class="peer sr-only" name="trip_duration" type="radio" value="2-days" />
+              <div class="absolute inset-0 bg-primary rounded-md opacity-0 peer-checked:opacity-100 transition-opacity">
+              </div>
+              <span class="relative z-10 text-gray-500 peer-checked:text-white font-semibold text-xs">
+                2 Hari 1 Malam
+              </span>
+            </label>
+          </div>
         </div>
       </div>
       <!-- Packages Grid -->
@@ -408,7 +439,7 @@
         <!-- Card 6: Private Trip Baluran Jeep Experience -->
         <div
           class="package-card group flex flex-col h-full bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden hover:shadow-xl hover:-translate-y-1 transition-all duration-300"
-          data-trip-type="private">
+          data-trip-type="private" data-duration="1-day">
           <div class="relative h-56 overflow-hidden">
             <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent z-10 opacity-60"></div>
             <img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
@@ -470,7 +501,7 @@
         <!-- Card 7: Private Trip Banyuwangi Selatan -->
         <div
           class="package-card group flex flex-col h-full bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden hover:shadow-xl hover:-translate-y-1 transition-all duration-300"
-          data-trip-type="private">
+          data-trip-type="private" data-duration="1-day">
           <div class="relative h-56 overflow-hidden">
             <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent z-10 opacity-60"></div>
             <img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
@@ -532,7 +563,7 @@
         <!-- Card 8: Private Trip Djawatan Baluran -->
         <div
           class="package-card group flex flex-col h-full bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden hover:shadow-xl hover:-translate-y-1 transition-all duration-300"
-          data-trip-type="private">
+          data-trip-type="private" data-duration="1-day">
           <div class="relative h-56 overflow-hidden">
             <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent z-10 opacity-60"></div>
             <img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
@@ -594,7 +625,7 @@
         <!-- Card 9: Private Trip Kawah Ijen -->
         <div
           class="package-card group flex flex-col h-full bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden hover:shadow-xl hover:-translate-y-1 transition-all duration-300"
-          data-trip-type="private">
+          data-trip-type="private" data-duration="1-day">
           <div class="relative h-56 overflow-hidden">
             <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent z-10 opacity-60"></div>
             <img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
@@ -655,7 +686,7 @@
         </div>
         <div
           class="package-card group bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden flex flex-col"
-          data-trip-type="private">
+          data-trip-type="private" data-duration="1-day">
           <div class="relative h-56 overflow-hidden">
             <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent z-10 opacity-60"></div>
             <img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
@@ -716,7 +747,7 @@
         </div>
         <div
           class="package-card group bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden flex flex-col"
-          data-trip-type="private">
+          data-trip-type="private" data-duration="1-day">
           <div class="relative h-56 overflow-hidden">
             <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent z-10 opacity-60"></div>
             <img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
@@ -777,7 +808,7 @@
         </div>
         <div
           class="package-card group bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden flex flex-col"
-          data-trip-type="private">
+          data-trip-type="private" data-duration="1-day">
           <div class="relative h-56 overflow-hidden">
             <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent z-10 opacity-60"></div>
             <img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
@@ -838,7 +869,7 @@
         </div>
         <div
           class="package-card group bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden flex flex-col"
-          data-trip-type="private">
+          data-trip-type="private" data-duration="1-day">
           <div class="relative h-56 overflow-hidden">
             <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent z-10 opacity-60"></div>
             <img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
@@ -972,13 +1003,40 @@
   </a>
   <script src="assets/js/script.js"></script>
   <script>
-    function filterPackages(tripType) {
+    function filterPackages() {
+      // Ambil nilai radio button yang terpilih
+      const selectedTripType = document.querySelector('input[name="trip_type"]:checked').value;
+      const selectedDuration = document.querySelector('input[name="trip_duration"]:checked').value;
+
+      // Logic untuk menampilkan/menyembunyikan filter durasi
+      const durationFilterContainer = document.getElementById('duration-filter-container');
+      if (selectedTripType === 'private') {
+        durationFilterContainer.classList.remove('hidden');
+      } else {
+        durationFilterContainer.classList.add('hidden');
+        // Reset filter durasi ke 'all' jika kembali ke open trip (opsional, tapi UX bagus)
+        // document.querySelector('input[name="trip_duration"][value="all"]').checked = true;
+      }
+
       const packages = document.querySelectorAll('.package-card');
 
       packages.forEach(pkg => {
         const pkgType = pkg.getAttribute('data-trip-type');
+        const pkgDuration = pkg.getAttribute('data-duration');
 
-        if (tripType === 'all' || pkgType === tripType) {
+        let isMatch = false;
+
+        if (selectedTripType === 'open') {
+          // Jika Open Trip, abaikan filter durasi
+          isMatch = (pkgType === 'open');
+        } else {
+          // Jika Private Trip, perhitungkan filter tipe DAN durasi
+          const typeMatch = (pkgType === 'private');
+          const durationMatch = (selectedDuration === 'all' || pkgDuration === selectedDuration);
+          isMatch = typeMatch && durationMatch;
+        }
+
+        if (isMatch) {
           pkg.classList.remove('hidden', 'fade-out');
           setTimeout(() => {
             pkg.classList.add('fade-in');
@@ -994,20 +1052,24 @@
     }
 
     document.addEventListener('DOMContentLoaded', () => {
-
+      // Event listeners untuk Trip Type
       const tripTypeInputs = document.querySelectorAll('input[name="trip_type"]');
       tripTypeInputs.forEach(input => {
-        input.addEventListener('change', (e) => {
-          filterPackages(e.target.value);
+        input.addEventListener('change', () => {
+          filterPackages();
         });
       });
 
-      const initialChecked = document.querySelector('input[name="trip_type"]:checked');
-      if (initialChecked) {
-        filterPackages(initialChecked.value);
-      } else {
-        filterPackages('open');
-      }
+      // Event listeners untuk Duration
+      const durationInputs = document.querySelectorAll('input[name="trip_duration"]');
+      durationInputs.forEach(input => {
+        input.addEventListener('change', () => {
+          filterPackages();
+        });
+      });
+
+      // Initial filter run
+      filterPackages();
     });
   </script>
 </body>
