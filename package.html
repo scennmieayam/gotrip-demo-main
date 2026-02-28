@@ -83,11 +83,11 @@
       <!-- Filter Toggle -->
       <div class="flex flex-col items-center mb-10 gap-6">
         <!-- Main Trip Type Toggle -->
-        <div class="bg-white p-1.5 rounded-xl shadow-lg border border-gray-100 inline-flex">
-          <label class="cursor-pointer relative px-6 py-2.5 rounded-lg transition-all duration-200">
+        <div class="bg-white p-1.5 rounded-full shadow-lg border border-gray-100 inline-flex">
+          <label class="cursor-pointer relative px-6 py-2.5 rounded-full transition-all duration-200">
             <input checked="" class="peer sr-only" name="trip_type" type="radio" value="open" id="trip-open" />
             <div
-              class="absolute inset-0 bg-primary rounded-lg opacity-0 peer-checked:opacity-100 transition-opacity shadow-sm">
+              class="absolute inset-0 bg-primary rounded-full opacity-0 peer-checked:opacity-100 transition-opacity shadow-sm">
             </div>
             <span
               class="relative z-10 text-[#60718a] peer-checked:text-white font-bold text-sm flex items-center gap-2">
@@ -95,10 +95,10 @@
               Open Trip
             </span>
           </label>
-          <label class="cursor-pointer relative px-6 py-2.5 rounded-lg transition-all duration-200">
+          <label class="cursor-pointer relative px-6 py-2.5 rounded-full transition-all duration-200">
             <input class="peer sr-only" name="trip_type" type="radio" value="private" id="trip-private" />
             <div
-              class="absolute inset-0 bg-primary rounded-lg opacity-0 peer-checked:opacity-100 transition-opacity shadow-sm">
+              class="absolute inset-0 bg-primary rounded-full opacity-0 peer-checked:opacity-100 transition-opacity shadow-sm">
             </div>
             <span
               class="relative z-10 text-[#60718a] peer-checked:text-white font-bold text-sm flex items-center gap-2">
@@ -110,29 +110,41 @@
 
         <!-- Duration Filter (Hidden by default, shown only for Private Trip) -->
         <div id="duration-filter-container" class="hidden transition-all duration-300 transform origin-top">
-          <div class="bg-white/80 backdrop-blur-sm p-1 rounded-lg border border-gray-200 inline-flex">
-            <label class="cursor-pointer relative px-4 py-1.5 rounded-md transition-all duration-200">
+          <div class="bg-white/80 backdrop-blur-sm p-1 rounded-full border border-gray-200 inline-flex">
+            <label class="cursor-pointer relative px-4 py-1.5 rounded-full transition-all duration-200">
               <input checked="" class="peer sr-only" name="trip_duration" type="radio" value="all" />
-              <div class="absolute inset-0 bg-primary rounded-md opacity-0 peer-checked:opacity-100 transition-opacity">
+              <div
+                class="absolute inset-0 bg-primary rounded-full opacity-0 peer-checked:opacity-100 transition-opacity">
               </div>
               <span class="relative z-10 text-gray-500 peer-checked:text-white font-semibold text-xs">
                 Semua
               </span>
             </label>
-            <label class="cursor-pointer relative px-4 py-1.5 rounded-md transition-all duration-200">
+            <label class="cursor-pointer relative px-4 py-1.5 rounded-full transition-all duration-200">
               <input class="peer sr-only" name="trip_duration" type="radio" value="1-day" />
-              <div class="absolute inset-0 bg-primary rounded-md opacity-0 peer-checked:opacity-100 transition-opacity">
+              <div
+                class="absolute inset-0 bg-primary rounded-full opacity-0 peer-checked:opacity-100 transition-opacity">
               </div>
               <span class="relative z-10 text-gray-500 peer-checked:text-white font-semibold text-xs">
                 1 Hari
               </span>
             </label>
-            <label class="cursor-pointer relative px-4 py-1.5 rounded-md transition-all duration-200">
+            <label class="cursor-pointer relative px-4 py-1.5 rounded-full transition-all duration-200">
               <input class="peer sr-only" name="trip_duration" type="radio" value="2-days" />
-              <div class="absolute inset-0 bg-primary rounded-md opacity-0 peer-checked:opacity-100 transition-opacity">
+              <div
+                class="absolute inset-0 bg-primary rounded-full opacity-0 peer-checked:opacity-100 transition-opacity">
               </div>
               <span class="relative z-10 text-gray-500 peer-checked:text-white font-semibold text-xs">
                 2 Hari 1 Malam
+              </span>
+            </label>
+            <label class="cursor-pointer relative px-4 py-1.5 rounded-full transition-all duration-200">
+              <input class="peer sr-only" name="trip_duration" type="radio" value="3-days" />
+              <div
+                class="absolute inset-0 bg-primary rounded-full opacity-0 peer-checked:opacity-100 transition-opacity">
+              </div>
+              <span class="relative z-10 text-gray-500 peer-checked:text-white font-semibold text-xs">
+                3 Hari 2 Malam
               </span>
             </label>
           </div>
@@ -302,7 +314,7 @@
               <div class="flex flex-col mb-4">
                 <span class="text-xs text-[#60718a] font-semibold uppercase tracking-wider">Mulai dari</span>
                 <div class="flex items-baseline gap-1">
-                  <span class="text-2xl font-black text-primary">Rp 275K</span>
+                  <span class="text-2xl font-black text-primary">Rp 350K</span>
                   <span class="text-sm text-[#60718a] font-medium">/ orang</span>
                 </div>
               </div>
@@ -429,6 +441,194 @@
                 <a href="package-detail.html?pkg=ijen-baluran"
                   class="px-4 py-2.5 border border-gray-200 rounded-xl text-sm font-bold text-[#111418] hover:bg-gray-50 hover:border-gray-300 transition-colors text-center">Detail</a>
                 <a href="package-detail.html?pkg=ijen-baluran#bookingForm"
+                  class="px-4 py-2.5 bg-primary rounded-xl text-sm font-bold text-white hover:bg-blue-700 transition-colors flex items-center justify-center gap-2 shadow-lg shadow-blue-500/30">
+                  <span class="material-symbols-outlined text-[18px]">chat</span> Pesan
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Card: Freedive Pulau Menjangan Tabuhan -->
+        <div
+          class="package-card group flex flex-col h-full bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden hover:shadow-xl hover:-translate-y-1 transition-all duration-300"
+          data-trip-type="open">
+          <div class="relative h-56 overflow-hidden">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent z-10 opacity-60"></div>
+            <img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+              alt="Freedive di Pulau Menjangan"
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuCyw2nqX_GCuy6t1NjlsSR1INDbMsd93i36aNHlksSAOuHnOBXpnPn_EX_RfcgAzp6vUI45ie2u8Fy05sMuN5A15SoymshmQGEkumIB6_wpDGAC4bzGbB7yfavZgMUs31nawlfu2kohjOLE_xENS2SZ-y9zCAU2VtJcjYg-X0sqV7MB8Tp7mHprj_8YVsSF-2h3kdkQgk-JZD8yF-6HvFlE55CsC2wv-2ZRZNUAaI-pEywTLDzvUwp44_EXdFJHFAhnayBCdOoFXw" />
+            <div class="absolute top-4 left-4 z-20 flex gap-2">
+              <span
+                class="bg-white/90 backdrop-blur-md px-3 py-1 rounded-full text-xs font-bold text-primary shadow-sm flex items-center gap-1">
+                <span class="material-symbols-outlined text-[14px]">schedule</span> 1 Hari
+              </span>
+              <span
+                class="bg-blue-500/90 backdrop-blur-md px-3 py-1 rounded-full text-xs font-bold text-white shadow-sm">Freedive</span>
+            </div>
+          </div>
+          <div class="p-6 flex flex-col flex-1">
+            <div class="mb-4">
+              <h3
+                class="text-xl font-bold text-[#111418] leading-tight mb-2 group-hover:text-primary transition-colors">
+                Open Trip Freedive Pulau Menjangan Tabuhan
+              </h3>
+              <p class="text-sm text-[#60718a] line-clamp-2">
+                Rasakan pengalaman freedive terbaik di Pulau Menjangan dengan berbagai spot pilihan menakjubkan.
+              </p>
+            </div>
+            <div class="space-y-3 mb-6 flex-1">
+              <div class="flex items-center gap-3 text-sm text-[#4b5563]">
+                <span class="material-symbols-outlined text-green-500 text-[20px]">check_circle</span>
+                <span>Guide Freedive & Kapal PP</span>
+              </div>
+              <div class="flex items-center gap-3 text-sm text-[#4b5563]">
+                <span class="material-symbols-outlined text-green-500 text-[20px]">check_circle</span>
+                <span>Dokumentasi Underwater</span>
+              </div>
+              <div class="flex items-center gap-3 text-sm text-[#4b5563]">
+                <span class="material-symbols-outlined text-green-500 text-[20px]">check_circle</span>
+                <span>Sarapan & Makan Siang</span>
+              </div>
+            </div>
+            <div class="pt-5 border-t border-gray-100 mt-auto">
+              <div class="flex flex-col mb-4">
+                <span class="text-xs text-[#60718a] font-semibold uppercase tracking-wider">Mulai dari</span>
+                <div class="flex items-baseline gap-1">
+                  <span class="text-2xl font-black text-primary">Rp 650K</span>
+                  <span class="text-sm text-[#60718a] font-medium">/ orang</span>
+                </div>
+              </div>
+              <div class="grid grid-cols-2 gap-3">
+                <a href="package-detail.html?pkg=freedive-menjangan-tabuhan"
+                  class="px-4 py-2.5 border border-gray-200 rounded-xl text-sm font-bold text-[#111418] hover:bg-gray-50 hover:border-gray-300 transition-colors text-center">Detail</a>
+                <a href="package-detail.html?pkg=freedive-menjangan-tabuhan#bookingForm"
+                  class="px-4 py-2.5 bg-primary rounded-xl text-sm font-bold text-white hover:bg-blue-700 transition-colors flex items-center justify-center gap-2 shadow-lg shadow-blue-500/30">
+                  <span class="material-symbols-outlined text-[18px]">chat</span> Pesan
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card: Pulau Menjangan Tabuhan Baluran -->
+        <div
+          class="package-card group flex flex-col h-full bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden hover:shadow-xl hover:-translate-y-1 transition-all duration-300"
+          data-trip-type="open">
+          <div class="relative h-56 overflow-hidden">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent z-10 opacity-60"></div>
+            <img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+              alt="Snorkeling dan Safari Baluran"
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuCyw2nqX_GCuy6t1NjlsSR1INDbMsd93i36aNHlksSAOuHnOBXpnPn_EX_RfcgAzp6vUI45ie2u8Fy05sMuN5A15SoymshmQGEkumIB6_wpDGAC4bzGbB7yfavZgMUs31nawlfu2kohjOLE_xENS2SZ-y9zCAU2VtJcjYg-X0sqV7MB8Tp7mHprj_8YVsSF-2h3kdkQgk-JZD8yF-6HvFlE55CsC2wv-2ZRZNUAaI-pEywTLDzvUwp44_EXdFJHFAhnayBCdOoFXw" />
+            <div class="absolute top-4 left-4 z-20 flex gap-2">
+              <span
+                class="bg-white/90 backdrop-blur-md px-3 py-1 rounded-full text-xs font-bold text-primary shadow-sm flex items-center gap-1">
+                <span class="material-symbols-outlined text-[14px]">schedule</span> 1 Hari
+              </span>
+              <span
+                class="bg-accent/90 backdrop-blur-md px-3 py-1 rounded-full text-xs font-bold text-white shadow-sm">Kombo
+                Trip</span>
+            </div>
+          </div>
+          <div class="p-6 flex flex-col flex-1">
+            <div class="mb-4">
+              <h3
+                class="text-xl font-bold text-[#111418] leading-tight mb-2 group-hover:text-primary transition-colors">
+                Open Trip Pulau Menjangan Tabuhan Baluran
+              </h3>
+              <p class="text-sm text-[#60718a] line-clamp-2">
+                Paket super kombo menggabungkan pesona bawah laut Pulau Menjangan dan eksotisme "Afrika kecil" TN.
+                Baluran.
+              </p>
+            </div>
+            <div class="space-y-3 mb-6 flex-1">
+              <div class="flex items-center gap-3 text-sm text-[#4b5563]">
+                <span class="material-symbols-outlined text-green-500 text-[20px]">check_circle</span>
+                <span>Kapal Wisata PP & Jeep Trooper</span>
+              </div>
+              <div class="flex items-center gap-3 text-sm text-[#4b5563]">
+                <span class="material-symbols-outlined text-green-500 text-[20px]">check_circle</span>
+                <span>Dokumentasi Underwater & Guide</span>
+              </div>
+              <div class="flex items-center gap-3 text-sm text-[#4b5563]">
+                <span class="material-symbols-outlined text-green-500 text-[20px]">check_circle</span>
+                <span>Sarapan & Makan Siang</span>
+              </div>
+            </div>
+            <div class="pt-5 border-t border-gray-100 mt-auto">
+              <div class="flex flex-col mb-4">
+                <span class="text-xs text-[#60718a] font-semibold uppercase tracking-wider">Mulai dari</span>
+                <div class="flex items-baseline gap-1">
+                  <span class="text-2xl font-black text-primary">Rp 650K</span>
+                  <span class="text-sm text-[#60718a] font-medium">/ orang</span>
+                </div>
+              </div>
+              <div class="grid grid-cols-2 gap-3">
+                <a href="package-detail.html?pkg=menjangan-tabuhan-baluran"
+                  class="px-4 py-2.5 border border-gray-200 rounded-xl text-sm font-bold text-[#111418] hover:bg-gray-50 hover:border-gray-300 transition-colors text-center">Detail</a>
+                <a href="package-detail.html?pkg=menjangan-tabuhan-baluran#bookingForm"
+                  class="px-4 py-2.5 bg-primary rounded-xl text-sm font-bold text-white hover:bg-blue-700 transition-colors flex items-center justify-center gap-2 shadow-lg shadow-blue-500/30">
+                  <span class="material-symbols-outlined text-[18px]">chat</span> Pesan
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card: Private Trip Freedive Menjangan -->
+        <div
+          class="package-card group flex flex-col h-full bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden hover:shadow-xl hover:-translate-y-1 transition-all duration-300"
+          data-trip-type="private" data-duration="1-day">
+          <div class="relative h-56 overflow-hidden">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent z-10 opacity-60"></div>
+            <img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+              alt="Private Trip Freedive Menjangan"
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuCyw2nqX_GCuy6t1NjlsSR1INDbMsd93i36aNHlksSAOuHnOBXpnPn_EX_RfcgAzp6vUI45ie2u8Fy05sMuN5A15SoymshmQGEkumIB6_wpDGAC4bzGbB7yfavZgMUs31nawlfu2kohjOLE_xENS2SZ-y9zCAU2VtJcjYg-X0sqV7MB8Tp7mHprj_8YVsSF-2h3kdkQgk-JZD8yF-6HvFlE55CsC2wv-2ZRZNUAaI-pEywTLDzvUwp44_EXdFJHFAhnayBCdOoFXw" />
+            <div class="absolute top-4 left-4 z-20 flex gap-2">
+              <span
+                class="bg-white/90 backdrop-blur-md px-3 py-1 rounded-full text-xs font-bold text-primary shadow-sm flex items-center gap-1">
+                <span class="material-symbols-outlined text-[14px]">schedule</span> 1 Hari
+              </span>
+              <span
+                class="bg-emerald-600/90 backdrop-blur-md px-3 py-1 rounded-full text-xs font-bold text-white shadow-sm">Private</span>
+            </div>
+          </div>
+          <div class="p-6 flex flex-col flex-1">
+            <div class="mb-4">
+              <h3
+                class="text-xl font-bold text-[#111418] leading-tight mb-2 group-hover:text-primary transition-colors">
+                PRIVATE TRIP FREEDIVE PULAU MENJANGAN</h3>
+              <p class="text-sm text-[#60718a] line-clamp-2">
+                Private trip freediving di spot-spot spektakuler Pulau Menjangan seperti Dream Wall, Blue Corner, dan
+                Lorong Avatar.
+              </p>
+            </div>
+            <div class="space-y-3 mb-6 flex-1">
+              <div class="flex items-center gap-3 text-sm text-[#4b5563]">
+                <span class="material-symbols-outlined text-green-500 text-[20px]">check_circle</span>
+                <span>Kapal Wisata PP & Guide FreeDive</span>
+              </div>
+              <div class="flex items-center gap-3 text-sm text-[#4b5563]">
+                <span class="material-symbols-outlined text-green-500 text-[20px]">check_circle</span>
+                <span>Dokumentasi Underwater</span>
+              </div>
+              <div class="flex items-center gap-3 text-sm text-[#4b5563]">
+                <span class="material-symbols-outlined text-green-500 text-[20px]">check_circle</span>
+                <span>Makan Siang & Air Mineral</span>
+              </div>
+            </div>
+            <div class="pt-5 border-t border-gray-100 mt-auto">
+              <div class="flex flex-col mb-4">
+                <span class="text-xs text-[#60718a] font-semibold uppercase tracking-wider">Mulai dari</span>
+                <div class="flex items-baseline gap-1">
+                  <span class="text-2xl font-black text-primary">Rp 550K</span>
+                  <span class="text-sm text-[#60718a] font-medium">/ orang</span>
+                </div>
+                <span class="text-[11px] text-[#9ca3af] mt-1">Harga per orang sesuai tabel 1–6 peserta.</span>
+              </div>
+              <div class="grid grid-cols-2 gap-3">
+                <a href="package-detail.html?pkg=freedive-pulau-menjangan-private"
+                  class="px-4 py-2.5 border border-gray-200 rounded-xl text-sm font-bold text-[#111418] hover:bg-gray-50 hover:border-gray-300 transition-colors text-center">Detail</a>
+                <a href="package-detail.html?pkg=freedive-pulau-menjangan-private#bookingForm"
                   class="px-4 py-2.5 bg-primary rounded-xl text-sm font-bold text-white hover:bg-blue-700 transition-colors flex items-center justify-center gap-2 shadow-lg shadow-blue-500/30">
                   <span class="material-symbols-outlined text-[18px]">chat</span> Pesan
                 </a>
@@ -928,7 +1128,386 @@
             </div>
           </div>
         </div>
+        <!-- Card 11: Private Trip 2H 1M Opsi A -->
+        <div
+          class="package-card group bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden flex flex-col"
+          data-trip-type="private" data-duration="2-days">
+          <div class="relative h-56 overflow-hidden">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent z-10 opacity-60"></div>
+            <img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+              alt="Private Trip 2 Hari 1 Malam Opsi A"
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuDw-WbsJaRXEbEmvrth0oepOs6X6noVKCLI6s7u7lyyVvTgc9UFqdvf_DGbmBsFSrP9c9HBuheFkwdGHsoOJ6ofK2vHExXBSL96UTWqPjdkIGRoS2TYAe6yC1mc3DZTHcxn5qAtZ-B3EAvmKlcOIFQwlxkHElxuXT0V17esjwqJI2zmo4ZoBX0EGWklxq4kEk77vAETNSqI79vo_9ni2NLllJHmMNOHlHcxMbrAKyNrq1X2-RLGx6QrwKofTbxDM_bs-K0c6SLZoA" />
+            <div class="absolute top-4 left-4 z-20 flex gap-2">
+              <span
+                class="bg-white/90 backdrop-blur-md px-3 py-1 rounded-full text-xs font-bold text-primary shadow-sm flex items-center gap-1">
+                <span class="material-symbols-outlined text-[14px]">schedule</span> 2H 1M
+              </span>
+              <span
+                class="bg-emerald-600/90 backdrop-blur-md px-3 py-1 rounded-full text-xs font-bold text-white shadow-sm">Private</span>
+            </div>
+          </div>
+          <div class="p-6 flex flex-col flex-1">
+            <div class="mb-4">
+              <h3
+                class="text-xl font-bold text-[#111418] leading-tight mb-2 group-hover:text-primary transition-colors">
+                PRIVATE TRIP 2H 1M (OPSI A)</h3>
+              <p class="text-sm text-[#60718a] line-clamp-2">
+                Menjangan, Tabuhan, Baluran, hingga Kawah Ijen dalam satu trip komprehensif 2 Hari 1 Malam yang tak
+                terlupakan.
+              </p>
+            </div>
+            <div class="space-y-3 mb-6 flex-1">
+              <div class="flex items-center gap-3 text-sm text-[#4b5563]">
+                <span class="material-symbols-outlined text-green-500 text-[20px]">check_circle</span>
+                <span>Kapal Wisata & Jeep Trooper</span>
+              </div>
+              <div class="flex items-center gap-3 text-sm text-[#4b5563]">
+                <span class="material-symbols-outlined text-green-500 text-[20px]">check_circle</span>
+                <span>Tiket Destinasi & Izin Menginap</span>
+              </div>
+              <div class="flex items-center gap-3 text-sm text-[#4b5563]">
+                <span class="material-symbols-outlined text-green-500 text-[20px]">check_circle</span>
+                <span>Video Reels & Foto Underwater</span>
+              </div>
+            </div>
+            <div class="pt-5 border-t border-gray-100 mt-auto">
+              <div class="flex flex-col mb-4">
+                <span class="text-xs text-[#60718a] font-semibold uppercase tracking-wider">Mulai dari</span>
+                <div class="flex items-baseline gap-1">
+                  <span class="text-2xl font-black text-primary">Rp 870K</span>
+                  <span class="text-sm text-[#60718a] font-medium">/ orang</span>
+                </div>
+                <span class="text-[11px] text-[#9ca3af] mt-1">Harga per orang sesuai tabel 1–10 peserta.</span>
+              </div>
+              <div class="grid grid-cols-2 gap-3">
+                <a href="package-detail.html?pkg=private-2d1n-opsi-a"
+                  class="px-4 py-2.5 border border-gray-200 rounded-xl text-sm font-bold text-[#111418] hover:bg-gray-50 hover:border-gray-300 transition-colors text-center">Detail</a>
+                <a href="package-detail.html?pkg=private-2d1n-opsi-a#bookingForm"
+                  class="px-4 py-2.5 bg-primary rounded-xl text-sm font-bold text-white hover:bg-blue-700 transition-colors flex items-center justify-center gap-2 shadow-lg shadow-blue-500/30">
+                  <span class="material-symbols-outlined text-[18px]">chat</span> Pesan
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 12: Private Trip 2H 1M Opsi B -->
+        <div
+          class="package-card group bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden flex flex-col"
+          data-trip-type="private" data-duration="2-days">
+          <div class="relative h-56 overflow-hidden">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent z-10 opacity-60"></div>
+            <img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+              alt="Private Trip 2 Hari 1 Malam Opsi B"
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuCwNUotJBB-PBiBEhK4CaXIrxdhZnCoXvhXQIXl5_n1whNLmnQnq-4VXpGjOxTO99zb3WvRsTeVCSmhzjg80qijgwB6URnr6Z5HHSRfOhTXcxTwvLTKoaEzYF1qPjHKLYFkKxQB7FvBHOt0Z3vDfbsyRjqiRWszVyLTFI4t1r2ni23lFFsObYxacYNqRPdW6WX6x2HorirhEq7cigRT3MJcsMbnLjfI4HHcoawvaslaRB6Ej2Scci9AC3YgoxWCM7_9E_7QRm8ahw" />
+            <div class="absolute top-4 left-4 z-20 flex gap-2">
+              <span
+                class="bg-white/90 backdrop-blur-md px-3 py-1 rounded-full text-xs font-bold text-primary shadow-sm flex items-center gap-1">
+                <span class="material-symbols-outlined text-[14px]">schedule</span> 2H 1M
+              </span>
+              <span
+                class="bg-emerald-600/90 backdrop-blur-md px-3 py-1 rounded-full text-xs font-bold text-white shadow-sm">Private</span>
+            </div>
+          </div>
+          <div class="p-6 flex flex-col flex-1">
+            <div class="mb-4">
+              <h3
+                class="text-xl font-bold text-[#111418] leading-tight mb-2 group-hover:text-primary transition-colors">
+                PRIVATE TRIP 2H 1M (OPSI B)</h3>
+              <p class="text-sm text-[#60718a] line-clamp-2">
+                Eksplorasi unik pesona Banyuwangi Selatan, Kawah Ijen, hingga Baluran dengan itinerary yang padat dan
+                memanjakan mata.
+              </p>
+            </div>
+            <div class="space-y-3 mb-6 flex-1">
+              <div class="flex items-center gap-3 text-sm text-[#4b5563]">
+                <span class="material-symbols-outlined text-green-500 text-[20px]">check_circle</span>
+                <span>Jeep Trooper & Transportasi Tour</span>
+              </div>
+              <div class="flex items-center gap-3 text-sm text-[#4b5563]">
+                <span class="material-symbols-outlined text-green-500 text-[20px]">check_circle</span>
+                <span>Tiket & Izin Semua Destinasi</span>
+              </div>
+              <div class="flex items-center gap-3 text-sm text-[#4b5563]">
+                <span class="material-symbols-outlined text-green-500 text-[20px]">check_circle</span>
+                <span>Foto Edit & Video Reels Instagram</span>
+              </div>
+            </div>
+            <div class="pt-5 border-t border-gray-100 mt-auto">
+              <div class="flex flex-col mb-4">
+                <span class="text-xs text-[#60718a] font-semibold uppercase tracking-wider">Mulai dari</span>
+                <div class="flex items-baseline gap-1">
+                  <span class="text-2xl font-black text-primary">Rp 925K</span>
+                  <span class="text-sm text-[#60718a] font-medium">/ orang</span>
+                </div>
+                <span class="text-[11px] text-[#9ca3af] mt-1">Harga per orang sesuai tabel 1–10 peserta.</span>
+              </div>
+              <div class="grid grid-cols-2 gap-3">
+                <a href="package-detail.html?pkg=private-2d1n-opsi-b"
+                  class="px-4 py-2.5 border border-gray-200 rounded-xl text-sm font-bold text-[#111418] hover:bg-gray-50 hover:border-gray-300 transition-colors text-center">Detail</a>
+                <a href="package-detail.html?pkg=private-2d1n-opsi-b#bookingForm"
+                  class="px-4 py-2.5 bg-primary rounded-xl text-sm font-bold text-white hover:bg-blue-700 transition-colors flex items-center justify-center gap-2 shadow-lg shadow-blue-500/30">
+                  <span class="material-symbols-outlined text-[18px]">chat</span> Pesan
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 13: Private Trip 2H 1M Opsi C -->
+        <div
+          class="package-card group bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden flex flex-col"
+          data-trip-type="private" data-duration="2-days">
+          <div class="relative h-56 overflow-hidden">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent z-10 opacity-60"></div>
+            <img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+              alt="Private Trip 2 Hari 1 Malam Opsi C"
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuAJqTh0VDyhP4HJGVgXBUONOh9IQFPF627vwgEaSPLRV9Nxd6uZqj9Nku8wrCvGLps-aSgqEy5QUJkS_HL5C066mxqPTxN_-NhNQ_qjBrA7fe3YFBDMVd5o38RTvwAKRi4uq_xsymg_MOWAmAJQemgmtnip5K6dkRh8CmpedNHIa2gvLYwu-3P5zPhoKk83bh-5BhZ-zq0BUFnmokei9eRUSDakQPZZ_WRlh-D3kn752PHmUIAA5RzNtbJPqckSX6VqEWP1UUmnYg" />
+            <div class="absolute top-4 left-4 z-20 flex gap-2">
+              <span
+                class="bg-white/90 backdrop-blur-md px-3 py-1 rounded-full text-xs font-bold text-primary shadow-sm flex items-center gap-1">
+                <span class="material-symbols-outlined text-[14px]">schedule</span> 2H 1M
+              </span>
+              <span
+                class="bg-emerald-600/90 backdrop-blur-md px-3 py-1 rounded-full text-xs font-bold text-white shadow-sm">Private</span>
+            </div>
+          </div>
+          <div class="p-6 flex flex-col flex-1">
+            <div class="mb-4">
+              <h3
+                class="text-xl font-bold text-[#111418] leading-tight mb-2 group-hover:text-primary transition-colors">
+                PRIVATE TRIP 2H 1M (OPSI C)</h3>
+              <p class="text-sm text-[#60718a] line-clamp-2">
+                Perjalanan terfokus untuk eksplorasi fotografi alam di Djawatan, Savana Baluran, dan pesona kawah Ijen.
+              </p>
+            </div>
+            <div class="space-y-3 mb-6 flex-1">
+              <div class="flex items-center gap-3 text-sm text-[#4b5563]">
+                <span class="material-symbols-outlined text-green-500 text-[20px]">check_circle</span>
+                <span>Guide as Photographer Pribadi</span>
+              </div>
+              <div class="flex items-center gap-3 text-sm text-[#4b5563]">
+                <span class="material-symbols-outlined text-green-500 text-[20px]">check_circle</span>
+                <span>Video Reels & Foto Trip</span>
+              </div>
+              <div class="flex items-center gap-3 text-sm text-[#4b5563]">
+                <span class="material-symbols-outlined text-green-500 text-[20px]">check_circle</span>
+                <span>Transportasi AC & Jeep Trooper</span>
+              </div>
+            </div>
+            <div class="pt-5 border-t border-gray-100 mt-auto">
+              <div class="flex flex-col mb-4">
+                <span class="text-xs text-[#60718a] font-semibold uppercase tracking-wider">Mulai dari</span>
+                <div class="flex items-baseline gap-1">
+                  <span class="text-2xl font-black text-primary">Rp 675K</span>
+                  <span class="text-sm text-[#60718a] font-medium">/ orang</span>
+                </div>
+                <span class="text-[11px] text-[#9ca3af] mt-1">Harga per orang sesuai tabel 1–10 peserta.</span>
+              </div>
+              <div class="grid grid-cols-2 gap-3">
+                <a href="package-detail.html?pkg=private-2d1n-opsi-c"
+                  class="px-4 py-2.5 border border-gray-200 rounded-xl text-sm font-bold text-[#111418] hover:bg-gray-50 hover:border-gray-300 transition-colors text-center">Detail</a>
+                <a href="package-detail.html?pkg=private-2d1n-opsi-c#bookingForm"
+                  class="px-4 py-2.5 bg-primary rounded-xl text-sm font-bold text-white hover:bg-blue-700 transition-colors flex items-center justify-center gap-2 shadow-lg shadow-blue-500/30">
+                  <span class="material-symbols-outlined text-[18px]">chat</span> Pesan
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 14: Private Trip 3H 2M Opsi A -->
+        <div
+          class="package-card group bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden flex flex-col"
+          data-trip-type="private" data-duration="3-days">
+          <div class="relative h-56 overflow-hidden">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent z-10 opacity-60"></div>
+            <img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+              alt="Private Trip 3 Hari 2 Malam Opsi A"
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuDw-WbsJaRXEbEmvrth0oepOs6X6noVKCLI6s7u7lyyVvTgc9UFqdvf_DGbmBsFSrP9c9HBuheFkwdGHsoOJ6ofK2vHExXBSL96UTWqPjdkIGRoS2TYAe6yC1mc3DZTHcxn5qAtZ-B3EAvmKlcOIFQwlxkHElxuXT0V17esjwqJI2zmo4ZoBX0EGWklxq4kEk77vAETNSqI79vo_9ni2NLllJHmMNOHlHcxMbrAKyNrq1X2-RLGx6QrwKofTbxDM_bs-K0c6SLZoA" />
+            <div class="absolute top-4 left-4 z-20 flex gap-2">
+              <span
+                class="bg-white/90 backdrop-blur-md px-3 py-1 rounded-full text-xs font-bold text-primary shadow-sm flex items-center gap-1">
+                <span class="material-symbols-outlined text-[14px]">schedule</span> 3H 2M
+              </span>
+              <span
+                class="bg-emerald-600/90 backdrop-blur-md px-3 py-1 rounded-full text-xs font-bold text-white shadow-sm">Private</span>
+            </div>
+          </div>
+          <div class="p-6 flex flex-col flex-1">
+            <div class="mb-4">
+              <h3
+                class="text-xl font-bold text-[#111418] leading-tight mb-2 group-hover:text-primary transition-colors">
+                PRIVATE TRIP 3H 2M (OPSI A)</h3>
+              <p class="text-sm text-[#60718a] line-clamp-2">
+                Eksplorasi paripurna keindahan alam Banyuwangi di Djawatan, pantai selatan, snorkeling Menjangan,
+                Baluran, hingga sunrise Kawah Ijen.
+              </p>
+            </div>
+            <div class="space-y-3 mb-6 flex-1">
+              <div class="flex items-center gap-3 text-sm text-[#4b5563]">
+                <span class="material-symbols-outlined text-green-500 text-[20px]">check_circle</span>
+                <span>Kapal Wisata & Jeep Trooper</span>
+              </div>
+              <div class="flex items-center gap-3 text-sm text-[#4b5563]">
+                <span class="material-symbols-outlined text-green-500 text-[20px]">check_circle</span>
+                <span>Makan 4x & Tiket Destinasi</span>
+              </div>
+              <div class="flex items-center gap-3 text-sm text-[#4b5563]">
+                <span class="material-symbols-outlined text-green-500 text-[20px]">check_circle</span>
+                <span>Dokumentasi Underwater & Video Reels</span>
+              </div>
+            </div>
+            <div class="pt-5 border-t border-gray-100 mt-auto">
+              <div class="flex flex-col mb-4">
+                <span class="text-xs text-[#60718a] font-semibold uppercase tracking-wider">Mulai dari</span>
+                <div class="flex items-baseline gap-1">
+                  <span class="text-2xl font-black text-primary">Rp 1.350K</span>
+                  <span class="text-sm text-[#60718a] font-medium">/ orang</span>
+                </div>
+                <span class="text-[11px] text-[#9ca3af] mt-1">Harga per orang sesuai tabel 1–10 peserta.</span>
+              </div>
+              <div class="grid grid-cols-2 gap-3">
+                <a href="package-detail.html?pkg=private-3d2n-opsi-a"
+                  class="px-4 py-2.5 border border-gray-200 rounded-xl text-sm font-bold text-[#111418] hover:bg-gray-50 hover:border-gray-300 transition-colors text-center">Detail</a>
+                <a href="package-detail.html?pkg=private-3d2n-opsi-a#bookingForm"
+                  class="px-4 py-2.5 bg-primary rounded-xl text-sm font-bold text-white hover:bg-blue-700 transition-colors flex items-center justify-center gap-2 shadow-lg shadow-blue-500/30">
+                  <span class="material-symbols-outlined text-[18px]">chat</span> Pesan
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 15: Private Trip 3H 2M Opsi B -->
+        <div
+          class="package-card group bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden flex flex-col"
+          data-trip-type="private" data-duration="3-days">
+          <div class="relative h-56 overflow-hidden">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent z-10 opacity-60"></div>
+            <img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+              alt="Private Trip 3 Hari 2 Malam Opsi B"
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuBEK65ZL3HXU2kc9ug3F2faXJ82U6VRcNd69uXB34nuhBc0XbDkfidMYlgLQwX7T-JqSyCSw9h7-oAJ4G5crk1aHs5AfF7Y6xs0l4lyMQkP5pYRKDEaYea04nj1Mr9TygnuFs9nCE-tjX6RlUVscfHqLRTfit9pAuJb-QNKBCpzYSfXGy9KFgFS0K8IlZb7LmisHO82BPejB98_gjzkMiPkgPH3mVN3THTIHpcVuZ0Igl_G8pI8VYAncGPoEZaAFkqQVE_I6RTvgQ" />
+            <div class="absolute top-4 left-4 z-20 flex gap-2">
+              <span
+                class="bg-white/90 backdrop-blur-md px-3 py-1 rounded-full text-xs font-bold text-primary shadow-sm flex items-center gap-1">
+                <span class="material-symbols-outlined text-[14px]">schedule</span> 3H 2M
+              </span>
+              <span
+                class="bg-emerald-600/90 backdrop-blur-md px-3 py-1 rounded-full text-xs font-bold text-white shadow-sm">Private</span>
+            </div>
+          </div>
+          <div class="p-6 flex flex-col flex-1">
+            <div class="mb-4">
+              <h3
+                class="text-xl font-bold text-[#111418] leading-tight mb-2 group-hover:text-primary transition-colors">
+                PRIVATE TRIP 3H 2M (OPSI B)</h3>
+              <p class="text-sm text-[#60718a] line-clamp-2">
+                Perjalanan lengkap menjelajah Banyuwangi mulai dari hutan trembesi Djawatan, gugusan pesona pantai
+                selatan Nusantara, Taman Nasional Baluran, keindahan Kawah Ijen, hingga hamparan sabana hijau Kawah
+                Wurung.
+              </p>
+            </div>
+            <div class="space-y-3 mb-6 flex-1">
+              <div class="flex items-center gap-3 text-sm text-[#4b5563]">
+                <span class="material-symbols-outlined text-green-500 text-[20px]">check_circle</span>
+                <span>Kapal Wisata & Jeep Trooper</span>
+              </div>
+              <div class="flex items-center gap-3 text-sm text-[#4b5563]">
+                <span class="material-symbols-outlined text-green-500 text-[20px]">check_circle</span>
+                <span>Makan 4x & Tiket Destinasi</span>
+              </div>
+              <div class="flex items-center gap-3 text-sm text-[#4b5563]">
+                <span class="material-symbols-outlined text-green-500 text-[20px]">check_circle</span>
+                <span>Dokumentasi Underwater & Video Reels</span>
+              </div>
+            </div>
+            <div class="pt-5 border-t border-gray-100 mt-auto">
+              <div class="flex flex-col mb-4">
+                <span class="text-xs text-[#60718a] font-semibold uppercase tracking-wider">Mulai dari</span>
+                <div class="flex items-baseline gap-1">
+                  <span class="text-2xl font-black text-primary">Rp 1.420K</span>
+                  <span class="text-sm text-[#60718a] font-medium">/ orang</span>
+                </div>
+                <span class="text-[11px] text-[#9ca3af] mt-1">Harga per orang sesuai tabel 1–10 peserta.</span>
+              </div>
+              <div class="grid grid-cols-2 gap-3">
+                <a href="package-detail.html?pkg=private-3d2n-opsi-b"
+                  class="px-4 py-2.5 border border-gray-200 rounded-xl text-sm font-bold text-[#111418] hover:bg-gray-50 hover:border-gray-300 transition-colors text-center">Detail</a>
+                <a href="package-detail.html?pkg=private-3d2n-opsi-b#bookingForm"
+                  class="px-4 py-2.5 bg-primary rounded-xl text-sm font-bold text-white hover:bg-blue-700 transition-colors flex items-center justify-center gap-2 shadow-lg shadow-blue-500/30">
+                  <span class="material-symbols-outlined text-[18px]">chat</span> Pesan
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 16: Private Trip 3H 2M Opsi C -->
+        <div
+          class="package-card group bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden flex flex-col"
+          data-trip-type="private" data-duration="3-days">
+          <div class="relative h-56 overflow-hidden">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent z-10 opacity-60"></div>
+            <img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+              alt="Private Trip 3 Hari 2 Malam Opsi C"
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuDw-WbsJaRXEbEmvrth0oepOs6X6noVKCLI6s7u7lyyVvTgc9UFqdvf_DGbmBsFSrP9c9HBuheFkwdGHsoOJ6ofK2vHExXBSL96UTWqPjdkIGRoS2TYAe6yC1mc3DZTHcxn5qAtZ-B3EAvmKlcOIFQwlxkHElxuXT0V17esjwqJI2zmo4ZoBX0EGWklxq4kEk77vAETNSqI79vo_9ni2NLllJHmMNOHlHcxMbrAKyNrq1X2-RLGx6QrwKofTbxDM_bs-K0c6SLZoA" />
+            <div class="absolute top-4 left-4 z-20 flex gap-2">
+              <span
+                class="bg-white/90 backdrop-blur-md px-3 py-1 rounded-full text-xs font-bold text-primary shadow-sm flex items-center gap-1">
+                <span class="material-symbols-outlined text-[14px]">schedule</span> 3H 2M
+              </span>
+              <span
+                class="bg-emerald-600/90 backdrop-blur-md px-3 py-1 rounded-full text-xs font-bold text-white shadow-sm">Private</span>
+            </div>
+          </div>
+          <div class="p-6 flex flex-col flex-1">
+            <div class="mb-4">
+              <h3
+                class="text-xl font-bold text-[#111418] leading-tight mb-2 group-hover:text-primary transition-colors">
+                PRIVATE TRIP 3H 2M (OPSI C)</h3>
+              <p class="text-sm text-[#60718a] line-clamp-2">
+                Perjalanan lengkap menjelajah Banyuwangi mulai dari hutan trembesi Djawatan, gugusan pesona pantai
+                selatan Nusantara, Pantai Pulau Merah, dilanjutkan asyiknya Snorkeling, menjelajahi Taman Nasional
+                Baluran, hingga ditutup megahnya pesona Kawah Wurung di pagi hari.
+              </p>
+            </div>
+            <div class="space-y-3 mb-6 flex-1">
+              <div class="flex items-center gap-3 text-sm text-[#4b5563]">
+                <span class="material-symbols-outlined text-green-500 text-[20px]">check_circle</span>
+                <span>Kapal Wisata & Jeep Trooper</span>
+              </div>
+              <div class="flex items-center gap-3 text-sm text-[#4b5563]">
+                <span class="material-symbols-outlined text-green-500 text-[20px]">check_circle</span>
+                <span>Makan 4x & Tiket Destinasi</span>
+              </div>
+              <div class="flex items-center gap-3 text-sm text-[#4b5563]">
+                <span class="material-symbols-outlined text-green-500 text-[20px]">check_circle</span>
+                <span>Dokumentasi Underwater & Video Reels</span>
+              </div>
+            </div>
+            <div class="pt-5 border-t border-gray-100 mt-auto">
+              <div class="flex flex-col mb-4">
+                <span class="text-xs text-[#60718a] font-semibold uppercase tracking-wider">Mulai dari</span>
+                <div class="flex items-baseline gap-1">
+                  <span class="text-2xl font-black text-primary">Rp 1.380K</span>
+                  <span class="text-sm text-[#60718a] font-medium">/ orang</span>
+                </div>
+                <span class="text-[11px] text-[#9ca3af] mt-1">Harga per orang sesuai tabel 1–10 peserta.</span>
+              </div>
+              <div class="grid grid-cols-2 gap-3">
+                <a href="package-detail.html?pkg=private-3d2n-opsi-c"
+                  class="px-4 py-2.5 border border-gray-200 rounded-xl text-sm font-bold text-[#111418] hover:bg-gray-50 hover:border-gray-300 transition-colors text-center">Detail</a>
+                <a href="package-detail.html?pkg=private-3d2n-opsi-c#bookingForm"
+                  class="px-4 py-2.5 bg-primary rounded-xl text-sm font-bold text-white hover:bg-blue-700 transition-colors flex items-center justify-center gap-2 shadow-lg shadow-blue-500/30">
+                  <span class="material-symbols-outlined text-[18px]">chat</span> Pesan
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
+    </div>
     </div>
   </main>
   <footer class="site-footer" role="contentinfo">
