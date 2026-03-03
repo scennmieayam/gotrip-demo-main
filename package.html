@@ -109,41 +109,53 @@
         </div>
 
         <!-- Duration Filter (Hidden by default, shown only for Private Trip) -->
-        <div id="duration-filter-container" class="hidden transition-all duration-300 transform origin-top">
-          <div class="bg-white/80 backdrop-blur-sm p-1 rounded-full border border-gray-200 inline-flex">
-            <label class="cursor-pointer relative px-4 py-1.5 rounded-full transition-all duration-200">
+        <div id="duration-filter-container"
+          class="hidden transition-all duration-300 transform origin-top max-w-full overflow-x-auto bg-transparent px-2"
+          style="scrollbar-width: none; -ms-overflow-style: none;">
+          <style>
+            #duration-filter-container::-webkit-scrollbar {
+              display: none;
+            }
+          </style>
+          <div
+            class="bg-white/80 backdrop-blur-sm p-1 rounded-full border border-gray-200 flex min-w-max mx-auto w-fit">
+            <label class="cursor-pointer relative px-3 md:px-4 py-1.5 rounded-full transition-all duration-200">
               <input checked="" class="peer sr-only" name="trip_duration" type="radio" value="all" />
               <div
                 class="absolute inset-0 bg-primary rounded-full opacity-0 peer-checked:opacity-100 transition-opacity">
               </div>
-              <span class="relative z-10 text-gray-500 peer-checked:text-white font-semibold text-xs">
+              <span
+                class="relative z-10 text-gray-500 peer-checked:text-white font-semibold text-[11px] md:text-xs whitespace-nowrap">
                 Semua
               </span>
             </label>
-            <label class="cursor-pointer relative px-4 py-1.5 rounded-full transition-all duration-200">
+            <label class="cursor-pointer relative px-3 md:px-4 py-1.5 rounded-full transition-all duration-200">
               <input class="peer sr-only" name="trip_duration" type="radio" value="1-day" />
               <div
                 class="absolute inset-0 bg-primary rounded-full opacity-0 peer-checked:opacity-100 transition-opacity">
               </div>
-              <span class="relative z-10 text-gray-500 peer-checked:text-white font-semibold text-xs">
+              <span
+                class="relative z-10 text-gray-500 peer-checked:text-white font-semibold text-[11px] md:text-xs whitespace-nowrap">
                 1 Hari
               </span>
             </label>
-            <label class="cursor-pointer relative px-4 py-1.5 rounded-full transition-all duration-200">
+            <label class="cursor-pointer relative px-3 md:px-4 py-1.5 rounded-full transition-all duration-200">
               <input class="peer sr-only" name="trip_duration" type="radio" value="2-days" />
               <div
                 class="absolute inset-0 bg-primary rounded-full opacity-0 peer-checked:opacity-100 transition-opacity">
               </div>
-              <span class="relative z-10 text-gray-500 peer-checked:text-white font-semibold text-xs">
+              <span
+                class="relative z-10 text-gray-500 peer-checked:text-white font-semibold text-[11px] md:text-xs whitespace-nowrap">
                 2 Hari 1 Malam
               </span>
             </label>
-            <label class="cursor-pointer relative px-4 py-1.5 rounded-full transition-all duration-200">
+            <label class="cursor-pointer relative px-3 md:px-4 py-1.5 rounded-full transition-all duration-200">
               <input class="peer sr-only" name="trip_duration" type="radio" value="3-days" />
               <div
                 class="absolute inset-0 bg-primary rounded-full opacity-0 peer-checked:opacity-100 transition-opacity">
               </div>
-              <span class="relative z-10 text-gray-500 peer-checked:text-white font-semibold text-xs">
+              <span
+                class="relative z-10 text-gray-500 peer-checked:text-white font-semibold text-[11px] md:text-xs whitespace-nowrap">
                 3 Hari 2 Malam
               </span>
             </label>
