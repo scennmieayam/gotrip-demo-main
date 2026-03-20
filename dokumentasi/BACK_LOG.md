@@ -49,3 +49,4 @@ Tasks that were started but temporarily stopped.
 | Task ID | Description | Completed Date |
 |--------|-------------|---------------|
 | T-000 | Project initialization | 2026-03-11 |
+| T-007 | Update pricing for Kawah Wurung & Baluran | 2026-03-21 |

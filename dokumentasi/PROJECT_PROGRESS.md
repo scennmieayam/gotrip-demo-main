@@ -24,6 +24,7 @@ Completion Estimate: 35%
 
 - Dashboard interface
 - API integration
+- Trip packages pricing update
 
 ---
 
