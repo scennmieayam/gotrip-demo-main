@@ -108,6 +108,117 @@
     --tw-contain-style:
 }
 
+/* ==================== HOVER SYSTEM (CSS Variables & Reusable Classes) ==================== */
+:root {
+    --hover-primary: #1d4ed8;
+    --hover-primary-light: rgba(11, 92, 213, 0.08);
+    --hover-green: #16a34a;
+    --hover-green-glow: rgba(34, 197, 94, 0.4);
+    --hover-text-white: #fff;
+    --hover-shadow-card: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
+    --hover-shadow-btn: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1);
+    --hover-duration: 0.3s;
+    --hover-duration-fast: 0.2s;
+    --hover-duration-img: 0.7s;
+    --hover-easing: cubic-bezier(0.4, 0, 0.2, 1);
+    --hover-lift: -0.25rem;
+    --hover-scale-subtle: 1.02;
+    --hover-scale-icon: 1.1;
+    --hover-scale-img: 1.1;
+}
+
+.hover-card {
+    transition: transform var(--hover-duration) var(--hover-easing),
+                box-shadow var(--hover-duration) var(--hover-easing),
+                border-color var(--hover-duration) var(--hover-easing);
+}
+.hover-card:hover {
+    transform: translateY(var(--hover-lift));
+    box-shadow: var(--hover-shadow-card);
+}
+
+.hover-card-img {
+    transition: transform var(--hover-duration-img) var(--hover-easing);
+}
+.group:hover .hover-card-img {
+    transform: scale(var(--hover-scale-img));
+}
+
+.hover-card-title {
+    transition: color var(--hover-duration) var(--hover-easing);
+}
+.group:hover .hover-card-title {
+    color: rgb(11, 92, 213);
+}
+
+.hover-card-icon {
+    transition: transform var(--hover-duration) var(--hover-easing);
+}
+.group:hover .hover-card-icon {
+    transform: scale(var(--hover-scale-icon));
+}
+
+.hover-btn-primary {
+    transition: background-color var(--hover-duration) var(--hover-easing),
+                box-shadow var(--hover-duration) var(--hover-easing),
+                transform var(--hover-duration) var(--hover-easing);
+}
+.hover-btn-primary:hover {
+    background-color: var(--hover-primary);
+    box-shadow: var(--hover-shadow-btn);
+}
+
+.hover-btn-outline {
+    transition: background-color var(--hover-duration) var(--hover-easing),
+                border-color var(--hover-duration) var(--hover-easing),
+                color var(--hover-duration) var(--hover-easing);
+}
+.hover-btn-outline:hover {
+    background-color: rgb(249, 250, 251);
+    border-color: rgb(209, 213, 219);
+}
+
+.hover-btn-whatsapp {
+    transition: background-color var(--hover-duration) var(--hover-easing),
+                box-shadow var(--hover-duration) var(--hover-easing),
+                transform var(--hover-duration) var(--hover-easing);
+}
+.hover-btn-whatsapp:hover {
+    background-color: var(--hover-green);
+    box-shadow: 0 10px 25px -5px var(--hover-green-glow);
+    transform: translateY(var(--hover-lift));
+}
+
+.hover-nav-link {
+    transition: color var(--hover-duration) var(--hover-easing);
+}
+.hover-nav-link:hover {
+    color: var(--hover-text-white);
+}
+
+.hover-text-link {
+    transition: color var(--hover-duration) var(--hover-easing);
+}
+.hover-text-link:hover {
+    color: rgb(11, 92, 213);
+}
+
+.hover-arrow {
+    transition: transform var(--hover-duration) var(--hover-easing);
+}
+.group:hover .hover-arrow {
+    transform: translateX(0.25rem);
+}
+
+.hover-share-btn {
+    transition: background-color var(--hover-duration) var(--hover-easing);
+}
+.hover-share-btn:hover {
+    background-color: rgb(243, 244, 246);
+}
+
+/* ==================== END HOVER SYSTEM ==================== */
+
 /*! tailwindcss v3.4.19 | MIT License | https://tailwindcss.com*/
 *,
 :after,
@@ -1787,25 +1898,25 @@ input:where([type=file]):focus {
 .transition-all {
     transition-property: all;
     transition-timing-function: cubic-bezier(.4, 0, .2, 1);
-    transition-duration: .15s
+    transition-duration: .3s
 }
 
 .transition-colors {
     transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
     transition-timing-function: cubic-bezier(.4, 0, .2, 1);
-    transition-duration: .15s
+    transition-duration: .3s
 }
 
 .transition-opacity {
     transition-property: opacity;
     transition-timing-function: cubic-bezier(.4, 0, .2, 1);
-    transition-duration: .15s
+    transition-duration: .3s
 }
 
 .transition-transform {
     transition-property: transform;
     transition-timing-function: cubic-bezier(.4, 0, .2, 1);
-    transition-duration: .15s
+    transition-duration: .3s
 }
 
 .duration-200 {
@@ -1898,7 +2009,7 @@ input:where([type=file]):focus {
 
 .footer-social-link {
     color: hsla(0, 0%, 100%, .7);
-    transition: color .2s
+    transition: color var(--hover-duration) var(--hover-easing)
 }
 
 .footer-social-link:hover {
@@ -1930,7 +2041,7 @@ input:where([type=file]):focus {
     color: hsla(0, 0%, 100%, .7);
     font-size: .875rem;
     text-decoration: none;
-    transition: color .2s
+    transition: color var(--hover-duration) var(--hover-easing)
 }
 
 .footer-link:hover {
@@ -1992,7 +2103,7 @@ input:where([type=file]):focus {
     font-size: .875rem;
     font-weight: 500;
     border-radius: .75rem;
-    transition: background-color .2s, color .2s
+    transition: background-color var(--hover-duration) var(--hover-easing), color var(--hover-duration) var(--hover-easing)
 }
 
 .mobile-nav-link:hover {
@@ -2376,7 +2487,7 @@ input:where([type=file]):focus {
     display: flex;
     align-items: center;
     justify-content: center;
-    transition: background 0.2s;
+    transition: background var(--hover-duration) var(--hover-easing);
     z-index: 60;
 }
 
